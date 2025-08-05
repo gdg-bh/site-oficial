@@ -1,2 +1,3 @@
-# site-oficial
-Site oficial GDG BH
+# Site oficial do Google Developer Group - Belo Horizonte
+
+Em construção...
