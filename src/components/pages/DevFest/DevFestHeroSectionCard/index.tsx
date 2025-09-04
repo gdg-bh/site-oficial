@@ -2,7 +2,7 @@ import { Calendar, MapPin } from 'lucide-react';
 
 export function DevFestHeroSectionCard() {
     return (
-        <div className="mt-8 bg-white rounded-2xl shadow-medium px-6 py-6 md:px-10 md:py-8 flex flex-col items-center gap-4 max-w-3xl">
+        <div className="mt-8 bg-white rounded-2xl drop-shadow-title px-6 py-6 md:px-10 md:py-8 flex flex-col items-center gap-4 max-w-3xl">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full text-google-gray text-sm md:text-base">
                 <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-google-blue" />
