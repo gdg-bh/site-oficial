@@ -53,7 +53,7 @@ export function CountdownTimer() {
 
     if (!isMounted) return null;
 
-    return (    
+    return (
         <section className="container mb-5 md:mt-10 md:mb-8 py-9 overflow-hidden mx-auto flex justify-center items-center flex-wrap gap-6">
             <CountdownElement
                 remainingQuantity={timeRemaining?.days || '00'}

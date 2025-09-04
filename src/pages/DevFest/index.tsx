@@ -1,6 +1,6 @@
 import devfestBg from '../../assets/pages/devfest/bg.png';
-import { Hero } from '../../components/Common/Hero';
-import { SectionTitle } from '../../components/Common/SectionTitle';
+import { Hero } from '../../components/common/Hero';
+import { SectionTitle } from '../../components/common/SectionTitle';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 
 export function DevFest() {

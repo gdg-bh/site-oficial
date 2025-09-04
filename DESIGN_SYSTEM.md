@@ -3,6 +3,7 @@
 ## 🎨 Cores
 
 ### Cores Principais do Projeto
+
 ```css
 /* Cores principais */
 bg-google-blue        /* #4285f4 - azul principal */
@@ -21,6 +22,7 @@ bg-google-yellow-light    /* #fde293 - amarelo claro */
 ```
 
 ### Cores das Pílulas
+
 ```css
 /* Pílulas selecionadas */
 bg-pill-blue          /* #2163CE */
@@ -38,6 +40,7 @@ bg-pill-orange-50     /* rgba(255, 153, 0, 0.5) */
 ```
 
 ### Gradientes
+
 ```css
 /* Gradiente Google (azul → verde → amarelo) */
 bg-gradient-google
@@ -53,6 +56,7 @@ bg-gradient-session
 ```
 
 ### Sombras
+
 ```css
 /* Sombras personalizadas */
 shadow-soft      /* Sombra suave */
@@ -62,29 +66,37 @@ shadow-medium    /* Sombra média */
 ## 📝 Exemplos de Uso
 
 ### Botões com Cores Google
+
 ```jsx
-{/* Azul */}
-<button className="bg-google-blue text-white px-6 py-3 rounded-lg shadow-soft">
-  Botão Azul
-</button>
+{
+    /* Azul */
+}
+<button className="bg-google-blue text-white px-6 py-3 rounded-lg shadow-soft">Botão Azul</button>;
 
-{/* Verde */}
+{
+    /* Verde */
+}
 <button className="bg-google-green text-white px-6 py-3 rounded-lg shadow-soft">
-  Botão Verde
-</button>
+    Botão Verde
+</button>;
 
-{/* Amarelo */}
+{
+    /* Amarelo */
+}
 <button className="bg-google-yellow text-white px-6 py-3 rounded-lg shadow-soft">
-  Botão Amarelo
-</button>
+    Botão Amarelo
+</button>;
 
-{/* Vermelho */}
+{
+    /* Vermelho */
+}
 <button className="bg-google-red text-white px-6 py-3 rounded-lg shadow-soft">
-  Botão Vermelho
-</button>
+    Botão Vermelho
+</button>;
 ```
 
 ### Pílulas
+
 ```jsx
 {/* Pílulas selecionadas */}
 <div className="bg-pill-blue text-white px-4 py-2 rounded-full">
@@ -110,25 +122,30 @@ shadow-medium    /* Sombra média */
 ```
 
 ### Gradientes
+
 ```jsx
-{/* Gradiente para texto */}
+{
+    /* Gradiente para texto */
+}
 <h1 className="bg-gradient-text bg-clip-text text-transparent text-4xl font-bold">
-  Título com Gradiente
-</h1>
+    Título com Gradiente
+</h1>;
 
-{/* Gradiente de sessão */}
-<div className="bg-gradient-session text-white p-8 rounded-xl">
-  Sessão com Gradiente
-</div>
+{
+    /* Gradiente de sessão */
+}
+<div className="bg-gradient-session text-white p-8 rounded-xl">Sessão com Gradiente</div>;
 
-{/* Gradiente de sessão claro */}
+{
+    /* Gradiente de sessão claro */
+}
 <div className="bg-gradient-session-light text-gray-800 p-8 rounded-xl">
-  Sessão com Gradiente Claro
-</div>
+    Sessão com Gradiente Claro
+</div>;
 ```
 
-
 ### Cores de Destaque
+
 ```jsx
 <div className="bg-google-orange text-white p-4 rounded">
   Laranja de Destaque
@@ -144,6 +161,7 @@ shadow-medium    /* Sombra média */
 ```
 
 ### Texto com Cores
+
 ```jsx
 <h1 className="text-google-blue text-3xl font-bold">
   Título Azul
