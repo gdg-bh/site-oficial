@@ -9,6 +9,8 @@ export default {
             colors: {
                 'bg-color': '#F7F9FB',
                 'title-color': '#F9F9F9',
+                'icon-bg': '#EBF2FE',
+                'blue-icon': '#3C83F6',
 
                 // Cores principais do Google Material Design
                 'google-blue': '#4285f4', // azul principal
@@ -58,6 +60,7 @@ export default {
             },
             dropShadow: {
                 title: '0 4px 4px rgba(0,0,0,0.25)',
+                card: '1px 1px 1.2px rgba(0, 0, 0, 0.25)',
             },
         },
     },

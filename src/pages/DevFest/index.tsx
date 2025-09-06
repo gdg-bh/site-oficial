@@ -1,14 +1,16 @@
+import { Calendar, Clock, MapPin } from 'lucide-react';
 import devfestBg from '../../assets/pages/devfest/bg.png';
 import { Hero } from '../../components/common/Hero';
 import { SectionTitle } from '../../components/common/SectionTitle';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
+import { EventInformationCard } from '../../components/pages/DevFest/EventInformationCard';
 
 export function DevFest() {
     return (
         <>
             <Hero title="DevFest 2025" location="Belo Horizonte" bgImage={devfestBg} />
             <CountdownTimer />
-            <div className="bg-white py-20">
+            <section className="bg-white py-20">
                 <SectionTitle text="O que é o" highlight="DevFest" />
                 <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
                     O DevFest é uma conferência anual organizada por comunidades do Google Developer
@@ -20,7 +22,31 @@ export function DevFest() {
                     as tecnologias mais recentes do Google até tendências globais do mercado de
                     tecnologia.
                 </p>
-            </div>
+            </section>
+            <section className="flex flex-col xl:flex-row items-center py-24 xl:p-32 justify-center gap-12 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF]">
+                <div className="flex flex-col gap-6">
+                    <EventInformationCard icon={Calendar}>
+                        Belo Horizonte - MG <br />
+                        PUC Minas <br />
+                        Lourdes Av. Brasil, 2023 - Funcionários
+                    </EventInformationCard>
+                    <EventInformationCard icon={MapPin}>
+                        08 de Novembro de 2025
+                    </EventInformationCard>
+                    <EventInformationCard icon={Clock}>às 08:30</EventInformationCard>
+                </div>
+                <div className="w-80 h-48 md:w-[450px] md:h-[320px] xl:w-[672px] xl:h-[342px] bg-white border-[11px] border-white rounded-[32px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.788846822649!2d-43.93968002432465!3d-19.933300938412227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6991939c3dc67%3A0x1bcc33e162314675!2sPUC%20Minas%20Lourdes%20-%20Pr%C3%A9dio%201%20%E2%80%93%20Edif%C3%ADcio%20Dom%20Cabral!5e0!3m2!1spt-BR!2sbr!4v1757131665987!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
+                </div>
+            </section>
         </>
     );
 }
