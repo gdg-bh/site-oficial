@@ -86,7 +86,7 @@ export function Carousel({ count = 5, children }: CarouselSlotsProps) {
     };
 
     return (
-        <div className="relative w-full max-w-7xl mx-auto mt-28">
+        <div className="relative w-full max-w-7xl mx-auto">
             <div className="relative p-4">
                 <div className="absolute top-[-60px] right-8 xl:right-0 flex items-center gap-6 z-20">
                     <button

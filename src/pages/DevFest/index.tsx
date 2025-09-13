@@ -5,6 +5,8 @@ import { SectionTitle } from '../../components/Common/SectionTitle';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import { EventInformationCard } from '../../components/pages/DevFest/EventInformationCard';
 import Speakers from '../../components/pages/DevFest/Speakers';
+import Schedule from '../../components/pages/DevFest/Schedule';
+import Sponsors from '../../components/pages/DevFest/Sponsors';
 
 export function DevFest() {
     return (
@@ -50,11 +52,27 @@ export function DevFest() {
             </section>
             <section className="bg-[#F7F9FB] py-20 overflow-hidden">
                 <SectionTitle highlight="Palestrantes" />
-                <p className="mx-auto w-10/12 lg:w-6/12 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
-                    text-base Desenvolvedores apaixonados e construtores de comunidades dedicados a
-                    promover o crescimento e o compartilhamento de conhecimento
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                    Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
+                    crescimento e o compartilhamento de conhecimento
                 </p>
-                <Speakers></Speakers>
+                <Speakers />
+            </section>
+            <section className="bg-white py-20 overflow-hidden">
+                <SectionTitle highlight="Agenda" />
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua lorem ipsum.
+                </p>
+                <Schedule />
+            </section>
+            <section className="bg-[#F7F9FB] py-20 overflow-hidden">
+                <SectionTitle highlight="Patrocinadores" />
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                    Temos orgulho de fazer parceria com líderes do setor que compartilham nossa
+                    visão de promover o crescimento dos desenvolvedores
+                </p>
+                <Sponsors />
             </section>
         </>
     );
