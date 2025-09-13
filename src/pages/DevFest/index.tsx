@@ -1,9 +1,10 @@
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import devfestBg from '../../assets/pages/devfest/bg.png';
-import { Hero } from '../../components/common/Hero';
-import { SectionTitle } from '../../components/common/SectionTitle';
+import { Hero } from '../../components/Common/Hero';
+import { SectionTitle } from '../../components/Common/SectionTitle';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import { EventInformationCard } from '../../components/pages/DevFest/EventInformationCard';
+import Speakers from '../../components/pages/DevFest/Speakers';
 
 export function DevFest() {
     return (
@@ -46,6 +47,14 @@ export function DevFest() {
                         referrerPolicy="no-referrer-when-downgrade"
                     />
                 </div>
+            </section>
+            <section className="bg-[#F7F9FB] py-20 overflow-hidden">
+                <SectionTitle highlight="Palestrantes" />
+                <p className="mx-auto w-10/12 lg:w-6/12 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                    text-base Desenvolvedores apaixonados e construtores de comunidades dedicados a
+                    promover o crescimento e o compartilhamento de conhecimento
+                </p>
+                <Speakers></Speakers>
             </section>
         </>
     );

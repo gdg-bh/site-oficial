@@ -21,7 +21,7 @@ export function Header() {
                     </div>
 
                     {/* Navegação central - Desktop */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    <nav className="hidden xl:flex items-center space-x-8">
                         <Link
                             to="/"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
@@ -55,14 +55,14 @@ export function Header() {
                     </nav>
 
                     {/* Botão de call-to-action - Desktop */}
-                    <div className="hidden md:flex items-center">
+                    <div className="hidden xl:flex items-center">
                         <button className="bg-google-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 shadow-soft">
                             Garantir ingresso
                         </button>
                     </div>
 
                     {/* Botão mobile menu */}
-                    <div className="md:hidden flex items-center space-x-3">
+                    <div className="xl:hidden flex items-center space-x-3">
                         <button className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 shadow-soft text-sm whitespace-nowrap">
                             Ingresso
                         </button>
@@ -98,7 +98,7 @@ export function Header() {
 
                 {/* Menu mobile */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden">
+                    <div className="xl:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
                             <Link
                                 to="/"
