@@ -15,7 +15,7 @@ export function DevFest() {
             <CountdownTimer />
             <section className="bg-white py-20">
                 <SectionTitle text="O que é o" highlight="DevFest" />
-                <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     O DevFest é uma conferência anual organizada por comunidades do Google Developer
                     Groups (GDG) ao redor do mundo. Cada edição é única, criada por organizadores
                     locais para atender às necessidades de suas comunidades, mas todas compartilham
@@ -52,7 +52,7 @@ export function DevFest() {
             </section>
             <section className="bg-[#F7F9FB] py-20 overflow-hidden">
                 <SectionTitle highlight="Palestrantes" />
-                <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                     crescimento e o compartilhamento de conhecimento
                 </p>
@@ -60,7 +60,7 @@ export function DevFest() {
             </section>
             <section className="bg-white py-20 overflow-hidden">
                 <SectionTitle highlight="Agenda" />
-                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                     crescimento e o compartilhamento de conhecimento
                 </p>
@@ -68,7 +68,7 @@ export function DevFest() {
             </section>
             <section className="bg-[#F7F9FB] py-20 overflow-hidden">
                 <SectionTitle highlight="Patrocinadores" />
-                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     Temos orgulho de fazer parceria com líderes do setor que compartilham nossa
                     visão de promover o crescimento dos desenvolvedores
                 </p>
@@ -84,7 +84,7 @@ export function DevFest() {
                     desenvolvedores apaixonados e entusiastas de tecnologia.
                 </p>
                 <a
-                    href=""
+                    href="#"
                     target="_blank"
                     className="bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft cursor-pointer"
                 >

@@ -11,7 +11,7 @@ interface TimeRemaining {
 
 const calculateTimeRemaining = (targetDate: Date): TimeRemaining => {
     const now = new Date();
-    let difference = targetDate.getTime() - now.getTime();
+    const difference = targetDate.getTime() - now.getTime();
 
     if (difference <= 0) {
         return {
