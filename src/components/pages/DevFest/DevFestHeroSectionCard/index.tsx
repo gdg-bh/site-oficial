@@ -19,7 +19,7 @@ export function DevFestHeroSectionCard() {
                 </div>
             </div>
 
-            <button className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-soft">
+            <button className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft">
                 Garantir ingresso
             </button>
         </div>

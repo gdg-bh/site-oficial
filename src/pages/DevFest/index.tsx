@@ -74,6 +74,23 @@ export function DevFest() {
                 </p>
                 <Sponsors />
             </section>
+            <section className="mb-16 py-10 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] text-center">
+                <h1 className="text-google-blue font-semibold text-2xl text-center mb-5">
+                    Seja um Patrocinador
+                </h1>
+                <p className="text-subtitle-color font-normal text-sm w-4/5 md:w-1/2 mx-auto mb-8">
+                    Junte-se à nossa comunidade de parceiros e ajude-nos a criar um impacto
+                    significativo no ecossistema de desenvolvedores. Alcance milhares de
+                    desenvolvedores apaixonados e entusiastas de tecnologia.
+                </p>
+                <a
+                    href=""
+                    target="_blank"
+                    className="bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft cursor-pointer"
+                >
+                    Entre em contato
+                </a>
+            </section>
         </>
     );
 }

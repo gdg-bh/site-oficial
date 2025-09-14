@@ -11,6 +11,7 @@ export default {
                 'title-color': '#F9F9F9',
                 'icon-bg': '#EBF2FE',
                 'blue-icon': '#3C83F6',
+                'subtitle-color': '#6A7181',
 
                 // Cores principais do Google Material Design
                 'google-blue': '#4285f4', // azul principal
