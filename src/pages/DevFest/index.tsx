@@ -1,12 +1,12 @@
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import devfestBg from '../../assets/pages/devfest/bg.png';
-import { Hero } from '../../components/Common/Hero';
-import { SectionTitle } from '../../components/Common/SectionTitle';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import { EventInformationCard } from '../../components/pages/DevFest/EventInformationCard';
 import Speakers from '../../components/pages/DevFest/Speakers';
 import Schedule from '../../components/pages/DevFest/Schedule';
 import Sponsors from '../../components/pages/DevFest/Sponsors';
+import { Hero } from '../../components/common/Hero';
+import { SectionTitle } from '../../components/common/SectionTitle';
 
 export function DevFest() {
     return (
@@ -61,8 +61,8 @@ export function DevFest() {
             <section className="bg-white py-20 overflow-hidden">
                 <SectionTitle highlight="Agenda" />
                 <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-[#6A7181] font-normal text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua lorem ipsum.
+                    Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
+                    crescimento e o compartilhamento de conhecimento
                 </p>
                 <Schedule />
             </section>
