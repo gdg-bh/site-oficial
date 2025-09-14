@@ -245,7 +245,7 @@ export default function Schedule() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
                 <button
                     onClick={() => setFilter('all')}
-                    className={`px-7 py-1 rounded-lg text-sm md:text-xl font-regular border-2 ${
+                    className={`px-7 py-1 rounded-lg text-sm md:text-base font-regular border-2 ${
                         filter === 'all'
                             ? 'bg-white text-gray-700 border-gray-300 shadow-[0px_4px_4px_0px_#00000040]'
                             : 'hover:bg-gray-200'
@@ -257,7 +257,7 @@ export default function Schedule() {
                     <button
                         key={t.name}
                         onClick={() => setFilter(t.name)}
-                        className={`px-6 py-1 rounded-lg text-sm md:text-xl text-white font-regular transition  ${
+                        className={`px-6 py-1 rounded-lg text-sm md:text-base text-white font-regular transition  ${
                             filter === t.name
                                 ? ' border-blue-600 shadow-[0px_4px_4px_0px_#00000040]'
                                 : `opacity-50 hover:opacity-100`
@@ -308,14 +308,14 @@ export default function Schedule() {
                                                     '#ccc'
                                             ),
                                         }}
-                                        className="text-center bg-[#ccc] rounded-full text-white md:px-6 md:py-1 text-sm md:text-xl max-w-36"
+                                        className="text-center bg-[#ccc] rounded-full text-white md:px-6 md:py-1 text-sm md:text-base max-w-36"
                                     >
                                         {item.track}
                                     </div>
                                 </td>
 
                                 <td className="px-3 py-5 align-center">
-                                    <div className="font-medium text-sm md:text-base text-gray-900">
+                                    <div className="font-normal text-sm md:text-base text-gray-900">
                                         {item.title}
                                     </div>
                                     <div className="text-gray-500 text-sm md:hidden mt-1">
