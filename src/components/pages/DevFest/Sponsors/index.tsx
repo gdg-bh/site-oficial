@@ -7,7 +7,7 @@ export default function Sponsors() {
 
     return (
         <ContinuousSlider>
-            {images.concat(images).map((src, idx) => (
+            {images.map((src, idx) => (
                 <img
                     key={idx}
                     src={src}

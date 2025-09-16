@@ -4,6 +4,7 @@ export default function ContinuousSlider(props) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [scrollWidth, setScrollWidth] = useState(0);
     const [duration, setDuration] = useState(40);
+    const [repeatCount, setRepeatCount] = useState(2);
 
     useEffect(() => {
         if (containerRef.current) {
@@ -14,12 +15,29 @@ export default function ContinuousSlider(props) {
             if (containerRef.current) {
                 setScrollWidth(containerRef.current.scrollWidth / 2);
                 setDuration(window.innerWidth < 768 ? 20 : 40);
+
+                const containerWidth = containerRef.current.offsetWidth;
+                const childWidth = containerRef.current.scrollWidth / 2;
+                const count = Math.ceil(containerWidth / childWidth) + 1;
+                setRepeatCount(count);
             }
         };
 
         window.addEventListener('resize', handleResize);
+
+        handleResize();
+
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const getRepeatedChildren = () => {
+        const childrenArray = Array.isArray(props.children) ? props.children : [props.children];
+        let repeated: any[] = [];
+        for (let i = 0; i < repeatCount; i++) {
+            repeated = repeated.concat(childrenArray);
+        }
+        return repeated;
+    };
 
     return (
         <div className="overflow-hidden relative w-full">
@@ -31,7 +49,7 @@ export default function ContinuousSlider(props) {
                     animation: scrollWidth ? `scroll ${duration}s linear infinite` : 'none',
                 }}
             >
-                {props.children}
+                {getRepeatedChildren()}
             </div>
 
             <style>{`
