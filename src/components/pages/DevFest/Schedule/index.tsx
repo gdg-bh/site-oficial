@@ -2,221 +2,169 @@ import { useState, useMemo } from 'react';
 
 const scheduleData = [
     {
-        start: '09:00',
-        end: '09:50',
-        track: 'Iniciante',
-        title: 'Introdução ao React',
-        speaker: 'Ana Costa',
-    },
-    {
-        start: '09:10',
-        end: '10:00',
-        track: 'Avançado',
-        title: 'Design Systems em escala',
-        speaker: 'Rafael Mendes',
-    },
-    {
-        start: '09:20',
-        end: '10:10',
-        track: 'Carreiras',
-        title: 'DevOps Moderno',
-        speaker: 'Juliana Rocha',
+        start: '08:30',
+        end: '09:30',
+        title: 'Credenciamento',
     },
     {
         start: '09:30',
-        end: '10:20',
-        track: 'WTM',
-        title: 'Carreiras em Tecnologia',
-        speaker: 'Lucas Almeida',
-    },
-    {
-        start: '09:40',
-        end: '10:30',
-        track: 'Workshop',
-        title: 'Workshop de Node.js',
-        speaker: 'Fernanda Lima',
+        end: '10:00',
+        title: 'Abertura',
     },
     {
         start: '10:00',
         end: '10:50',
         track: 'Iniciante',
-        title: 'React Avançado',
-        speaker: 'Gustavo Torres',
+        title: 'Desenvolvimento de Agents com o ADK',
+        speaker: 'Douglas Augusto',
     },
     {
-        start: '10:10',
-        end: '11:00',
+        start: '10:00',
+        end: '10:50',
         track: 'Avançado',
-        title: 'Front-end Performance',
-        speaker: 'Mariana Oliveira',
+        title: 'Generative UI: UIs Dinâmicas e LLMs',
+        speaker: 'Jorge Mauro',
     },
     {
-        start: '10:20',
-        end: '11:10',
+        start: '10:00',
+        end: '10:50',
         track: 'Carreiras',
-        title: 'Inteligência Artificial na Prática',
-        speaker: 'André Barbosa',
+        title: 'Por dentro da Análise de Dados: o divertido, o difícil e o essencial',
+        speaker: 'Yuri Fernandes',
     },
     {
-        start: '10:30',
-        end: '11:20',
-        track: 'WTM',
-        title: 'UX/UI Design Essentials',
-        speaker: 'Camila Ferreira',
-    },
-    {
-        start: '10:40',
-        end: '11:30',
+        start: '10:00',
+        end: '11:40',
         track: 'Workshop',
-        title: 'Next.js Deep Dive',
-        speaker: 'Paulo Silva',
+        title: 'Docker para iniciantes',
+        speaker: 'Gabriel Nogueira',
     },
     {
-        start: '11:00',
-        end: '11:50',
+        start: '10:50',
+        end: '11:40',
         track: 'Iniciante',
-        title: 'Introdução ao React',
-        speaker: 'Juliana Rocha',
+        title: 'Earth Engine no atendimento das emergèncias climáticas',
+        speaker: 'Eliana Fonseca',
     },
     {
-        start: '11:10',
-        end: '12:00',
+        start: '10:50',
+        end: '11:40',
         track: 'Avançado',
-        title: 'Design Systems em escala',
-        speaker: 'Ana Costa',
+        title: '### LOREM IPSUM DOLOR SIT AMET',
+        speaker: 'Mateus Pereira',
     },
     {
-        start: '11:20',
-        end: '12:10',
+        start: '10:50',
+        end: '11:40',
         track: 'Carreiras',
-        title: 'DevOps Moderno',
-        speaker: 'Lucas Almeida',
-    },
-    {
-        start: '11:30',
-        end: '12:20',
-        track: 'WTM',
-        title: 'Carreiras em Tecnologia',
-        speaker: 'Rafael Mendes',
+        title: 'Tenha o Linkedin como seu aliado para se destacar no mercado de trabalho',
+        speaker: 'Victoria Boaventura',
     },
     {
         start: '11:40',
         end: '12:30',
-        track: 'Workshop',
-        title: 'Workshop de Node.js',
-        speaker: 'Fernanda Lima',
-    },
-    {
-        start: '12:00',
-        end: '12:50',
         track: 'Iniciante',
-        title: 'React Avançado',
-        speaker: 'Gustavo Torres',
+        title: '### LOREM IPSUM DOLOR SIT AMET',
+        speaker: 'Thais Falabella',
     },
     {
-        start: '12:10',
-        end: '13:00',
+        start: '11:40',
+        end: '12:30',
         track: 'Avançado',
-        title: 'Front-end Performance',
-        speaker: 'Mariana Oliveira',
+        title: 'Implement Bulletproof AgentOps',
+        speaker: 'Camilla Martins',
     },
     {
-        start: '12:20',
-        end: '13:10',
+        start: '11:40',
+        end: '12:30',
         track: 'Carreiras',
-        title: 'Inteligência Artificial na Prática',
-        speaker: 'André Barbosa',
-    },
-    {
-        start: '12:30',
-        end: '13:20',
-        track: 'WTM',
-        title: 'UX/UI Design Essentials',
-        speaker: 'Camila Ferreira',
-    },
-    {
-        start: '12:40',
-        end: '13:30',
-        track: 'Workshop',
-        title: 'Next.js Deep Dive',
-        speaker: 'Paulo Silva',
-    },
-    {
-        start: '13:00',
-        end: '13:50',
-        track: 'Iniciante',
-        title: 'Introdução ao React',
-        speaker: 'Ana Costa',
-    },
-    {
-        start: '13:10',
-        end: '14:00',
-        track: 'Avançado',
-        title: 'Design Systems em escala',
-        speaker: 'Rafael Mendes',
-    },
-    {
-        start: '13:20',
-        end: '14:10',
-        track: 'Carreiras',
-        title: 'DevOps Moderno',
-        speaker: 'Juliana Rocha',
+        title: 'Testes técnicos sem mistério: o guia para se destacar',
+        speaker: 'Rafael Ribeiro Andrade',
     },
     {
         start: '13:30',
-        end: '14:20',
-        track: 'WTM',
-        title: 'Carreiras em Tecnologia',
-        speaker: 'Lucas Almeida',
+        end: '13:40',
+        title: 'Almoço',
     },
     {
         start: '13:40',
         end: '14:30',
-        track: 'Workshop',
-        title: 'Workshop de Node.js',
-        speaker: 'Fernanda Lima',
-    },
-    {
-        start: '14:00',
-        end: '14:50',
         track: 'Iniciante',
-        title: 'React Avançado',
-        speaker: 'Gustavo Torres',
+        title: 'A Era Gemma: Desvendando a Família de Modelos Abertos do Google',
+        speaker: 'Victor Pugliese',
     },
     {
-        start: '14:10',
-        end: '15:00',
+        start: '13:40',
+        end: '14:30',
         track: 'Avançado',
-        title: 'Front-end Performance',
-        speaker: 'Mariana Oliveira',
+        title: 'Docker Offload: To the Cloud and Beyond',
+        speaker: 'Juliana Conde',
     },
     {
-        start: '14:20',
-        end: '15:10',
+        start: '13:40',
+        end: '14:30',
         track: 'Carreiras',
-        title: 'Inteligência Artificial na Prática',
-        speaker: 'André Barbosa',
+        title: 'Work-life Balance em Carreiras Globais',
+        speaker: 'Nicole Barra',
+    },
+    {
+        start: '13:40',
+        end: '15:20',
+        track: 'Workshop',
+        title: 'Arquitetura Frontend Moderna: Sistemas Clean, Escaláveis e Sólidos',
+        speaker: 'Mariana Mendonça',
     },
     {
         start: '14:30',
         end: '15:20',
-        track: 'WTM',
-        title: 'UX/UI Design Essentials',
-        speaker: 'Camila Ferreira',
-    },
-    {
-        start: '14:40',
-        end: '15:30',
-        track: 'Workshop',
-        title: 'Next.js Deep Dive',
-        speaker: 'Paulo Silva',
-    },
-    {
-        start: '15:00',
-        end: '15:50',
         track: 'Iniciante',
-        title: 'Introdução ao React',
-        speaker: 'Juliana Rocha',
+        title: 'Vamos falar de Inteligência Artificial? Desenvolvendo Apps Inteligentes com Flutter e Gemini',
+        speaker: 'Toshi Ossada',
+    },
+    {
+        start: '14:30',
+        end: '15:20',
+        track: 'Avançado',
+        title: 'BigQuery Advanced',
+        speaker: 'Alisson Rosa',
+    },
+    {
+        start: '14:30',
+        end: '15:20',
+        track: 'Carreiras',
+        title: 'De Dev a Tech Manager: Coisas que aprendi nessa jornada',
+        speaker: 'Diego Borges Ferreira',
+    },
+    {
+        start: '15:20',
+        end: '16:10',
+        track: 'Iniciante',
+        title: 'A Mentalidade do desenvolvedor Secure-First',
+        speaker: 'Pedro Rosemberg',
+    },
+    {
+        start: '15:20',
+        end: '16:10',
+        track: 'Avançado',
+        title: 'Arquitetura Sob Demanda: Construindo um sistema do zero',
+        speaker: 'Arthur e Arthur',
+    },
+    {
+        start: '15:20',
+        end: '16:10',
+        track: 'Carreiras',
+        title: 'Storytelling Estratégico: Como mostrar seu trabalho com intenção e gerar impacto',
+        speaker: 'Júlia Vasconcelos',
+    },
+    {
+        start: '16:10',
+        end: '16:30',
+        title: 'Encerramento + Sorteios + Foto oficial',
+    },
+    {
+        start: '16:30',
+        end: '17:30',
+        title: 'Happy Hour',
     },
 ];
 
@@ -238,7 +186,7 @@ export default function Schedule() {
 
     const filteredData = useMemo(() => {
         if (filter === 'all') return sortedData;
-        return sortedData.filter((item) => item.track === filter);
+        return sortedData.filter((item) => item.track === filter || !item.track);
     }, [filter, sortedData]);
 
     return (
@@ -292,41 +240,51 @@ export default function Schedule() {
                         {filteredData.map((item, idx) => (
                             <tr
                                 key={idx}
-                                className="border-t border-gray-200 even:bg-white odd:bg-[#FAFAFC]"
+                                className={`border-t border-gray-200 even:bg-white odd:bg-[#FAFAFC]${!item.track ? ' bg-gradient-to-r from-google-blue/20 to-google-green/20 border-white' : ''}`}
                             >
-                                <td className="px-3 py-5 align-center whitespace-nowrap">
+                                <td
+                                    className={`px-3 align-center whitespace-nowrap${!item.track ? ' py-2' : 'py-5'}`}
+                                >
                                     <div className="font-bold text-base text-gray-900">
                                         {item.start}
                                     </div>
                                     <div className="text-gray-500">{item.end}</div>
                                 </td>
 
-                                <td className="px-1 md:px-3 py-5 align-center">
-                                    <div
-                                        style={{
-                                            backgroundColor: String(
-                                                tracks.find((t) => t.name === item.track)?.color ??
-                                                    '#ccc'
-                                            ),
-                                        }}
-                                        className="text-center bg-[#ccc] rounded-full text-white md:px-6 md:py-1 text-sm md:text-base max-w-36"
-                                    >
-                                        {item.track}
-                                    </div>
-                                </td>
-
-                                <td className="px-3 py-5 align-center">
-                                    <div className="font-normal text-sm md:text-base text-gray-900">
-                                        {item.title}
-                                    </div>
-                                    <div className="text-gray-500 text-sm md:hidden mt-1">
-                                        {item.speaker}
-                                    </div>
-                                </td>
-
-                                <td className="px-3 py-5 align-center text-gray-500 hidden md:table-cell">
-                                    {item.speaker}
-                                </td>
+                                {item.track ? (
+                                    <>
+                                        <td className="px-1 md:px-3 py-5 align-center">
+                                            <div
+                                                style={{
+                                                    backgroundColor: String(
+                                                        tracks.find((t) => t.name === item.track)
+                                                            ?.color ?? '#ccc'
+                                                    ),
+                                                }}
+                                                className="text-center bg-[#ccc] rounded-full text-white md:px-6 md:py-1 text-sm md:text-base max-w-36"
+                                            >
+                                                {item.track}
+                                            </div>
+                                        </td>
+                                        <td className="px-3 py-5 align-center">
+                                            <div className="font-normal text-sm md:text-base text-gray-900">
+                                                {item.title}
+                                            </div>
+                                            <div className="text-gray-500 text-sm md:hidden mt-1">
+                                                {item.speaker}
+                                            </div>
+                                        </td>
+                                        <td className="px-3 py-5 align-center text-gray-500 hidden md:table-cell">
+                                            {item.speaker}
+                                        </td>
+                                    </>
+                                ) : (
+                                    <td colSpan={3} className="px-3 py-2 align-center">
+                                        <div className="font-bold text-sm  md:text-base text-gray-800">
+                                            {item.title}
+                                        </div>
+                                    </td>
+                                )}
                             </tr>
                         ))}
                     </tbody>
