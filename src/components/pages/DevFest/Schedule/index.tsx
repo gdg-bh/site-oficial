@@ -225,6 +225,7 @@ const tracks = [
     { name: 'Avançado', color: '#6AA84F' },
     { name: 'Carreiras', color: '#BE60DC' },
     { name: 'WTM', color: '#FF5858' },
+    { name: 'Onfly', color: '#009EFB' },
     { name: 'Workshop', color: '#FF9900' },
 ];
 

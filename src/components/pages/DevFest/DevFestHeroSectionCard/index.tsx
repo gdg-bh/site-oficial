@@ -22,7 +22,7 @@ export function DevFestHeroSectionCard() {
             <a
                 href="#"
                 target="_blank"
-                className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft"
+                className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft"
             >
                 Garantir ingresso
             </a>

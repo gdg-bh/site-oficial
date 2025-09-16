@@ -5,8 +5,8 @@ import { EventInformationCard } from '../../components/pages/DevFest/EventInform
 import Speakers from '../../components/pages/DevFest/Speakers';
 import Schedule from '../../components/pages/DevFest/Schedule';
 import Sponsors from '../../components/pages/DevFest/Sponsors';
-import { Hero } from '../../components/common/Hero';
-import { SectionTitle } from '../../components/common/SectionTitle';
+import { Hero } from '../../components/Common/Hero';
+import { SectionTitle } from '../../components/Common/SectionTitle';
 
 export function DevFest() {
     return (
@@ -16,14 +16,14 @@ export function DevFest() {
             <section className="bg-white py-20">
                 <SectionTitle text="O que é o" highlight="DevFest" />
                 <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                    O DevFest é uma conferência anual organizada por comunidades do Google Developer
-                    Groups (GDG) ao redor do mundo. Cada edição é única, criada por organizadores
-                    locais para atender às necessidades de suas comunidades, mas todas compartilham
-                    o mesmo propósito: oferecer aprendizado, conexão e inspiração. O DevFest reúne
-                    desenvolvedores, profissionais de tecnologia e estudantes em um ambiente
-                    inclusivo, com palestras, workshops e momentos de networking, explorando desde
-                    as tecnologias mais recentes do Google até tendências globais do mercado de
-                    tecnologia.
+                    O <strong>DevFest</strong> é uma conferência anual organizada por comunidades do
+                    Google Developer Groups (GDG) ao redor do mundo. Cada edição é única, criada por
+                    organizadores locais para atender às necessidades de suas comunidades, mas todas
+                    compartilham o mesmo propósito: oferecer aprendizado, conexão e inspiração. O
+                    DevFest reúne desenvolvedores, profissionais de tecnologia e estudantes em um
+                    ambiente inclusivo, com palestras, workshops e momentos de networking,
+                    explorando desde as tecnologias mais recentes do Google até tendências globais
+                    do mercado de tecnologia.
                 </p>
             </section>
             <section className="flex flex-col xl:flex-row items-center py-24 xl:p-32 justify-center gap-12 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF]">
@@ -36,7 +36,7 @@ export function DevFest() {
                     <EventInformationCard icon={MapPin}>
                         08 de Novembro de 2025
                     </EventInformationCard>
-                    <EventInformationCard icon={Clock}>às 08:30</EventInformationCard>
+                    <EventInformationCard icon={Clock}>8:30 às 17:30</EventInformationCard>
                 </div>
                 <div className="w-80 h-48 md:w-[450px] md:h-[320px] xl:w-[672px] xl:h-[342px] bg-white border-[11px] border-white rounded-[32px]">
                     <iframe
@@ -69,8 +69,10 @@ export function DevFest() {
             <section className="bg-[#F7F9FB] py-20 overflow-hidden">
                 <SectionTitle highlight="Patrocinadores" />
                 <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
+                    {/*
                     Temos orgulho de fazer parceria com líderes do setor que compartilham nossa
                     visão de promover o crescimento dos desenvolvedores
+                    */}
                 </p>
                 <Sponsors />
             </section>
@@ -79,12 +81,12 @@ export function DevFest() {
                     Seja um Patrocinador
                 </h1>
                 <p className="text-subtitle-color font-normal text-sm w-4/5 md:w-1/2 mx-auto mb-8">
-                    Junte-se à nossa comunidade de parceiros e ajude-nos a criar um impacto
-                    significativo no ecossistema de desenvolvedores. Alcance milhares de
-                    desenvolvedores apaixonados e entusiastas de tecnologia.
+                    Interessado em se tornar um patrocinador? Entre em contato conosco pelo e-mail
+                    gdgbhz@gmail.com para saber mais sobre as oportunidades de parceria e como sua
+                    empresa pode se envolver.
                 </p>
                 <a
-                    href="#"
+                    href="mailto:gdgbhz@gmail.com"
                     target="_blank"
                     className="bg-google-blue hover:bg-blue-600 outline-none text-white px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft cursor-pointer"
                 >
