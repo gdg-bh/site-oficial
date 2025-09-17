@@ -1,12 +1,11 @@
 import ContinuousSlider from '../../../Common/ContinuousSlider';
 
-import devfest from '../../../../assets/logos/logo-devfest-bh.png';
 import lucralize from '../../../../assets/logos/logo-lucralize.png';
 import pucminas from '../../../../assets/logos/logo-puc-minas.png';
 import wtm from '../../../../assets/logos/logo-wtm-bh.png';
 
 export default function Sponsors() {
-    const images = [devfest, wtm, lucralize, pucminas, devfest, wtm, lucralize, pucminas];
+    const images = [wtm, lucralize, pucminas, wtm, lucralize, pucminas];
 
     return (
         <ContinuousSlider>

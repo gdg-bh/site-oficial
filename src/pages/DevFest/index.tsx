@@ -61,8 +61,7 @@ export function DevFest() {
             <section className="bg-white py-20 overflow-hidden">
                 <SectionTitle highlight="Agenda" />
                 <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                    Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
-                    crescimento e o compartilhamento de conhecimento
+                    Confira o cronograma completo do evento.
                 </p>
                 <Schedule />
             </section>

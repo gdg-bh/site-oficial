@@ -22,31 +22,31 @@ export function Header() {
                     <nav className="hidden xl:flex items-center space-x-8">
                         <Link
                             to="/"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             O que é o GDG?
                         </Link>
                         <Link
                             to="/gdg-bh-meet"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             GDG BH Meet
                         </Link>
                         <Link
                             to="/build-with-ai"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             Build With AI
                         </Link>
                         <Link
                             to="/google-io-extended"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             Google I/O Extended
                         </Link>
                         <Link
                             to="/devfest"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             DevFest
                         </Link>
@@ -56,7 +56,7 @@ export function Header() {
                         <a
                             href="#"
                             target="_blank"
-                            className="bg-google-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 shadow-soft cursor-pointer"
+                            className="bg-google-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft cursor-pointer"
                         >
                             Garantir ingresso
                         </a>
@@ -66,7 +66,7 @@ export function Header() {
                         <a
                             href="#"
                             target="_blank"
-                            className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-medium transition-colors duration-200 shadow-soft text-sm whitespace-nowrap"
+                            className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft text-sm whitespace-nowrap"
                         >
                             Ingresso
                         </a>
@@ -105,35 +105,35 @@ export function Header() {
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
                             <Link
                                 to="/"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 O que é o GDG?
                             </Link>
                             <Link
                                 to="/gdg-bh-meet"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 GDG BH Meet
                             </Link>
                             <Link
                                 to="/build-with-ai"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Build With AI
                             </Link>
                             <Link
                                 to="/google-io-extended"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Google I/O Extended
                             </Link>
                             <Link
                                 to="/devfest"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-medium"
+                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 DevFest
