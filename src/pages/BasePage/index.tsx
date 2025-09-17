@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { Container } from '../../components/Common/Container';
-import { Footer } from '../../components/Common/Footer';
-import { Header } from '../../components/Common/Header';
+import { Container } from '../../components/common/Container';
+import { Footer } from '../../components/common/Footer';
+import { Header } from '../../components/common/Header';
 
 export function BasePage() {
     return (
