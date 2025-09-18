@@ -35,7 +35,7 @@ jobs:
          with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}'
-          projectId: 'seu-project-id-aqui'
+          projectId: 'gdg-website-ec183'
           channelId: live
          env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
@@ -46,6 +46,6 @@ jobs:
          with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}'
-          projectId: 'seu-project-id-aqui'
+          projectId: 'gdg-website-ec183'
          env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
