@@ -4,10 +4,11 @@ import arrowRight from '../../../assets/icons/ArrowRightBlue.svg';
 
 type CarouselSlotsProps = {
     count?: number;
+    viewCount?: number;
     children?: React.ReactNode;
 };
 
-export function Carousel({ count = 5, children }: CarouselSlotsProps) {
+export function Carousel({ count = 5, viewCount = 4, children }: CarouselSlotsProps) {
     const [index, setIndex] = useState<number>(0);
     const slotRef = useRef<HTMLDivElement | null>(null);
     const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -36,7 +37,7 @@ export function Carousel({ count = 5, children }: CarouselSlotsProps) {
     const next = () => {
         setIndex((i) => {
             if (windowWidth > 1280) {
-                return Math.min(count - 4, i + 1);
+                return Math.min(count - viewCount, i + 1);
             }
             if (windowWidth > 980) {
                 return Math.min(count - 3, i + 1);
@@ -88,7 +89,7 @@ export function Carousel({ count = 5, children }: CarouselSlotsProps) {
     return (
         <div className="relative w-full max-w-7xl mx-auto">
             <div className="relative p-4">
-                <div className="absolute top-[-60px] right-8 xl:right-0 flex items-center gap-6 z-20">
+                <div className="absolute top-[-60px] right-8 xl:right-0 flex items-center gap-6">
                     <button
                         onClick={prev}
                         disabled={index === 0}
@@ -102,7 +103,7 @@ export function Carousel({ count = 5, children }: CarouselSlotsProps) {
                         onClick={next}
                         disabled={
                             windowWidth > 1280
-                                ? index >= count - 4
+                                ? index >= count - viewCount
                                 : windowWidth > 980
                                   ? index >= count - 3
                                   : windowWidth > 768
@@ -128,7 +129,7 @@ export function Carousel({ count = 5, children }: CarouselSlotsProps) {
                         {Array.from({ length: count }).map((_, i) => (
                             <div
                                 key={i}
-                                className="flex-shrink-0 w-[280px] xl:basis-1/4"
+                                className={`flex-shrink-0 max-w-[100%] min-w-[280px] xl:basis-1/${viewCount}`}
                                 tabIndex={0}
                                 onKeyDown={handleKeyDown}
                                 ref={
