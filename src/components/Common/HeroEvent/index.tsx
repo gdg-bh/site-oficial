@@ -6,7 +6,7 @@ interface HeroProps {
     bgImage: string;
 }
 
-export function Hero({ title, location, bgImage }: HeroProps) {
+export function HeroEvent({ title, location, bgImage }: HeroProps) {
     return (
         <section
             className="relative w-full h-[550px] flex flex-col items-center justify-center bg-cover bg-center px-4"

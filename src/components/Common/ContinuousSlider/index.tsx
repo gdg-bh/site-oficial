@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function ContinuousSlider(props) {
+interface SliderProps {
+    children: any;
+}
+
+export default function ContinuousSlider({ children }: SliderProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [scrollWidth, setScrollWidth] = useState(0);
     const [duration, setDuration] = useState(40);
@@ -31,7 +35,7 @@ export default function ContinuousSlider(props) {
     }, []);
 
     const getRepeatedChildren = () => {
-        const childrenArray = Array.isArray(props.children) ? props.children : [props.children];
+        const childrenArray = Array.isArray(children) ? children : [children];
         let repeated: any[] = [];
         for (let i = 0; i < repeatCount; i++) {
             repeated = repeated.concat(childrenArray);

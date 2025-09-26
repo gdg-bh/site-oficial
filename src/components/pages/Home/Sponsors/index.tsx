@@ -10,13 +10,13 @@ export default function Sponsors() {
 
     return (
         <>
-            <section className="bg-[#F7F9FB] py-20 overflow-hidden">
-                <SectionTitle highlight="Patrocinadores" />
+            <section className="bg-[#FFF] py-20 overflow-hidden">
+                <SectionTitle text="Marcas que já" highlight="nos apoiaram" />
                 <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     {/*
-                    Temos orgulho de fazer parceria com líderes do setor que compartilham nossa
-                    visão de promover o crescimento dos desenvolvedores
-                    */}
+                Temos orgulho de fazer parceria com líderes do setor que compartilham nossa
+                visão de promover o crescimento dos desenvolvedores
+                */}
                 </p>
                 <ContinuousSlider>
                     {images.map((src, idx) => (
@@ -29,8 +29,8 @@ export default function Sponsors() {
                     ))}
                 </ContinuousSlider>
             </section>
-            <section>
-                <div className="mb-16 py-10 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] text-center w-full max-w-7xl  mx-auto rounded-xl">
+            <section className="bg-white pb-16">
+                <div className="py-10 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] text-center w-full max-w-7xl mx-auto rounded-xl">
                     <h1 className="text-google-blue font-semibold text-2xl text-center mb-5">
                         Seja um Patrocinador
                     </h1>

@@ -1,16 +1,13 @@
 import { Carousel } from '../../../Common/Carousel';
-import ProfileCard from '../ProfileCard';
+import ProfileCard from '../../DevFest/ProfileCard';
 
 import diegoBorges from '../../../../assets/palestrantes/Diego_Borges_Ferreira.png';
 import douglasAugusto from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
 import elianaLima from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
 import jorgeMauro from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
-// import nicoleBarra from '../../../../assets/palestrantes/Nicole_Barra.png';
-import rafaelRibeiro from '../../../../assets/palestrantes/Rafael_Ribeiro_Andrade.png';
-import toshiOsada from '../../../../assets/palestrantes/Toshi_Osada.png';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
-export default function Speakers() {
+export default function Crew() {
     //links: { linkedin: '#', instagram: '#', github: '#' },
 
     const speakers = [
@@ -19,7 +16,7 @@ export default function Speakers() {
             name: 'Diego Borges',
             role: 'Cargo',
             description: 'Empresa',
-            links: { linkedin: '#' },
+            links: { linkedin: 'aaaaa' },
         },
         {
             photoUrl: douglasAugusto,
@@ -42,29 +39,19 @@ export default function Speakers() {
             description: 'Empresa',
             links: { linkedin: '#' },
         },
-        {
-            photoUrl: rafaelRibeiro,
-            name: 'Rafael Ribeiro',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: '#' },
-        },
-        {
-            photoUrl: toshiOsada,
-            name: 'Toshi Osada',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: '#' },
-        },
     ];
 
     return (
-        <section className="bg-[#F7F9FB] py-20 overflow-hidden">
-            <SectionTitle highlight="Palestrantes" />
-            <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
+        <section className="mb-24 overflow-hidden">
+            <SectionTitle text="Time de" highlight="Organizadores" />
+            <p className="mx-auto w-10/12 lg:w-6/12 mb-10 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                 crescimento e o compartilhamento de conhecimento
             </p>
+            <img
+                className="h-[226px] mx-auto lg:w-10/12 mb-20 rounded rounded-xl"
+                src="https://picsum.photos/1000/300"
+            ></img>
             <Carousel count={speakers.length}>
                 {speakers.map((card, index) => (
                     <ProfileCard

@@ -89,7 +89,14 @@ export function Carousel({ count = 5, viewCount = 4, children }: CarouselSlotsPr
     return (
         <div className="relative w-full max-w-7xl mx-auto">
             <div className="relative p-4">
-                <div className="absolute top-[-60px] right-8 xl:right-0 flex items-center gap-6">
+                <div
+                    className="absolute top-[-60px] right-8 xl:right-0 flex items-center gap-6"
+                    style={
+                        windowWidth > 1200 && count <= viewCount && index == 0
+                            ? { display: 'none' }
+                            : {}
+                    }
+                >
                     <button
                         onClick={prev}
                         disabled={index === 0}
@@ -129,7 +136,8 @@ export function Carousel({ count = 5, viewCount = 4, children }: CarouselSlotsPr
                         {Array.from({ length: count }).map((_, i) => (
                             <div
                                 key={i}
-                                className={`flex-shrink-0 max-w-[100%] min-w-[280px] xl:basis-1/${viewCount}`}
+                                className={`flex-shrink-0 max-w-[100%] min-w-[280px]`}
+                                style={{ flexBasis: `${100 / viewCount}%` }}
                                 tabIndex={0}
                                 onKeyDown={handleKeyDown}
                                 ref={
