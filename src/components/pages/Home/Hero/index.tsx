@@ -19,7 +19,7 @@ export function Hero({ title, location, bgImage, text }: HeroProps) {
             <p className="font-normal text-2xl md:text-3xl text-center text-title-color drop-shadow-title mt-3 mb-6">
                 {location}
             </p>
-            <p className="font-normal text-xl text-center text-title-color">{text}</p>
+            <p className="font-normal text-xl text-center text-title-color lg:w-6/12">{text}</p>
 
             <HeroSectionCard />
         </section>

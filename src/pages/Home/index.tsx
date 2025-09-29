@@ -21,12 +21,12 @@ export function Home() {
             <Impact />
             <Crew />
             <About />
-            <PastEvents />
+            {/* <PastEvents /> */}
             <HighlightSection
                 title="Save the Date!"
-                text="O GDG DevFest 2025 está chegando. Não perca o nosso maior evento do ano!"
-                btnText="Garantir ingresso"
-                btnLink="mailto:gdgbhz@gmail.com"
+                text="O DevFest 2025 está chegando. Não perca o nosso maior evento do ano!"
+                btnText="Saiba mais"
+                btnLink="/devfest"
             />
             <Sponsors />
             <Ideas />

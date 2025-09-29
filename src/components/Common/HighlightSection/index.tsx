@@ -13,7 +13,6 @@ export default function HighlightSection({ title, text, btnText, btnLink }: high
                 <p className="font-normal text-lg w-4/5 md:w-1/2 mx-auto mb-8">{text}</p>
                 <a
                     href={btnLink}
-                    target="_blank"
                     className="bg-white hover:bg-grey outline-none text-black px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft cursor-pointer"
                 >
                     {btnText}

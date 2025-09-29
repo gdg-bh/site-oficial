@@ -1,10 +1,11 @@
 import { Carousel } from '../../../Common/Carousel';
 import ProfileCard from '../../DevFest/ProfileCard';
 
-import diegoBorges from '../../../../assets/palestrantes/Diego_Borges_Ferreira.png';
-import douglasAugusto from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
-import elianaLima from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
-import jorgeMauro from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
+import organizers from '../../../../assets/organizers/organizers.jpg';
+import fernanda from '../../../../assets/organizers/Fernanda.jpeg';
+import guilherme from '../../../../assets/organizers/Guilherme.jpg';
+import paloma from '../../../../assets/organizers/Paloma.jpg';
+import rayan from '../../../../assets/organizers/Rayan.jpeg';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Crew() {
@@ -12,32 +13,32 @@ export default function Crew() {
 
     const speakers = [
         {
-            photoUrl: diegoBorges,
-            name: 'Diego Borges',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: 'aaaaa' },
+            photoUrl: fernanda,
+            name: 'Fernanda Rezende',
+            role: 'Product Manager',
+            description: 'Organizadora GDG BH | Embaixadora Women Techmakers',
+            links: { linkedin: 'https://www.linkedin.com/in/ferezendee/' },
         },
         {
-            photoUrl: douglasAugusto,
-            name: 'Douglas Augusto',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: '#' },
+            photoUrl: guilherme,
+            name: 'Guilherme Radicchi',
+            role: 'Software Developer',
+            description: 'Organizador GDG BH',
+            links: { linkedin: 'https://www.linkedin.com/in/guilhermeradicchi/' },
         },
         {
-            photoUrl: elianaLima,
-            name: 'Eliana Lima',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: '#' },
+            photoUrl: paloma,
+            name: 'Paloma Rizzon',
+            role: 'Frontend Developer',
+            description: 'Organizadora GDG BH',
+            links: { linkedin: 'https://www.linkedin.com/in/palomarizzon/', github: 'https://github.com/palomarizzon' },
         },
         {
-            photoUrl: jorgeMauro,
-            name: 'Jorge Mauro',
-            role: 'Cargo',
-            description: 'Empresa',
-            links: { linkedin: '#' },
+            photoUrl: rayan,
+            name: 'Rayan Costa',
+            role: 'GRC Analyst',
+            description: 'Organizador GDG BH',
+            links: { linkedin: 'https://www.linkedin.com/in/rayancrodrigues/' },
         },
     ];
 
@@ -49,8 +50,8 @@ export default function Crew() {
                 crescimento e o compartilhamento de conhecimento
             </p>
             <img
-                className="h-[226px] mx-auto lg:w-10/12 mb-20 rounded rounded-xl"
-                src="https://picsum.photos/1000/300"
+                className="max-h-[400px] object-cover object-top mx-auto lg:w-10/12 mb-20 rounded rounded-xl"
+                src={organizers}
             ></img>
             <Carousel count={speakers.length}>
                 {speakers.map((card, index) => (

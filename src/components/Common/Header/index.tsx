@@ -21,12 +21,12 @@ export function Header() {
 
                     <nav className="hidden xl:flex items-center space-x-8">
                         <Link
-                            to="/"
+                            to="#about"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             O que é o GDG?
                         </Link>
-                        <Link
+                        {/* <Link
                             to="/gdg-bh-meet"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
@@ -43,7 +43,7 @@ export function Header() {
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             Google I/O Extended
-                        </Link>
+                        </Link> */}
                         <Link
                             to="/devfest"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
@@ -52,7 +52,7 @@ export function Header() {
                         </Link>
                     </nav>
 
-                    <div className="hidden xl:flex items-center">
+                    {/* <div className="hidden xl:flex items-center">
                         <a
                             href="#"
                             target="_blank"
@@ -60,16 +60,16 @@ export function Header() {
                         >
                             Garantir ingresso
                         </a>
-                    </div>
+                    </div> */}
 
                     <div className="xl:hidden flex items-center space-x-3">
-                        <a
+                        {/* <a
                             href="#"
                             target="_blank"
                             className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft text-sm whitespace-nowrap"
                         >
                             Ingresso
-                        </a>
+                        </a> */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 p-1"
@@ -110,7 +110,7 @@ export function Header() {
                             >
                                 O que é o GDG?
                             </Link>
-                            <Link
+                            {/* <Link
                                 to="/gdg-bh-meet"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
@@ -130,7 +130,7 @@ export function Header() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Google I/O Extended
-                            </Link>
+                            </Link> */}
                             <Link
                                 to="/devfest"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"

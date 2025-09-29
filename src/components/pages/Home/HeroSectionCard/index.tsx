@@ -17,16 +17,15 @@ export function HeroSectionCard() {
             </div>
 
             <div className="flex flex-col md:flex-row w-[100%] gap-4">
-                <a
+                {/* <a
                     href="#"
                     target="_blank"
                     className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white text-center px-3 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft"
                 >
                     Garantir ingresso
-                </a>
+                </a> */}
                 <a
-                    href="#"
-                    target="_blank"
+                    href="/devfest"
                     className="w-full bg-white hover:bg-gray outline-none text-black text-center px-3 py-3 border border-black/20 rounded-lg font-normal transition-colors duration-200 shadow-soft"
                 >
                     Saiba mais

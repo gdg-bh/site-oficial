@@ -7,44 +7,12 @@ export default function PastEvents() {
 
     const events = [
         {
-            name: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet',
-            date: 'Nov 2022',
+            name: 'DevFest',
+            description: 'O DevFest é uma conferência anual organizada por comunidades do Google Developer Groups (GDG) ao redor do mundo.',
+            date: '08/11/2025',
             participants: '800+',
-            highlights: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum'],
-            link: '#',
-        },
-        {
-            name: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet',
-            date: 'Fev 2023',
-            participants: '800+',
-            highlights: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum'],
-            link: '#',
-        },
-        {
-            name: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet',
-            date: 'Mar 2023',
-            participants: '800+',
-            highlights: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum'],
-            link: '#',
-        },
-        {
-            name: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet',
-            date: 'Abr 2024',
-            participants: '800+',
-            highlights: ['lorem ipsum', 'lorem ipsum', 'lorem ipsum', 'lorem ipsum'],
-            link: '#',
-        },
-        {
-            name: 'Lorem ipsum',
-            description: 'Lorem ipsum dolor sit amet',
-            date: 'Mai 2025',
-            participants: '800+',
-            highlights: ['lorem ipsum', 'lorem ipsum'],
-            link: '#',
+            highlights: ['6 trilhas', '30+ horas de conteúdo', 'lorem ipsum'],
+            link: '/devfest',
         },
     ];
 
@@ -53,7 +21,7 @@ export default function PastEvents() {
             <SectionTitle text="Eventos" highlight="Passados" />
             <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                 Explore nossos eventos anteriores e veja as experiências incríveis que criamos para
-                nossa comunidade
+                nossa comunidade.
             </p>
 
             <Carousel count={events.length} viewCount={3}>

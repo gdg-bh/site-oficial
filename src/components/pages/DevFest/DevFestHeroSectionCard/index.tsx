@@ -7,7 +7,7 @@ export function DevFestHeroSectionCard() {
                 <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-google-blue" />
                     <span>
-                        08 de Novembro de 2025 <br /> de 08:30 às 17:30h
+                        08 de Novembro de 2025 <br /> de 08:30 às 17:30
                     </span>
                 </div>
                 <div className="flex items-center gap-2">

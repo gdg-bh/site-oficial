@@ -2,11 +2,11 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function About() {
     return (
-        <section className="mx-auto w-10/12 lg:w-12/12 bg-white rounded rounded-xl px-3 px-lg-8 py-12 mb-16">
+        <section id="about" className="mx-auto w-10/12 lg:w-12/12 bg-white rounded rounded-xl px-3 px-lg-8 py-12 mb-16">
             <SectionTitle text="Sobre o" highlight="GDG" />
             <p className="mx-auto w-12/12 lg:w-6/12 mb-10 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
-                crescimento e o compartilhamento de conhecimento
+                crescimento e o compartilhamento de conhecimento.
             </p>
             <div className="flex flex-col md:flex-row px-4 md:px-12 gap-8">
                 <div className="p-4 flex-1">
