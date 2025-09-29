@@ -7,7 +7,7 @@ export function DevFestHeroSectionCard() {
                 <div className="flex items-center gap-2">
                     <Calendar className="w-5 h-5 text-google-blue" />
                     <span>
-                        08 de Novembro de 2025 <br /> de 08:30 às 17:30h
+                        08 de Novembro de 2025 <br /> de 08:30 às 17:30
                     </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -20,11 +20,11 @@ export function DevFestHeroSectionCard() {
             </div>
 
             <a
-                href="#"
-                target="_blank"
-                className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft"
+            href="#"
+            target="_blank"
+            className="w-full bg-google-blue text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft pointer-events-none opacity-50 cursor-not-allowed"
             >
-                Garantir ingresso
+            Ingressos disponíveis em breve
             </a>
         </div>
     );

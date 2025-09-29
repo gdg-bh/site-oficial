@@ -2,13 +2,15 @@ import instagramIcon from '../../../../assets/icons/InstagramGray.svg';
 import linkedinIcon from '../../../../assets/icons/LinkedinGray.svg';
 import githubIcon from '../../../../assets/icons/GithubGray.svg';
 
-export default function ProfileCard({
-    photoUrl = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
-    name = 'Nome Sobrenome',
-    role = 'Cargo',
-    description = 'Breve descrição sobre a pessoa: interesses, skills ou uma frase curta que resuma o profissional.',
-    links = { linkedin: '#', instagram: '#', github: '#' },
-}) {
+interface ProfileProps {
+    photoUrl: string;
+    name: string;
+    role: string;
+    description: string;
+    links: any;
+}
+
+export default function ProfileCard({ photoUrl, name, role, description, links }: ProfileProps) {
     return (
         <div className="max-w-sm bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center h-full">
             <img

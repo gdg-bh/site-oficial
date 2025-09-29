@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ContinuousSlider(props: any) {
+interface SliderProps {
+    children: any;
+}
+
+export default function ContinuousSlider({ children }: SliderProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const [scrollWidth, setScrollWidth] = useState(0);
     const [duration, setDuration] = useState(40);
@@ -32,9 +35,7 @@ export default function ContinuousSlider(props: any) {
     }, []);
 
     const getRepeatedChildren = () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const childrenArray: any = Array.isArray(props.children) ? props.children : [props.children];
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const childrenArray = Array.isArray(children) ? children : [children];
         let repeated: any[] = [];
         for (let i = 0; i < repeatCount; i++) {
             repeated = repeated.concat(childrenArray);
