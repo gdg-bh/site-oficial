@@ -2,11 +2,11 @@ import ContinuousSlider from '../../../Common/ContinuousSlider';
 
 import lucralize from '../../../../assets/logos/logo-lucralize.png';
 import pucminas from '../../../../assets/logos/logo-puc-minas.png';
-import wtm from '../../../../assets/logos/logo-wtm-bh.png';
+import hotel from '../../../../assets/logos/logo-wtm-bh.png';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Sponsors() {
-    const images = [wtm, lucralize, pucminas, wtm, lucralize, pucminas];
+    const images = [pucminas, lucralize, hotel, pucminas, lucralize, hotel];
 
     return (
         <>

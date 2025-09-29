@@ -47,7 +47,7 @@ export default function Crew() {
             <SectionTitle text="Time de" highlight="Organizadores" />
             <p className="mx-auto w-10/12 lg:w-6/12 mb-10 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
-                crescimento e o compartilhamento de conhecimento
+                crescimento e o compartilhamento de conhecimento.
             </p>
             <img
                 className="max-h-[400px] object-cover object-top mx-auto lg:w-10/12 mb-20 rounded rounded-xl"

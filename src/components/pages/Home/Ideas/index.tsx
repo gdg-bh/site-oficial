@@ -14,13 +14,13 @@ export default function Ideas() {
         },
         {
             icon: sparkles,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            title: 'Sugestões de Tópicos',
+            text: 'Sugira tópicos e tecnologias que você gostaria de aprender',
         },
         {
             icon: light,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            title: 'Ideias da Comunidade',
+            text: 'Compartilhe ideias para iniciativas e colaboração com a comunidade',
         },
     ];
     return (

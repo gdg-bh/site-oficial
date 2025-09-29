@@ -19,12 +19,9 @@ export default function About() {
                     </p>
                 </div>
                 <div className="p-4 flex-1">
-                    <h3 className="text-google-blue text-base font-medium">Nossa missão</h3>
+                    <h3 className="text-google-blue text-base font-medium">O que fazemos</h3>
                     <p className="text-sm text-gray-600">
-                        Os Grupos de Desenvolvedores do Google (GDGs) são organizações voltadas para
-                        a comunidade que criam espaços para desenvolvedores aprenderem,
-                        compartilharem e se conectarem. Promovemos a inovação por meio da educação,
-                        do compartilhamento de conhecimento e do networking.
+                        Organizamos workshops, palestras técnicas e eventos de networking. Nosso foco abrange desenvolvimento web, aplicativos mobile, computação em nuvem, IA/ML e tecnologias emergentes.
                     </p>
                 </div>
             </div>

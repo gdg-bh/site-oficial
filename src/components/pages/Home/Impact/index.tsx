@@ -1,35 +1,36 @@
 import { SectionTitle } from '../../../Common/SectionTitle';
 import InfoCard from '../../../Common/InfoCard';
 
-import chatCircle from '../../../../assets/icons/ChatCircleTextBlue.svg';
-import sparkles from '../../../../assets/icons/SparkleBLue.svg';
-import light from '../../../../assets/icons/LightbulbBlue.svg';
+import people from '../../../../assets/icons/People.svg';
+import rocket from '../../../../assets/icons/RocketLaunch.svg';
+import building from '../../../../assets/icons/Building.svg';
+import medal from '../../../../assets/icons/Medal.svg';
 
 export default function Impact() {
     const cards = [
         {
-            icon: chatCircle,
-            number: 88,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            icon: people,
+            number: 4110,
+            title: 'Pessoas',
+            text: 'Participantes já passaram pelos nossos eventos',
         },
         {
-            icon: sparkles,
-            number: 88,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            icon: rocket,
+            number: 20,
+            title: 'Eventos Realizados',
+            text: 'Workshops, palestras e eventos de networking',
         },
         {
-            icon: light,
-            number: 88,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            icon: building,
+            number: 18,
+            title: 'Empresas Parceiras',
+            text: 'Apoiando o crescimento da nossa comunidade',
         },
         {
-            icon: light,
-            number: 88,
-            title: 'Feedback do evento',
-            text: 'Compartilhe sua experiência e ajude-nos a melhorar eventos futuros',
+            icon: medal,
+            number: 3,
+            title: 'Anos de impacto na comunidade',
+            text: 'Construindo conexões desde 2022 com a organização atual',
         },
     ];
     return (

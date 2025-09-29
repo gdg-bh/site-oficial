@@ -20,11 +20,11 @@ export function DevFestHeroSectionCard() {
             </div>
 
             <a
-                href="#"
-                target="_blank"
-                className="w-full bg-google-blue hover:bg-blue-600 outline-none text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft"
+            href="#"
+            target="_blank"
+            className="w-full bg-google-blue text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft pointer-events-none opacity-50 cursor-not-allowed"
             >
-                Garantir ingresso
+            Ingressos disponíveis em breve
             </a>
         </div>
     );

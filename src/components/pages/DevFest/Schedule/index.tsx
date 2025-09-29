@@ -83,7 +83,7 @@ const scheduleData = [
         speaker: 'Rafael Ribeiro Andrade',
     },
     {
-        start: '13:30',
+        start: '12:30',
         end: '13:40',
         title: 'Almoço',
     },
