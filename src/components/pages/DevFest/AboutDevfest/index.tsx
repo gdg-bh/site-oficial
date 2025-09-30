@@ -21,9 +21,8 @@ export default function AboutDevfest() {
             <section className="flex flex-col xl:flex-row items-center py-24 xl:p-32 justify-center gap-12 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF]">
                 <div className="flex flex-col gap-6">
                     <EventInformationCard icon={Calendar}>
-                        Belo Horizonte - MG <br />
-                        PUC Minas <br />
-                        Lourdes Av. Brasil, 2023 - Funcionários
+                        Puc Minas - Lourdes <br />
+                        Av. Brasil, 2023 - Funcionários
                     </EventInformationCard>
                     <EventInformationCard icon={MapPin}>
                         08 de Novembro de 2025

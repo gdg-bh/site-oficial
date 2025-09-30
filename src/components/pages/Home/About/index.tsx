@@ -5,23 +5,19 @@ export default function About() {
         <section id="about" className="mx-auto w-10/12 lg:w-12/12 bg-white rounded rounded-xl px-3 px-lg-8 py-12 mb-16">
             <SectionTitle text="Sobre o" highlight="GDG" />
             <p className="mx-auto w-12/12 lg:w-6/12 mb-10 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
-                crescimento e o compartilhamento de conhecimento.
+                O GDG (Google Developer Groups) é uma comunidade global de desenvolvedores de tecnologia interessados em aprender e se conectar.
             </p>
             <div className="flex flex-col md:flex-row px-4 md:px-12 gap-8">
                 <div className="p-4 flex-1">
                     <h3 className="text-google-blue text-base font-medium">Nossa missão</h3>
                     <p className="text-sm text-gray-600">
-                        Os Grupos de Desenvolvedores do Google (GDGs) são organizações voltadas para
-                        a comunidade que criam espaços para desenvolvedores aprenderem,
-                        compartilharem e se conectarem. Promovemos a inovação por meio da educação,
-                        do compartilhamento de conhecimento e do networking.
+                        Fortalecer a comunidade de tecnologia em Belo Horizonte, promovendo aprendizado contínuo, diversidade e colaboração por meio de eventos, conexões e iniciativas que inspiram pessoas a crescerem juntas e transformarem a sociedade com tecnologia.
                     </p>
                 </div>
                 <div className="p-4 flex-1">
                     <h3 className="text-google-blue text-base font-medium">O que fazemos</h3>
                     <p className="text-sm text-gray-600">
-                        Organizamos workshops, palestras técnicas e eventos de networking. Nosso foco abrange desenvolvimento web, aplicativos mobile, computação em nuvem, IA/ML e tecnologias emergentes.
+                        No GDG Belo Horizonte, criamos espaços para aprendizado, troca de experiências e conexões dentro da comunidade de tecnologia. Organizamos eventos como meetups, workshops e grandes eventos, trazendo conteúdos técnicos, histórias inspiradoras e oportunidades de networking.
                     </p>
                 </div>
             </div>
