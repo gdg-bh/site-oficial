@@ -19,6 +19,7 @@ import NicoleBarra from '../../../../assets/palestrantes/Nicole_Barra.png';
 import PedroRosemberg from '../../../../assets/palestrantes/Pedro_Rosemberg.jpeg';
 import RafaelRibeiroAndrade from '../../../../assets/palestrantes/Rafael_Ribeiro_Andrade.png';
 import ToshiOssada from '../../../../assets/palestrantes/Toshi_Ossada.png';
+import VictorPugliese from '../../../../assets/palestrantes/Victor_Pugliese.jpeg';
 import VictoriaBoaventura from '../../../../assets/palestrantes/Victoria_Boaventura.jpg';
 import YuriFernandes from '../../../../assets/palestrantes/Yuri_Fernandes.jpeg';
 
@@ -153,6 +154,13 @@ export default function Speakers() {
             role: 'Google Developer Expert',
             description: 'Vamos falar de Inteligência Artificial? Desenvolvendo Apps Inteligentes com Flutter e Gemini',
             links: { linkedin: 'https://www.linkedin.com/in/toshiossada/' },
+        },
+        {
+            photoUrl: VictorPugliese,
+            name: 'Victor Pugliese',
+            role: 'Google Developer Expert',
+            description: 'A Era Gemma: Desvendando a Família de Modelos Abertos do Google',
+            links: { linkedin: 'https://www.linkedin.com/in/victorpug-exe/' },
         },
         {
             photoUrl: VictoriaBoaventura,
