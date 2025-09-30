@@ -22,9 +22,11 @@ export function HeroEvent({ title, location, bgImage }: HeroProps) {
             <DevFestHeroSectionCard />
 
             <svg
-                className="w-[100vw] absolute bottom-[-5px]"
+                className="w-[300%] lg:w-[100vw] absolute bottom-[-5px]"
+                preserveAspectRatio="none"
                 width="1592"
                 height="130"
+                viewBox="0 0 1592 130"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
