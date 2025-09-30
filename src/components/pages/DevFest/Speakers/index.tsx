@@ -229,6 +229,7 @@ export default function Speakers() {
     return (
         <section className="bg-[#F7F9FB] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
+            <div className="mb-28"></div>
             {/* <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                 crescimento e o compartilhamento de conhecimento.

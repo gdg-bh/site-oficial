@@ -1,4 +1,4 @@
-import devfestBg from '../../assets/pages/devfest/bg.png';
+import devfestBg from '../../assets/pages/home/bg.png';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import Speakers from '../../components/pages/DevFest/Speakers';
 import Schedule from '../../components/pages/DevFest/Schedule';

@@ -21,7 +21,7 @@ export function Header() {
 
                     <nav className="hidden xl:flex items-center space-x-8">
                         <a
-                            href="#about"
+                            href="https://gdgbh.com.br/#about"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             O que é o GDG?
@@ -104,7 +104,7 @@ export function Header() {
                     <div className="xl:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
                             <a
-                                href="#about"
+                                href="https://gdgbh.com.br/#about"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >

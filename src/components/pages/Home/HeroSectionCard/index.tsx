@@ -2,7 +2,7 @@ import { Calendar, MapPin } from 'lucide-react';
 
 export function HeroSectionCard() {
     return (
-        <div className="mt-8 bg-white rounded-2xl drop-shadow-title px-6 py-6 md:px-10 md:py-8 flex flex-col items-center w-[100%] max-w-[480px]">
+        <div className="mt-8 bg-white rounded-2xl drop-shadow-title px-6 py-6 md:px-10 md:py-8 flex flex-col items-center w-[100%] max-w-[480px] z-[1]">
             <span>Próximo evento</span>
             <h3 className="text-google-blue text-xl font-bold mb-4">DevFest Belo Horizonte</h3>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 w-full text-google-gray text-sm md:text-base mb-4">

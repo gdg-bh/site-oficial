@@ -1,8 +1,8 @@
 import Sponsors from '../../components/pages/Home/Sponsors';
 import Ideas from '../../components/pages/Home/Ideas';
-import PastEvents from '../../components/pages/Home/PastEvents';
+// import PastEvents from '../../components/pages/Home/PastEvents';
 
-import devfestBg from '../../assets/pages/devfest/bg.png';
+import heroBG from '../../assets/pages/home/bg.png';
 import { Hero } from '../../components/pages/Home/Hero';
 import Impact from '../../components/pages/Home/Impact';
 import Crew from '../../components/pages/Home/Crew';
@@ -16,7 +16,7 @@ export function Home() {
                 title="Google Develorper Group"
                 location="Belo Horizonte"
                 text="Aprenda, conecte-se e evolua com uma comunidade inclusiva de desenvolvedores apaixonados por tecnologia."
-                bgImage={devfestBg}
+                bgImage={heroBG}
             />
             <Impact />
             <Crew />

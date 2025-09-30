@@ -22,7 +22,7 @@ export default function AboutDevfest() {
                 <div className="flex flex-col gap-6">
                     <EventInformationCard icon={Calendar}>
                         Puc Minas - Lourdes <br />
-                        Av. Brasil, 2023 - Funcionários
+                        Av. Brasil, 2023
                     </EventInformationCard>
                     <EventInformationCard icon={MapPin}>
                         08 de Novembro de 2025
