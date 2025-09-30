@@ -1,6 +1,6 @@
 import Sponsors from '../../components/pages/Home/Sponsors';
 import Ideas from '../../components/pages/Home/Ideas';
-import PastEvents from '../../components/pages/Home/PastEvents';
+// import PastEvents from '../../components/pages/Home/PastEvents';
 
 import devfestBg from '../../assets/pages/devfest/bg.png';
 import { Hero } from '../../components/pages/Home/Hero';

@@ -14,7 +14,7 @@ export function DevFestHeroSectionCard() {
                     <MapPin className="w-5 h-5 text-google-blue" />
                     <span>
                         Puc Minas - Lourdes <br />
-                        Av. Brasil, 2023 - Funcionários
+                        Av. Brasil, 2023
                     </span>
                 </div>
             </div>
