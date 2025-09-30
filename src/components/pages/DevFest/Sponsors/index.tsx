@@ -1,8 +1,9 @@
 import ContinuousSlider from '../../../Common/ContinuousSlider';
 
-import lucralize from '../../../../assets/logos/logo-lucralize.png';
-import pucminas from '../../../../assets/logos/logo-puc-minas.png';
-import hotel from '../../../../assets/logos/logo-wtm-bh.png';
+import pucminas from '../../../../assets/logos/puc-minas.png';
+import lucralize from '../../../../assets/logos/lucralize.png';
+import hotel from '../../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
+
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Sponsors() {
@@ -24,7 +25,7 @@ export default function Sponsors() {
                             key={idx}
                             src={src}
                             alt={`Slide ${idx}`}
-                            className="w-48 h-32 object-contain mx-2 flex-shrink-0"
+                            className="w-48 h-32 object-contain mx-6 flex-shrink-0"
                         />
                     ))}
                 </ContinuousSlider>

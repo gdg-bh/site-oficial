@@ -13,8 +13,8 @@ export function DevFestHeroSectionCard() {
                 <div className="flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-google-blue" />
                     <span>
-                        Belo Horizonte - MG (PUC Minas) <br />
-                        Lourdes Av. Brasil, 2023 - Funcionários
+                        Puc Minas - Lourdes <br />
+                        Av. Brasil, 2023 - Funcionários
                     </span>
                 </div>
             </div>

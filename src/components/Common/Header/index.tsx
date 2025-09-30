@@ -20,12 +20,12 @@ export function Header() {
                     </div>
 
                     <nav className="hidden xl:flex items-center space-x-8">
-                        <Link
-                            to="#about"
+                        <a
+                            href="#about"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             O que é o GDG?
-                        </Link>
+                        </a>
                         {/* <Link
                             to="/gdg-bh-meet"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
@@ -103,13 +103,13 @@ export function Header() {
                 {isMobileMenuOpen && (
                     <div className="xl:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                            <Link
-                                to="/"
+                            <a
+                                href="#about"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 O que é o GDG?
-                            </Link>
+                            </a>
                             {/* <Link
                                 to="/gdg-bh-meet"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
