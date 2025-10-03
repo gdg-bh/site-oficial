@@ -1,4 +1,4 @@
-import { Carousel } from '../../../Common/Carousel';
+import { InfiniteCarousel } from '../../../Common/InfiniteCarousel';
 import ProfileCard from '../ProfileCard';
 
 import AlissonRosa from '../../../../assets/palestrantes/Alisson_Rosa.png';
@@ -234,7 +234,7 @@ export default function Speakers() {
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                 crescimento e o compartilhamento de conhecimento.
             </p> */}
-            <Carousel count={speakers.length}>
+            <InfiniteCarousel count={speakers.length}>
                 {speakers.map((card, index) => (
                     <ProfileCard
                         key={index}
@@ -245,7 +245,7 @@ export default function Speakers() {
                         links={card.links}
                     />
                 ))}
-            </Carousel>
+            </InfiniteCarousel>
         </section>
     );
 }

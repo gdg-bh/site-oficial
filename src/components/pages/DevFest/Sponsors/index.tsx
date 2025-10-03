@@ -3,11 +3,12 @@ import ContinuousSlider from '../../../Common/ContinuousSlider';
 import pucminas from '../../../../assets/logos/puc-minas.png';
 import lucralize from '../../../../assets/logos/lucralize.png';
 import hotel from '../../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
+import strider from '../../../../assets/logos/strider.png';
 
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Sponsors() {
-    const images = [pucminas, lucralize, hotel, pucminas, lucralize, hotel];
+    const images = [pucminas, lucralize, hotel, strider, pucminas, lucralize, hotel, strider];
 
     return (
         <>
