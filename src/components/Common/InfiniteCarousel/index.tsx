@@ -9,7 +9,12 @@ type InfiniteCarouselProps = {
 };
 
 export function InfiniteCarousel({ count = 5, viewCount = 4, children }: InfiniteCarouselProps) {
-    const [index, setIndex] = useState<number>(0);
+    const getInitialIndex = () => {
+        return 1;
+    };
+
+    const [index, setIndex] = useState<number>(getInitialIndex());
+    const [isResetting, setIsResetting] = useState<boolean>(false);
 
     const slotRef = useRef<HTMLDivElement | null>(null);
     const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -34,53 +39,38 @@ export function InfiniteCarousel({ count = 5, viewCount = 4, children }: Infinit
         return () => window.removeEventListener('resize', measure);
     }, []);
 
+    useEffect(() => {
+        if (index <= -count) {
+            setIsResetting(true);
+            setTimeout(() => {
+                setIndex(0);
+                setIsResetting(false);
+            }, 50);
+        }
+        else if (index >= count * 2) {
+            setIsResetting(true);
+            setTimeout(() => {
+                setIndex(count);
+                setIsResetting(false);
+            }, 50);
+        }
+    }, [index, count]);
 
 
-    // Função de navegação infinita para a esquerda
+
     const prev = () => {
-        setIndex((i) => {
-            // Se estiver no início, vai para o final
-            if (i <= 0) {
-                if (windowWidth > 1280) {
-                    return Math.max(0, count - viewCount);
-                }
-                if (windowWidth > 980) {
-                    return Math.max(0, count - 3);
-                }
-                if (windowWidth > 768) {
-                    return Math.max(0, count - 2);
-                }
-                return Math.max(0, count - 1);
-            }
-            return i - 1;
-        });
+        setIndex((i) => i - 1);
     };
 
-    // Função de navegação infinita para a direita
     const next = () => {
-        setIndex((i) => {
-            let maxIndex;
-            if (windowWidth > 1280) {
-                maxIndex = Math.max(0, count - viewCount);
-            } else if (windowWidth > 980) {
-                maxIndex = Math.max(0, count - 3);
-            } else if (windowWidth > 768) {
-                maxIndex = Math.max(0, count - 2);
-            } else {
-                maxIndex = Math.max(0, count - 1);
-            }
-
-            const nextIndex = i + 1;
-            // Se o próximo índice ultrapassar o máximo, volta para o início
-            if (nextIndex > maxIndex) {
-                return 0;
-            }
-            return nextIndex;
-        });
+        setIndex((i) => i + 1);
     };
 
-    const x = -(index * slotWidth);
     const childArray = React.Children.toArray(children);
+    const duplicatedArray = [...childArray, ...childArray, ...childArray];
+    
+    const adjustedIndex = index + count;
+    const x = -(adjustedIndex * slotWidth);
 
     const handleKeyDown = useCallback(
         (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -148,20 +138,24 @@ export function InfiniteCarousel({ count = 5, viewCount = 4, children }: Infinit
                     <motion.div
                         className="flex gap-4 pr-10"
                         animate={{ x }}
-                        transition={{ type: 'spring', stiffness: 220, damping: 30 }}
+                        transition={
+                            isResetting 
+                                ? { duration: 0 }
+                                : { type: 'spring', stiffness: 220, damping: 30 }
+                        }
                         onTouchStart={handleTouchStart}
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
                     >
-                        {Array.from({ length: count }).map((_, i) => (
+                        {duplicatedArray.map((child, i) => (
                             <div
-                                key={i}
+                                key={`carousel-item-${i}`}
                                 className={`flex-shrink-0 max-w-[100%] min-w-[280px]`}
                                 style={{ flexBasis: `${100 / viewCount}%` }}
                                 tabIndex={0}
                                 onKeyDown={handleKeyDown}
                                 ref={
-                                    i === 0
+                                    i === count
                                         ? (el) => {
                                               slotRef.current = el;
                                               if (carouselRef.current === null)
@@ -170,7 +164,7 @@ export function InfiniteCarousel({ count = 5, viewCount = 4, children }: Infinit
                                         : null
                                 }
                             >
-                                {childArray[i] ?? null}
+                                {child}
                             </div>
                         ))}
                     </motion.div>

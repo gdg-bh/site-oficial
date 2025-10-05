@@ -1,14 +1,8 @@
 import ContinuousSlider from '../../../Common/ContinuousSlider';
-
-import pucminas from '../../../../assets/logos/puc-minas.png';
-import lucralize from '../../../../assets/logos/lucralize.png';
-import hotel from '../../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
-import strider from '../../../../assets/logos/strider.png';
-
 import { SectionTitle } from '../../../Common/SectionTitle';
+import { duplicatedImages, duplicatedUrls } from '../../../Common/SponsorURLs';
 
 export default function Sponsors() {
-    const images = [pucminas, lucralize, hotel, strider, pucminas, lucralize, hotel, strider];
 
     return (
         <>
@@ -21,13 +15,20 @@ export default function Sponsors() {
                     */}
                 </p>
                 <ContinuousSlider>
-                    {images.map((src, idx) => (
-                        <img
+                    {duplicatedImages.map((src, idx) => (
+                        <a
                             key={idx}
-                            src={src}
-                            alt={`Slide ${idx}`}
-                            className="w-48 h-32 object-contain mx-6 flex-shrink-0"
-                        />
+                            href={duplicatedUrls[idx]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mx-6 flex-shrink-0 transition-transform duration-200 hover:scale-105"
+                        >
+                            <img
+                                src={src}
+                                alt={`Patrocinador ${idx + 1}`}
+                                className="w-48 h-32 object-contain"
+                            />
+                        </a>
                     ))}
                 </ContinuousSlider>
             </section>

@@ -20,11 +20,11 @@ export function DevFestHeroSectionCard() {
             </div>
 
             <a
-                href="#"
+                href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                 target="_blank"
-                className="w-full bg-google-blue text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft pointer-events-none opacity-50 cursor-not-allowed"
+                className="w-full bg-google-blue text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft hover:bg-blue-600 cursor-pointer"
             >
-                Ingressos disponíveis em breve
+                Garanta Seu Ingresso
             </a>
         </div>
     );
