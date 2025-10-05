@@ -52,8 +52,8 @@ export default function Speakers() {
         {
             photoUrl: ArthurCarvalho,
             name: 'Arthur Carvalho',
-            role: 'Project Lead',
-            description: 'WebTech',
+            role: 'Software Developer',
+            description: 'Hotmart',
             links: { linkedin: 'https://www.linkedin.com/in/arthurcarvalh0/' },
         },
         {
@@ -185,8 +185,8 @@ export default function Speakers() {
         {
             photoUrl: RafaelaMarcolino,
             name: 'Rafaela Marcolino',
-            role: 'Software Engineering Manager',
-            description: 'Givisiez',
+            role: 'Tech Lead',
+            description: 'ThoughtWorks',
             links: { linkedin: 'https://www.linkedin.com/in/rafaela-marcolino/' },
         },
         {
