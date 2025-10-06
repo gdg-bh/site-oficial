@@ -32,7 +32,7 @@ import YuriFernandes from '../../../../assets/palestrantes/Yuri_Fernandes.jpeg';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Speakers() {
-    //links: { linkedin: '#', instagram: '#', github: '#' },
+    //exemplo de links: { linkedin: '#', instagram: '#', github: '#', post: '#' },
 
     const speakers = [
         {
