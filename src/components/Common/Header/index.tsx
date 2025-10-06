@@ -19,7 +19,8 @@ export function Header() {
                         </Link>
                     </div>
 
-                    <nav className="hidden xl:flex items-center space-x-8">
+                    <div className="hidden xl:flex items-center space-x-8">
+                    <nav className="flex items-center space-x-8">
                         <a
                             href="https://gdgbh.com.br/#about"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
@@ -52,24 +53,26 @@ export function Header() {
                         </Link>
                     </nav>
 
-                    {/* <div className="hidden xl:flex items-center">
+                    <div className="hidden xl:flex items-center">
                         <a
-                            href="#"
+                            href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                             target="_blank"
                             className="bg-google-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft cursor-pointer"
                         >
                             Garantir ingresso
                         </a>
-                    </div> */}
+                    </div>
+
+                    </div>
 
                     <div className="xl:hidden flex items-center space-x-3">
-                        {/* <a
-                            href="#"
+                        <a
+                            href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                             target="_blank"
                             className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft text-sm whitespace-nowrap"
                         >
                             Ingresso
-                        </a> */}
+                        </a>
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 p-1"

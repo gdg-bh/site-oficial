@@ -32,7 +32,7 @@ import YuriFernandes from '../../../../assets/palestrantes/Yuri_Fernandes.jpeg';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Speakers() {
-    //links: { linkedin: '#', instagram: '#', github: '#' },
+    //links: { linkedin: '#', instagram: '#', github: '#', post: '#' },
 
     const speakers = [
         {
@@ -40,7 +40,7 @@ export default function Speakers() {
             name: 'Alisson Rosa',
             role: 'Engenheiro de Dados',
             description: 'D-Analytics',
-            links: { linkedin: 'https://www.linkedin.com/in/alissonrosa/' },
+            links: { linkedin: 'https://www.linkedin.com/in/alissonrosa/', post: 'https://www.linkedin.com/in/alissonrosa/' },
         },
         {
             photoUrl: AnaPaulaBartels,
