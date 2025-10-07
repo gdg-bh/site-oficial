@@ -13,7 +13,7 @@ export function Home() {
     return (
         <>
             <Hero
-                title="Google Develorper Group"
+                title="Google Developer Group"
                 location="Belo Horizonte"
                 text="Aprenda, conecte-se e evolua com uma comunidade inclusiva de desenvolvedores apaixonados por tecnologia."
                 bgImage={heroBG}
