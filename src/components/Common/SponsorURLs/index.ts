@@ -3,6 +3,7 @@ import pucminas from '../../../assets/logos/puc-minas.png';
 import lucralize from '../../../assets/logos/lucralize.png';
 import hotel from '../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
 import strider from '../../../assets/logos/strider.png';
+import onfly from '../../../assets/logos/Onfly.png';
 
 
 export interface Sponsor {
@@ -25,14 +26,19 @@ export const sponsors: Sponsor[] = [
     },
     {
         image: hotel,
-        url: 'https://royalhoteis.com.br/royal-savassi-boutique/',
+        url: 'https://royalhoteis.com.br/royal-collection-savassi/',
         name: 'Hotel Royal Boutique Savassi'
     },
     {
         image: strider,
         url: 'https://www.onstrider.com/',
         name: 'Strider'
-    }
+    },
+    {
+        image: onfly,
+        url: 'https://onfly.com.br/',
+        name: 'Onfly'
+    },
 ];
 
 

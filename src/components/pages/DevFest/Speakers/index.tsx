@@ -108,7 +108,7 @@ export default function Speakers() {
         {
             photoUrl: GabrielNogueira,
             name: 'Gabriel Nogueira',
-            role: 'Desenvolvedor de Software',
+            role: 'Sotware Engineer Intern',
             description: 'WebTech',
             links: { linkedin: 'https://www.linkedin.com/in/gabriel-nogueira-vieira-resende/' },
         },

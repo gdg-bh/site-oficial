@@ -18,7 +18,7 @@ export default function ContinuousSlider({ children }: SliderProps) {
         const handleResize = () => {
             if (containerRef.current) {
                 setScrollWidth(containerRef.current.scrollWidth / 2);
-                setDuration(window.innerWidth < 768 ? 20 : 40);
+                setDuration(40);
 
                 const containerWidth = containerRef.current.offsetWidth;
                 const childWidth = containerRef.current.scrollWidth / 2;
