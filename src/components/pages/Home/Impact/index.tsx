@@ -12,7 +12,7 @@ export default function Impact() {
             icon: people,
             number: '4.110',
             title: 'Pessoas Impactadas',
-            text: 'Em eventos, Workshops e Webinars',
+            text: 'Pelos nossos eventos e iniciativas',
         },
         {
             icon: rocket,
