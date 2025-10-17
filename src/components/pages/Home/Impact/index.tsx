@@ -10,25 +10,25 @@ export default function Impact() {
     const cards = [
         {
             icon: people,
-            number: 4110,
-            title: 'Pessoas',
-            text: 'Participantes já passaram pelos nossos eventos',
+            number: '4.110',
+            title: 'Pessoas Impactadas',
+            text: 'Pelos nossos eventos e iniciativas',
         },
         {
             icon: rocket,
-            number: 20,
+            number: '+20',
             title: 'Eventos Realizados',
             text: 'Workshops, palestras e eventos de networking',
         },
         {
             icon: building,
-            number: 18,
+            number: '+20',
             title: 'Empresas Parceiras',
             text: 'Apoiando o crescimento da nossa comunidade',
         },
         {
             icon: medal,
-            number: 3,
+            number: '3',
             title: 'Anos de impacto na comunidade',
             text: 'Construindo conexões desde 2022 com a organização atual',
         },
@@ -49,7 +49,7 @@ export default function Impact() {
                         key={idx}
                         title={card.title}
                         text={card.text}
-                        bigNumber={card.number.toString()}
+                        bigNumber={card.number}
                         icon={card.icon}
                     />
                 ))}
