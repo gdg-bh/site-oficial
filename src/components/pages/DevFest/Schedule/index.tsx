@@ -48,6 +48,13 @@ const scheduleData = [
         speaker: 'Ana Carolina',
     },
     {
+        start: '10:00',
+        end: '10:50',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
+    },
+    {
         start: '10:50',
         end: '11:40',
         track: 'Iniciante',
@@ -76,6 +83,13 @@ const scheduleData = [
         speaker: 'Ana Paula Bartels',
     },
     {
+        start: '10:50',
+        end: '11:40',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
+    },
+    {
         start: '11:40',
         end: '12:30',
         track: 'Iniciante',
@@ -102,6 +116,13 @@ const scheduleData = [
         track: 'WTM',
         title: 'Mentoria',
         speaker: 'Fernanda Costa',
+    },
+    {
+        start: '11:40',
+        end: '12:30',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
     },
     {
         start: '12:30',
@@ -144,6 +165,13 @@ const scheduleData = [
         speaker: 'Rafaela Marcolino',
     },
     {
+        start: '13:40',
+        end: '14:30',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
+    },
+    {
         start: '14:30',
         end: '15:20',
         track: 'Iniciante',
@@ -170,6 +198,13 @@ const scheduleData = [
         track: 'WTM',
         title: 'Mentoria',
         speaker: 'Luiza Maria Taroni Naves',
+    },
+    {
+        start: '14:30',
+        end: '15:20',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
     },
     {
         start: '15:20',
@@ -200,6 +235,13 @@ const scheduleData = [
         speaker: 'Izabela Cançado',
     },
     {
+        start: '15:20',
+        end: '16:10',
+        track: 'Onfly',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
+    },
+    {
         start: '16:10',
         end: '16:30',
         title: 'Encerramento + Sorteios + Foto oficial',
@@ -215,7 +257,7 @@ const tracks = [
     { name: 'Iniciante', color: '#6AA84F' },
     { name: 'Avançado', color: '#2163CE' },
     { name: 'Carreiras', color: '#FF5858' },
-    // { name: 'Onfly', color: '#009EFB' },
+    { name: 'Onfly', color: '#009EFB' },
     { name: 'Workshop', color: '#FF9900' },
     { name: 'WTM', color: '#BE60DC' },
 ];

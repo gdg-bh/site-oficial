@@ -17,7 +17,7 @@ import JorgeMauroGonçalves from '../../../../assets/palestrantes/Jorge_Mauro_Go
 import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.jpg';
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
 import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
-import MarianaMendonca from '../../../../assets/palestrantes/Mariana_Mendonca.jpeg';
+import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
 import NicoleBarra from '../../../../assets/palestrantes/Nicole_Barra.png';
 import PedroRosemberg from '../../../../assets/palestrantes/Pedro_Rosemberg.jpeg';
@@ -47,7 +47,7 @@ export default function Speakers() {
             name: 'Ana Paula Bartels',
             role: 'Head of Success',
             description: 'Strider',
-            links: { linkedin: 'https://www.linkedin.com/in/anapaulabartels/' },
+            links: { linkedin: 'https://www.linkedin.com/in/anapaulabartels/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384181350305775617-KcWi' },
         },
         {
             photoUrl: ArthurCarvalho,
@@ -68,14 +68,14 @@ export default function Speakers() {
             name: 'Artur Bomtempo',
             role: 'Software Developer',
             description: 'dti digital',
-            links: { linkedin: 'https://www.linkedin.com/in/artur-bomtempo/' },
+            links: { linkedin: 'https://www.linkedin.com/in/artur-bomtempo/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384904217540313088-enKk' },
         },
         {
             photoUrl: CamillaMartins,
             name: 'Camilla Martins',
             role: 'Specialist Site Realiabitity Engineer',
             description: 'Storyblok',
-            links: { linkedin: 'https://www.linkedin.com/in/camilla-martins-603344115/' },
+            links: { linkedin: 'https://www.linkedin.com/in/camilla-martins-603344115/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7379099955552137216-1SO4' },
         },
         {
             photoUrl: DiegoBorgesFerreira,
@@ -89,28 +89,28 @@ export default function Speakers() {
             name: 'Douglas Augusto',
             role: 'Specialist Customer Engineer',
             description: 'Google',
-            links: { linkedin: 'https://www.linkedin.com/in/douglasaugusto/' },
+            links: { linkedin: 'https://www.linkedin.com/in/douglasaugusto/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7382348118618603520-Wa25' },
         },
         {
             photoUrl: ElianaLimadaFonseca,
             name: 'Eliana Fonseca',
             role: 'Professora',
             description: 'UFRGS',
-            links: { linkedin: 'http://www.linkedin.com/in/eliana-lima-da-fonseca-a99930228' },
+            links: { linkedin: 'http://www.linkedin.com/in/eliana-lima-da-fonseca-a99930228', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7378750423010119680-mA81/' },
         },
         {
             photoUrl: FernandaCosta,
             name: 'Fernanda Costa',
             role: 'Engenheira de Software',
             description: 'Nubank',
-            links: { linkedin: 'https://www.linkedin.com/in/fernandacosta-tech/' },
+            links: { linkedin: 'https://www.linkedin.com/in/fernandacosta-tech/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384999450273824768-Z7dG' },
         },
         {
             photoUrl: GabrielNogueira,
             name: 'Gabriel Nogueira',
             role: 'Sotware Engineer Intern',
             description: 'WebTech',
-            links: { linkedin: 'https://www.linkedin.com/in/gabriel-nogueira-vieira-resende/' },
+            links: { linkedin: 'https://www.linkedin.com/in/gabriel-nogueira-vieira-resende/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384904217540313088-enKk' },
         },
         {
             photoUrl: IzabelaCancado,
@@ -124,7 +124,7 @@ export default function Speakers() {
             name: 'Jorge Mauro',
             role: 'Software Engineer',
             description: 'Localiza',
-            links: { linkedin: 'https://www.linkedin.com/in/jorge-m-goncalves/' },
+            links: { linkedin: 'https://www.linkedin.com/in/jorge-m-goncalves/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7383813070432792576-Cyjn' },
         },
         {
             photoUrl: JuliaVasconcelos,
@@ -148,18 +148,18 @@ export default function Speakers() {
             links: { linkedin: 'https://www.linkedin.com/in/luizanaves/' },
         },
         {
-            photoUrl: MarianaMendonca,
-            name: 'Mariana Mendonça',
+            photoUrl: MarianaAlmeida,
+            name: 'Mariana Almeida',
             role: 'Desenvolvedora de Software',
             description: 'Origami Lab',
-            links: { linkedin: 'https://www.linkedin.com/in/marialmeidam/' },
+            links: { linkedin: 'https://www.linkedin.com/in/marialmeidam/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7381351272718823424-poOS' },
         },
         {
             photoUrl: MateusPereira,
             name: 'Mateus Pereira',
             role: 'Partner Solutions Architect',
             description: 'AWS',
-            links: { linkedin: 'https://www.linkedin.com/in/matgpereira/' },
+            links: { linkedin: 'https://www.linkedin.com/in/matgpereira/', post:'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7381270937167527936-z-iG' },
         },
         {
             photoUrl: NicoleBarra,
@@ -173,21 +173,21 @@ export default function Speakers() {
             name: 'Pedro Rosemberg',
             role: 'Segurança da Informação',
             description: 'Fiemg',
-            links: { linkedin: 'https://www.linkedin.com/in/pedrorosemberg/' },
+            links: { linkedin: 'https://www.linkedin.com/in/pedrorosemberg/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7383883785957744641-G_s-' },
         },
         {
             photoUrl: RafaelRibeiroAndrade,
             name: 'Rafael Andrade',
             role: 'Lead Software Engineer',
             description: 'Strider',
-            links: { linkedin: 'https://www.linkedin.com/in/rafaelra/' },
+            links: { linkedin: 'https://www.linkedin.com/in/rafaelra/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7379476262395842560-EMHP' },
         },
         {
             photoUrl: RafaelaMarcolino,
             name: 'Rafaela Marcolino',
             role: 'Tech Lead',
             description: 'ThoughtWorks',
-            links: { linkedin: 'https://www.linkedin.com/in/rafaela-marcolino/' },
+            links: { linkedin: 'https://www.linkedin.com/in/rafaela-marcolino/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7382439878560473088-44Mm' },
         },
         {
             photoUrl: ThaisFalabella,
@@ -215,14 +215,14 @@ export default function Speakers() {
             name: 'Victoria Boaventura',
             role: 'Tech Recruiter',
             description: 'Yellow.rec',
-            links: { linkedin: 'https://www.linkedin.com/in/victoria-boaventura/' },
+            links: { linkedin: 'https://www.linkedin.com/in/victoria-boaventura/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384268907810914304-w38o' },
         },
         {
             photoUrl: YuriFernandes,
             name: 'Yuri Fernandes',
             role: 'Analista de Dados',
             description: 'Vivo Vita',
-            links: { linkedin: 'https://www.linkedin.com/in/yurianalistabi/' },
+            links: { linkedin: 'https://www.linkedin.com/in/yurianalistabi/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7382015307407769600-Aa-e' },
         },
     ];
 
