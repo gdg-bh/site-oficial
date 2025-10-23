@@ -40,7 +40,7 @@ export default function Speakers() {
             name: 'Alisson Rosa',
             role: 'Engenheiro de Dados',
             description: 'D-Analytics',
-            links: { linkedin: 'https://www.linkedin.com/in/alissonrosa/' },
+            links: { linkedin: 'https://www.linkedin.com/in/alissonrosa/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386434431986655232-zT0K' },
         },
         {
             photoUrl: AnaPaulaBartels,
@@ -54,14 +54,14 @@ export default function Speakers() {
             name: 'Arthur Carvalho',
             role: 'Software Developer',
             description: 'Hotmart',
-            links: { linkedin: 'https://www.linkedin.com/in/arthurcarvalh0/' },
+            links: { linkedin: 'https://www.linkedin.com/in/arthurcarvalh0/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387142458976968705-gTi6' },
         },
         {
             photoUrl: ArthurDrumond,
             name: 'Arthur Drumond',
             role: 'Software Engineer',
             description: 'dti digital',
-            links: { linkedin: 'https://www.linkedin.com/in/arthur-drumond-52a2812b1/' },
+            links: { linkedin: 'https://www.linkedin.com/in/arthur-drumond-52a2812b1/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387142458976968705-gTi6' },
         },
         {
             photoUrl: ArturBomtempo,
@@ -82,7 +82,7 @@ export default function Speakers() {
             name: 'Diego Borges',
             role: 'Tech Manager',
             description: 'PicPay',
-            links: { linkedin: 'https://www.linkedin.com/in/eudiegoborgs/' },
+            links: { linkedin: 'https://www.linkedin.com/in/eudiegoborgs/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387090285232726017-wnYY' },
         },
         {
             photoUrl: DouglasAugustoFerreiraAraujo,
@@ -117,7 +117,7 @@ export default function Speakers() {
             name: 'Izabela Cançado',
             role: 'Agilista',
             description: 'Arcelor Mittal',
-            links: { linkedin: 'https://www.linkedin.com/in/isabela-can%C3%A7ado/' },
+            links: { linkedin: 'https://www.linkedin.com/in/isabela-can%C3%A7ado/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386814440018628608-4NSQ' },
         },
         {
             photoUrl: JorgeMauroGonçalves,
@@ -166,7 +166,7 @@ export default function Speakers() {
             name: 'Nicole Barra',
             role: 'Co-founder & COO',
             description: 'Strider',
-            links: { linkedin: 'https://www.linkedin.com/in/nicolebarraconde/' },
+            links: { linkedin: 'https://www.linkedin.com/in/nicolebarraconde/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386350713859129344-IutT' },
         },
         {
             photoUrl: PedroRosemberg,
@@ -194,7 +194,7 @@ export default function Speakers() {
             name: 'Thais Falabella',
             role: 'Head Product Design',
             description: 'iFood',
-            links: { linkedin: 'https://www.linkedin.com/in/thaisfalabella/' },
+            links: { linkedin: 'https://www.linkedin.com/in/thaisfalabella/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386714641290133505-NmfB' },
         },
         {
             photoUrl: ToshiOssada,

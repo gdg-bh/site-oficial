@@ -4,6 +4,7 @@ import lucralize from '../../../assets/logos/lucralize.png';
 import hotel from '../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
 import strider from '../../../assets/logos/strider.png';
 import onfly from '../../../assets/logos/Onfly.png';
+import localiza from '../../../assets/logos/Localiza.png';
 
 
 export interface Sponsor {
@@ -39,6 +40,11 @@ export const sponsors: Sponsor[] = [
         url: 'https://onfly.com.br/',
         name: 'Onfly'
     },
+    {
+        image: localiza,
+        url: 'https://localiza-carreiras.webflow.io/',
+        name: 'Localiza'
+    }
 ];
 
 

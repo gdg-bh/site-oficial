@@ -44,8 +44,8 @@ const scheduleData = [
         start: '10:00',
         end: '10:50',
         track: 'WTM',
-        title: 'Mary Kay',
-        speaker: 'Ana Carolina',
+        title: 'Mentoria em: Transição de Carreira, Produto e Agilidade',
+        speaker: 'Izabela Cançado',
     },
     {
         start: '10:00',
@@ -79,7 +79,7 @@ const scheduleData = [
         start: '10:50',
         end: '11:40',
         track: 'WTM',
-        title: 'Mentoria',
+        title: 'Mentoria em: Carreira em Tecnologia, Transição de Carreira, Saúde Mental e Bem-estar',
         speaker: 'Ana Paula Bartels',
     },
     {
@@ -114,7 +114,7 @@ const scheduleData = [
         start: '11:40',
         end: '12:30',
         track: 'WTM',
-        title: 'Mentoria',
+        title: 'Mentoria em: Carreira em Desenvolvimento, Desenvolvimento de Software, Inteligência Artificial',
         speaker: 'Fernanda Costa',
     },
     {
@@ -161,7 +161,7 @@ const scheduleData = [
         start: '13:40',
         end: '14:30',
         track: 'WTM',
-        title: 'Mentoria',
+        title: 'Mentoria em: Carreira em Desenvolvimento, Desenvolvimento de Software, Liderança e Gestão de Times',
         speaker: 'Rafaela Marcolino',
     },
     {
@@ -196,8 +196,8 @@ const scheduleData = [
         start: '14:30',
         end: '15:20',
         track: 'WTM',
-        title: 'Mentoria',
-        speaker: 'Luiza Maria Taroni Naves',
+        title: 'Mentoria em: Carreira em Produto, Produto e Agilidade, Liderança e Gestão de Times',
+        speaker: 'Luiza Naves',
     },
     {
         start: '14:30',
@@ -231,8 +231,8 @@ const scheduleData = [
         start: '15:20',
         end: '16:10',
         track: 'WTM',
-        title: 'Mentoria',
-        speaker: 'Izabela Cançado',
+        title: 'Mentoria em: Carreira em Produto, UX/UI Design, Produto e Agilidade, Empreendedorismo',
+        speaker: 'Mima Amie',
     },
     {
         start: '15:20',
