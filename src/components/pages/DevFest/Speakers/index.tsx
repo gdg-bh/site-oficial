@@ -145,7 +145,7 @@ export default function Speakers() {
             name: 'Luiza Naves',
             role: 'Product Manager',
             description: 'Localiza',
-            links: { linkedin: 'https://www.linkedin.com/in/luizanaves/' },
+            links: { linkedin: 'https://www.linkedin.com/in/luizanaves/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387507679423983617-mZkp' },
         },
         {
             photoUrl: MarianaAlmeida,
@@ -208,7 +208,7 @@ export default function Speakers() {
             name: 'Victor Pugliese',
             role: 'Google Developer Expert em AI',
             description: '',
-            links: { linkedin: 'https://www.linkedin.com/in/victorpug-exe/' },
+            links: { linkedin: 'https://www.linkedin.com/in/victorpug-exe/', post:'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387441967300784129-HtWN' },
         },
         {
             photoUrl: VictoriaBoaventura,
