@@ -7,20 +7,26 @@ import ArthurCarvalho from '../../../../assets/palestrantes/Arthur_Carvalho.jpeg
 import ArthurDrumond from '../../../../assets/palestrantes/Arthur_Drumond.jpeg';
 import ArturBomtempo from '../../../../assets/palestrantes/Artur_Bomtempo.jpeg';
 import CamillaMartins from '../../../../assets/palestrantes/Camilla_Martins.jpg';
+import DannielMagno from '../../../../assets/palestrantes/Danniel_Magno.jpeg';
 import DiegoBorgesFerreira from '../../../../assets/palestrantes/Diego_Borges_Ferreira.png';
 import DouglasAugustoFerreiraAraujo from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
 import ElianaLimadaFonseca from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
 import FernandaCosta from '../../../../assets/palestrantes/Fernanda_Costa.jpg';
 import GabrielNogueira from '../../../../assets/palestrantes/Gabriel_Nogueira.jpeg';
+import GeisislaineLimaMartins from '../../../../assets/palestrantes/Geisislaine_Lima_Martins.jpeg';
 import IzabelaCancado from '../../../../assets/palestrantes/Izabela_Cancado.jpeg';
 import JorgeMauroGonçalves from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
 import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.jpg';
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
+import LucasMenezes from '../../../../assets/palestrantes/Lucas_Menezes.png';
 import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
 import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
+import MozartSousa from '../../../../assets/palestrantes/Mozart_Sousa.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
 import NicoleBarra from '../../../../assets/palestrantes/Nicole_Barra.png';
+import OthoGarcia from '../../../../assets/palestrantes/Otho_Garcia.jpeg';
 import PedroRosemberg from '../../../../assets/palestrantes/Pedro_Rosemberg.jpeg';
+import RafaelCunha from '../../../../assets/palestrantes/Rafael_Cunha.jpeg';
 import RafaelRibeiroAndrade from '../../../../assets/palestrantes/Rafael_Ribeiro_Andrade.png';
 import RafaelaMarcolino from '../../../../assets/palestrantes/Rafaela_Marcolino.jpg';
 import ThaisFalabella from '../../../../assets/palestrantes/Thais_Falabella.png';
@@ -78,6 +84,13 @@ export default function Speakers() {
             links: { linkedin: 'https://www.linkedin.com/in/camilla-martins-603344115/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7379099955552137216-1SO4' },
         },
         {
+            photoUrl: DannielMagno,
+            name: 'Danniel Magno',
+            role: 'Head of Artificial Intelligence',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/dannielmagno/' },
+        },
+        {
             photoUrl: DiegoBorgesFerreira,
             name: 'Diego Borges',
             role: 'Tech Manager',
@@ -113,6 +126,13 @@ export default function Speakers() {
             links: { linkedin: 'https://www.linkedin.com/in/gabriel-nogueira-vieira-resende/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7384904217540313088-enKk' },
         },
         {
+            photoUrl: GeisislaineLimaMartins,
+            name: 'Geisislaine Lima Martins',
+            role: 'Tech Manager',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
+        },
+        {
             photoUrl: IzabelaCancado,
             name: 'Izabela Cançado',
             role: 'Agilista',
@@ -131,7 +151,7 @@ export default function Speakers() {
             name: 'Julia Vasconcelos',
             role: 'Product Designer',
             description: 'TOTVS',
-            links: { linkedin: 'https://www.linkedin.com/in/juvscncls/' },
+            links: { linkedin: 'https://www.linkedin.com/in/juvscncls/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7388591103928778753-jQhm' },
         },
         {
             photoUrl: JulianaConde,
@@ -139,6 +159,13 @@ export default function Speakers() {
             role: 'Especialista em Treinamento Técnico Corporativo',
             description: 'Matza',
             links: { linkedin: 'https://www.linkedin.com/in/julianaconde/' },
+        },
+        {
+            photoUrl: LucasMenezes,
+            name: 'Lucas Menezes',
+            role: 'Desenvolvedor Front End',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/lucas-menezes-bambirra/' },
         },
         {
             photoUrl: LuizaNaves,
@@ -162,6 +189,13 @@ export default function Speakers() {
             links: { linkedin: 'https://www.linkedin.com/in/matgpereira/', post:'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7381270937167527936-z-iG' },
         },
         {
+            photoUrl: MozartSousa,
+            name: 'Mozart Sousa',
+            role: 'Mobile Engineering Lead',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/mozartjasousa/' },
+        },
+        {
             photoUrl: NicoleBarra,
             name: 'Nicole Barra',
             role: 'Co-founder & COO',
@@ -169,11 +203,25 @@ export default function Speakers() {
             links: { linkedin: 'https://www.linkedin.com/in/nicolebarraconde/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386350713859129344-IutT' },
         },
         {
+            photoUrl: OthoGarcia,
+            name: 'Otho Garcia',
+            role: 'Arquiteto de Software',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/otho-garcia-da-silva-neto-165b38122/' },
+        },
+        {
             photoUrl: PedroRosemberg,
             name: 'Pedro Rosemberg',
             role: 'Segurança da Informação',
             description: 'Fiemg',
             links: { linkedin: 'https://www.linkedin.com/in/pedrorosemberg/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7383883785957744641-G_s-' },
+        },
+        {
+            photoUrl: RafaelCunha,
+            name: 'Rafael Cunha',
+            role: 'Head of Data & Analytics',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/rafaelalvesdeoliveiradacunha/' },
         },
         {
             photoUrl: RafaelRibeiroAndrade,
