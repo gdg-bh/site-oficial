@@ -23,6 +23,7 @@ import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
 import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
 import MozartSousa from '../../../../assets/palestrantes/Mozart_Sousa.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
+import MimaAmie from '../../../../assets/palestrantes/Mima_Amie.jpg';
 import NicoleBarra from '../../../../assets/palestrantes/Nicole_Barra.png';
 import OthoGarcia from '../../../../assets/palestrantes/Otho_Garcia.jpeg';
 import PedroRosemberg from '../../../../assets/palestrantes/Pedro_Rosemberg.jpeg';
@@ -158,7 +159,7 @@ export default function Speakers() {
             name: 'Juliana Conde',
             role: 'Especialista em Treinamento Técnico Corporativo',
             description: 'Matza',
-            links: { linkedin: 'https://www.linkedin.com/in/julianaconde/' },
+            links: { linkedin: 'https://www.linkedin.com/in/julianaconde/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7388867761285976064-xF1l' },
         },
         {
             photoUrl: LucasMenezes,
@@ -187,6 +188,13 @@ export default function Speakers() {
             role: 'Partner Solutions Architect',
             description: 'AWS',
             links: { linkedin: 'https://www.linkedin.com/in/matgpereira/', post:'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7381270937167527936-z-iG' },
+        },
+        {
+            photoUrl: MimaAmie,
+            name: 'Mima Amie',
+            role: 'Strategic Advisor',
+            description: 'BeCare',
+            links: { linkedin: 'https://www.linkedin.com/in/amiemima/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7389042205656752128-PwvW' },
         },
         {
             photoUrl: MozartSousa,
@@ -249,7 +257,7 @@ export default function Speakers() {
             name: 'Toshi Ossada',
             role: 'Lider Técnico',
             description: 'Famácias App',
-            links: { linkedin: 'https://www.linkedin.com/in/toshiossada/' },
+            links: { linkedin: 'https://www.linkedin.com/in/toshiossada/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7388962500660322304-PWP8' },
         },
         {
             photoUrl: VictorPugliese,
