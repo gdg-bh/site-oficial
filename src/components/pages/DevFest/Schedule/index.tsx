@@ -45,7 +45,7 @@ const scheduleData = [
         end: '10:50',
         track: 'WTM',
         title: 'Mentoria em: Transição de Carreira, Produto e Agilidade',
-        speaker: 'Izabela Cançado',
+        speaker: 'Isabela Cançado',
     },
     {
         start: '10:00',

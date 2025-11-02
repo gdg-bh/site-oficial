@@ -14,7 +14,7 @@ import ElianaLimadaFonseca from '../../../../assets/palestrantes/Eliana_Lima_da_
 import FernandaCosta from '../../../../assets/palestrantes/Fernanda_Costa.jpg';
 import GabrielNogueira from '../../../../assets/palestrantes/Gabriel_Nogueira.jpeg';
 import GeisislaineLimaMartins from '../../../../assets/palestrantes/Geisislaine_Lima_Martins.jpeg';
-import IzabelaCancado from '../../../../assets/palestrantes/Izabela_Cancado.jpeg';
+import IsabelaCancado from '../../../../assets/palestrantes/Isabela_Cancado.jpeg';
 import JorgeMauroGonçalves from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
 import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.jpg';
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
@@ -89,7 +89,7 @@ export default function Speakers() {
             name: 'Danniel Magno',
             role: 'Head of Artificial Intelligence',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/dannielmagno/' },
+            links: { linkedin: 'https://www.linkedin.com/in/dannielmagno/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
             photoUrl: DiegoBorgesFerreira,
@@ -131,11 +131,11 @@ export default function Speakers() {
             name: 'Geisislaine Lima Martins',
             role: 'Tech Manager',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
+            links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
-            photoUrl: IzabelaCancado,
-            name: 'Izabela Cançado',
+            photoUrl: IsabelaCancado,
+            name: 'Isabela Cançado',
             role: 'Agilista',
             description: 'Arcelor Mittal',
             links: { linkedin: 'https://www.linkedin.com/in/isabela-can%C3%A7ado/', post: 'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7386814440018628608-4NSQ' },
@@ -166,7 +166,7 @@ export default function Speakers() {
             name: 'Lucas Menezes',
             role: 'Desenvolvedor Front End',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/lucas-menezes-bambirra/' },
+            links: { linkedin: 'https://www.linkedin.com/in/lucas-menezes-bambirra/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
             photoUrl: LuizaNaves,
@@ -201,7 +201,7 @@ export default function Speakers() {
             name: 'Mozart Sousa',
             role: 'Mobile Engineering Lead',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/mozartjasousa/' },
+            links: { linkedin: 'https://www.linkedin.com/in/mozartjasousa/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
             photoUrl: NicoleBarra,
@@ -215,7 +215,7 @@ export default function Speakers() {
             name: 'Otho Garcia',
             role: 'Arquiteto de Software',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/otho-garcia-da-silva-neto-165b38122/' },
+            links: { linkedin: 'https://www.linkedin.com/in/otho-garcia-da-silva-neto-165b38122/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
             photoUrl: PedroRosemberg,
@@ -229,7 +229,7 @@ export default function Speakers() {
             name: 'Rafael Cunha',
             role: 'Head of Data & Analytics',
             description: 'Onfly',
-            links: { linkedin: 'https://www.linkedin.com/in/rafaelalvesdeoliveiradacunha/' },
+            links: { linkedin: 'https://www.linkedin.com/in/rafaelalvesdeoliveiradacunha/', post: 'https://www.linkedin.com/posts/gdg-bh_palestrantes-onfly-activity-7389997953920258048-tzwo' },
         },
         {
             photoUrl: RafaelRibeiroAndrade,
