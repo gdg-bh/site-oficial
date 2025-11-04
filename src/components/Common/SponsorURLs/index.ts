@@ -5,6 +5,7 @@ import hotel from '../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
 import strider from '../../../assets/logos/strider.png';
 import onfly from '../../../assets/logos/Onfly.png';
 import localiza from '../../../assets/logos/Localiza.png';
+import luza from '../../../assets/logos/luza.png';
 
 
 export interface Sponsor {
@@ -44,6 +45,11 @@ export const sponsors: Sponsor[] = [
         image: localiza,
         url: 'https://localiza-carreiras.webflow.io/',
         name: 'Localiza'
+    },
+    {
+        image: luza,
+        url: 'https://www.luzagroup.com/',
+        name: 'Luza'
     }
 ];
 
