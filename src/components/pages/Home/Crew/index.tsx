@@ -4,7 +4,7 @@ import ProfileCard from '../../DevFest/ProfileCard';
 import organizers from '../../../../assets/organizers/organizers.jpg';
 import fernanda from '../../../../assets/organizers/Fernanda.jpeg';
 import guilherme from '../../../../assets/organizers/Guilherme.jpg';
-import paloma from '../../../../assets/organizers/Paloma.jpg';
+import juliana from '../../../../assets/organizers/Juliana.jpg';
 import rayan from '../../../../assets/organizers/Rayan.jpeg';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
@@ -27,11 +27,11 @@ export default function Crew() {
             links: { linkedin: 'https://www.linkedin.com/in/guilhermeradicchi/' },
         },
         {
-            photoUrl: paloma,
-            name: 'Paloma Rizzon',
-            role: 'Frontend Developer',
+            photoUrl: juliana,
+            name: 'Juliana Ribeiro',
+            role: 'Product Designer',
             description: 'Organizadora GDG BH',
-            links: { linkedin: 'https://www.linkedin.com/in/palomarizzon/', github: 'https://github.com/palomarizzon' },
+            links: { linkedin: 'https://www.linkedin.com/in/julianarib/'},
         },
         {
             photoUrl: rayan,
@@ -49,10 +49,10 @@ export default function Crew() {
                 Desenvolvedores apaixonados e construtores de comunidades dedicados a promover o
                 crescimento e o compartilhamento de conhecimento.
             </p> */}
-            <img
+            {/* <img
                 className="max-h-[400px] object-cover object-top mx-auto lg:w-10/12 mb-20 mt-10 rounded rounded-xl"
                 src={organizers}
-            ></img>
+            ></img> */}
             <Carousel count={speakers.length}>
                 {speakers.map((card, index) => (
                     <ProfileCard

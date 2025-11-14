@@ -10,7 +10,7 @@ export default function Impact() {
     const cards = [
         {
             icon: people,
-            number: '4.110',
+            number: '+4.500',
             title: 'Pessoas Impactadas',
             text: 'Pelos nossos eventos e iniciativas',
         },

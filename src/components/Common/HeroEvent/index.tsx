@@ -1,4 +1,4 @@
-import { DevFestHeroSectionCard } from '../../pages/DevFest/DevFestHeroSectionCard';
+// import { DevFestHeroSectionCard } from '../../pages/DevFest/DevFestHeroSectionCard';
 
 interface HeroProps {
     title: string;
@@ -19,7 +19,7 @@ export function HeroEvent({ title, location, bgImage }: HeroProps) {
                 {location}
             </p>
 
-            <DevFestHeroSectionCard />
+            {/* <DevFestHeroSectionCard /> */}
 
             <svg
                 className="w-[300%] lg:w-[100vw] absolute bottom-[-5px]"
