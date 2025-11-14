@@ -1,5 +1,5 @@
 import devfestBg from '../../assets/pages/home/bg.png';
-import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
+// import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import Speakers from '../../components/pages/DevFest/Speakers';
 import Schedule from '../../components/pages/DevFest/Schedule';
 import Sponsors from '../../components/pages/DevFest/Sponsors';
@@ -10,7 +10,7 @@ export function DevFest() {
     return (
         <>
             <HeroEvent title="DevFest 2025" location="Belo Horizonte" bgImage={devfestBg} />
-            <CountdownTimer />
+            {/* <CountdownTimer /> */}
             <AboutDevfest />
             <Speakers />
             <Schedule />

@@ -1,9 +1,26 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import logoGdgBlack from '../../../assets/logos/logo-gdg-black.svg';
+import { ChevronDown } from 'lucide-react';
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const [isMobileEventsOpen, setIsMobileEventsOpen] = useState<string>('');
+    const dropdownTimerRef = useRef<number | null>(null);
+
+    const handleMouseEnter = (eventName: string) => {
+        if (dropdownTimerRef.current) {
+            clearTimeout(dropdownTimerRef.current);
+        }
+        setOpenDropdown(eventName);
+    };
+
+    const handleMouseLeave = () => {
+        dropdownTimerRef.current = window.setTimeout(() => {
+            setOpenDropdown(null);
+        }, 200);
+    };
 
     return (
         <header className="bg-white shadow-soft sticky top-0 z-10">
@@ -21,39 +38,62 @@ export function Header() {
 
                     <div className="hidden xl:flex items-center space-x-8">
                     <nav className="flex items-center space-x-8">
-                        <a
-                            href="https://gdgbh.com.br/#about"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                        {/* DevFest com dropdown de anos */}
+                        <div 
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter('devfest')}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            O que é o GDG?
-                        </a>
-                        {/* <Link
-                            to="/gdg-bh-meet"
+                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                DevFest
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'devfest' ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {openDropdown === 'devfest' && (
+                                <div 
+                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                    onMouseEnter={() => handleMouseEnter('devfest')}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <Link
+                                        to="/devfest"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        2025
+                                    </Link>
+                                    <Link
+                                        to="/devfest"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        2024
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+
+                        <a
+                            href="#"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             GDG BH Meet
-                        </Link>
-                        <Link
-                            to="/build-with-ai"
+                        </a>
+
+                        <a
+                            href="#"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             Build With AI
-                        </Link>
-                        <Link
-                            to="/google-io-extended"
+                        </a>
+
+                        <a
+                            href="#"
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                         >
                             Google I/O Extended
-                        </Link> */}
-                        <Link
-                            to="/devfest"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                        >
-                            DevFest
-                        </Link>
+                        </a>
                     </nav>
 
-                    <div className="hidden xl:flex items-center">
+                    {/* <div className="hidden xl:flex items-center">
                         <a
                             href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                             target="_blank"
@@ -61,18 +101,18 @@ export function Header() {
                         >
                             Garantir ingresso
                         </a>
-                    </div>
+                    </div> */}
 
                     </div>
 
                     <div className="xl:hidden flex items-center space-x-3">
-                        <a
+                        {/* <a
                             href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                             target="_blank"
                             className="bg-google-blue hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-regular transition-colors duration-200 shadow-soft text-sm whitespace-nowrap"
                         >
                             Ingresso
-                        </a>
+                        </a> */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className="text-google-gray hover:text-google-blue transition-colors duration-200 p-1"
@@ -106,41 +146,65 @@ export function Header() {
                 {isMobileMenuOpen && (
                     <div className="xl:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                            {/* DevFest Mobile Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => setIsMobileEventsOpen(isMobileEventsOpen === 'devfest' ? '' : 'devfest')}
+                                    className="w-full flex items-center justify-between px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                                >
+                                    DevFest
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'devfest' ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                {isMobileEventsOpen === 'devfest' && (
+                                    <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/devfest"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2025
+                                        </Link>
+                                        <Link
+                                            to="/devfest"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2024
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+
                             <a
-                                href="https://gdgbh.com.br/#about"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                O que é o GDG?
-                            </a>
-                            {/* <Link
-                                to="/gdg-bh-meet"
+                                href="#"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 GDG BH Meet
-                            </Link>
-                            <Link
-                                to="/build-with-ai"
+                            </a>
+
+                            <a
+                                href="#"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Build With AI
-                            </Link>
-                            <Link
-                                to="/google-io-extended"
+                            </a>
+
+                            <a
+                                href="#"
                                 className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Google I/O Extended
-                            </Link> */}
-                            <Link
-                                to="/devfest"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                DevFest
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 )}

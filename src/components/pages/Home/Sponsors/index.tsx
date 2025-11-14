@@ -11,11 +11,13 @@ import strider from '../../../../assets/logos/strider.png';
 import squadra from '../../../../assets/logos/squadra.png';
 import levty from '../../../../assets/logos/LEVTY.jpeg';
 import hotmart from '../../../../assets/logos/Hotmart.png';
+import onfly from '../../../../assets/logos/Onfly.png';
+import luza from '../../../../assets/logos/luza.png';
 
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Sponsors() {
-    const images = [pucminas, framework, fiap, alura, sydle, lucralize, localiza, strider, squadra, levty, hotmart];
+    const images = [pucminas, framework, fiap, alura, sydle, lucralize, localiza, strider, squadra, levty, hotmart, onfly, luza];
 
     return (
         <>

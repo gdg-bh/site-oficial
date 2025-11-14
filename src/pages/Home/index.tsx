@@ -1,6 +1,5 @@
 import Sponsors from '../../components/pages/Home/Sponsors';
 import Ideas from '../../components/pages/Home/Ideas';
-// import PastEvents from '../../components/pages/Home/PastEvents';
 
 import heroBG from '../../assets/pages/home/bg.png';
 import { Hero } from '../../components/pages/Home/Hero';
@@ -21,13 +20,12 @@ export function Home() {
             <Impact />
             <Crew />
             <About />
-            {/* <PastEvents /> */}
-            <HighlightSection
+            {/* <HighlightSection
                 title="Save the Date!"
                 text="O DevFest 2025 está chegando. Não perca o nosso maior evento do ano!"
                 btnText="Saiba mais"
                 btnLink="/devfest"
-            />
+            /> */}
             <Sponsors />
             <Ideas />
         </>

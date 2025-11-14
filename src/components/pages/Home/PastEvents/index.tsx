@@ -1,34 +1,50 @@
-import { Carousel } from '../../../Common/Carousel';
 import { SectionTitle } from '../../../Common/SectionTitle';
-import PastEventCard from '../PastEventCard';
+import { Container } from '../../../Common/Container';
+
+interface PastEvent {
+    id: string;
+    name: string;
+    year: string;
+    link: string;
+}
 
 export default function PastEvents() {
-    //links: { linkedin: '#', instagram: '#', github: '#' },
-
-    const events = [
+    const events: PastEvent[] = [
         {
-            name: 'DevFest',
-            description: 'O DevFest é uma conferência anual organizada por comunidades do Google Developer Groups (GDG) ao redor do mundo.',
-            date: '08/11/2025',
-            participants: '800+',
-            highlights: ['6 trilhas', '30+ horas de conteúdo', 'lorem ipsum'],
-            link: '/devfest',
+            id: '1',
+            name: 'GDG BH Meet',
+            year: '2024',
+            link: '/gdg-bh-meet-2024',
         },
+        // Adicione mais eventos aqui conforme necessário
     ];
 
     return (
-        <section className="bg-[#FFF] py-20 overflow-hidden">
-            <SectionTitle text="Eventos" highlight="Passados" />
-            <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                Explore nossos eventos anteriores e veja as experiências incríveis que criamos para
-                nossa comunidade.
-            </p>
+        <section className="bg-[#FFF] py-20">
+            <Container>
+                <SectionTitle text="Eventos" highlight="Passados" />
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
+                    Explore nossos eventos anteriores e veja as experiências incríveis que criamos para
+                    nossa comunidade.
+                </p>
 
-            <Carousel count={events.length} viewCount={3}>
-                {events.map((card, index) => (
-                    <PastEventCard key={index} card={card} />
-                ))}
-            </Carousel>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    {events.map((event) => (
+                        <a
+                            key={event.id}
+                            href={event.link}
+                            className="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:border-google-blue flex flex-col items-center justify-center text-center min-h-[200px]"
+                        >
+                            <h3 className="font-semibold text-2xl text-gray-800 mb-2 group-hover:text-google-blue transition-colors">
+                                {event.name}
+                            </h3>
+                            <span className="text-google-blue font-medium text-xl">
+                                {event.year}
+                            </span>
+                        </a>
+                    ))}
+                </div>
+            </Container>
         </section>
     );
 }
