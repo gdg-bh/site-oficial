@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { BasePage } from './pages/BasePage';
 import { Home } from './pages/Home';
 import { DevFest } from './pages/DevFest';
+import { DevFest2024 } from './pages/DevFest2024';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -18,6 +19,7 @@ export function AppRoutes() {
                 <Route path="/" element={<BasePage />}>
                     <Route index element={<Home />} />
                     <Route path="/devfest" element={<DevFest />} />
+                    <Route path="/devfest-2024" element={<DevFest2024 />} />
                     <Route path="*" element={<Home />} />
                 </Route>
             </Routes>
