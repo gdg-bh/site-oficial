@@ -62,7 +62,7 @@ export function Header() {
                                         2025
                                     </Link>
                                     <Link
-                                        to="/devfest"
+                                        to="/devfest-2024"
                                         className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
                                     >
                                         2024
@@ -169,7 +169,7 @@ export function Header() {
                                             2025
                                         </Link>
                                         <Link
-                                            to="/devfest"
+                                            to="/devfest-2024"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
                                             onClick={() => {
                                                 setIsMobileMenuOpen(false);

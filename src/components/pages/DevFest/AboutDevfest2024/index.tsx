@@ -2,7 +2,7 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 import { EventInformationCard } from '../EventInformationCard';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
-export default function AboutDevfest() {
+export default function AboutDevfest2024() {
     return (
         <>
             <section className="bg-white py-20">
@@ -30,7 +30,7 @@ export default function AboutDevfest() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-4xl font-semibold text-google-blue mb-2">500</h3>
+                            <h3 className="text-4xl font-semibold text-google-blue mb-2">400</h3>
                             <p className="text-gray-600 text-base font-medium">Participantes</p>
                         </div>
 
@@ -40,7 +40,7 @@ export default function AboutDevfest() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                                 </svg>
                             </div>
-                            <h3 className="text-4xl font-semibold text-google-blue mb-2">33</h3>
+                            <h3 className="text-4xl font-semibold text-google-blue mb-2">26</h3>
                             <p className="text-gray-600 text-base font-medium">Palestrantes</p>
                         </div>
 
@@ -50,7 +50,7 @@ export default function AboutDevfest() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-4xl font-semibold text-google-blue mb-2">30</h3>
+                            <h3 className="text-4xl font-semibold text-google-blue mb-2">28</h3>
                             <p className="text-gray-600 text-base font-medium">Horas de conteúdo</p>
                         </div>
                     </div>
@@ -62,11 +62,11 @@ export default function AboutDevfest() {
                             
                         </h3>
                         <p className="text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-                        O maior DevFest BH que já realizamos! A última edição reuniu quase 500 pessoas em um dia repleto de conteúdo, trazendo as principais tendências do mercado. Foram workshops, palestras inspiradoras e muitas oportunidades de networking, conectando a comunidade tech de Belo Horizonte em uma experiência intensa de aprendizado e troca.
+                        O DevFest BH 2024 reuniu 400 pessoas em um dia repleto de conteúdo, trazendo as principais tendências do mercado. Foram workshops, palestras inspiradoras e muitas oportunidades de networking, conectando a comunidade tech de Belo Horizonte em uma experiência intensa de aprendizado e troca.
                                                 </p>
                         <div className="flex justify-center mt-8">
                             <a
-                                href="https://drive.google.com/drive/folders/1IITy5iy32X_1D4tjr67O33cAe7TbTpqh?usp=sharing"
+                                href="https://drive.google.com/drive/u/2/folders/1L5xQ3x0MNpLhpP9vIDyN4gQI2WQv72zI"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-google-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
@@ -88,9 +88,9 @@ export default function AboutDevfest() {
                         Av. Brasil, 2023
                     </EventInformationCard>
                     <EventInformationCard icon={MapPin}>
-                        08 de Novembro de 2025
+                        26 de Outubro de 2024
                     </EventInformationCard>
-                    <EventInformationCard icon={Clock}>8:30 às 17:30</EventInformationCard>
+                    <EventInformationCard icon={Clock}>8:00 às 18:00</EventInformationCard>
                 </div>
                 <div className="w-80 h-48 md:w-[450px] md:h-[320px] xl:w-[672px] xl:h-[342px] bg-white border-[11px] border-white rounded-[32px]">
                     <iframe
@@ -98,10 +98,10 @@ export default function AboutDevfest() {
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
-                        allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                    />
+                        className="rounded-[24px]"
+                    ></iframe>
                 </div>
             </section>
         </>
