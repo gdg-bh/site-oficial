@@ -78,12 +78,32 @@ export function Header() {
                             GDG BH Meet
                         </a>
 
-                        <a
-                            href="#"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                        {/* Build With AI com dropdown de anos */}
+                        <div 
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter('buildwithai')}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            Build With AI
-                        </a>
+                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                Build With AI
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'buildwithai' ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {openDropdown === 'buildwithai' && (
+                                <div 
+                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                    onMouseEnter={() => handleMouseEnter('buildwithai')}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <Link
+                                        to="/build-with-ai-2024"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        2024
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
 
                         <a
                             href="#"
@@ -189,6 +209,32 @@ export function Header() {
                             >
                                 GDG BH Meet
                             </a>
+
+                            {/* Build With AI Mobile Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => setIsMobileEventsOpen(isMobileEventsOpen === 'buildwithai' ? '' : 'buildwithai')}
+                                    className="w-full flex items-center justify-between px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                                >
+                                    Build With AI
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'buildwithai' ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                {isMobileEventsOpen === 'buildwithai' && (
+                                    <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/build-with-ai-2024"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2024
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
 
                             <a
                                 href="#"
