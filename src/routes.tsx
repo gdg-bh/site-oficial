@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { DevFest } from './pages/DevFest';
 import { DevFest2024 } from './pages/DevFest2024';
 import { BuildWithAI2024 } from './pages/BuildWithAI2024';
+import { GoogleIO2024 } from './pages/GoogleIO2024';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -22,6 +23,7 @@ export function AppRoutes() {
                     <Route path="/devfest" element={<DevFest />} />
                     <Route path="/devfest-2024" element={<DevFest2024 />} />
                     <Route path="/build-with-ai-2024" element={<BuildWithAI2024 />} />
+                    <Route path="/google-io-extended-2024" element={<GoogleIO2024 />} />
                     <Route path="*" element={<Home />} />
                 </Route>
             </Routes>

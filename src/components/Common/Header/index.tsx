@@ -105,12 +105,32 @@ export function Header() {
                             )}
                         </div>
 
-                        <a
-                            href="#"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                        {/* Google I/O Extended com dropdown de anos */}
+                        <div 
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter('googleio')}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            Google I/O Extended
-                        </a>
+                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                Google I/O Extended
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'googleio' ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {openDropdown === 'googleio' && (
+                                <div 
+                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                    onMouseEnter={() => handleMouseEnter('googleio')}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <Link
+                                        to="/google-io-extended-2024"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        2024
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
                     </nav>
 
                     {/* <div className="hidden xl:flex items-center">
@@ -236,21 +256,31 @@ export function Header() {
                                 )}
                             </div>
 
-                            <a
-                                href="#"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Build With AI
-                            </a>
-
-                            <a
-                                href="#"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Google I/O Extended
-                            </a>
+                            {/* Google I/O Extended Mobile Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => setIsMobileEventsOpen(isMobileEventsOpen === 'googleio' ? '' : 'googleio')}
+                                    className="w-full flex items-center justify-between px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                                >
+                                    Google I/O Extended
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'googleio' ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                {isMobileEventsOpen === 'googleio' && (
+                                    <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/google-io-extended-2024"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2024
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 )}
