@@ -8,7 +8,10 @@ export default function AboutGoogleIO2024() {
             <section className="bg-white py-20">
                 <SectionTitle text="O que é o" highlight="Google I/O Extended" />
                 <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                   O <strong>Google I/O Extended</strong> é um evento global promovido pelas comunidades Google Developer Groups (GDG), que ocorre após o Google I/O oficial. Seu objetivo é levar as novidades anunciadas pela Google para os participantes, proporcionando uma experiência imersiva com palestras, workshops e networking para discutir as mais recentes tecnologias e ferramentas apresentadas no evento principal.
+                   O <strong>Google I/O Extended</strong> é a versão comunitária do Google I/O, criada para levar a experiência do evento oficial para diferentes cidades ao redor do mundo. Enquanto o Google I/O acontece na Califórnia e é organizado diretamente pelo Google, o I/O Extended é promovido pelas comunidades <strong>Google Developer Groups (GDG)</strong>, reunindo desenvolvedores, estudantes e entusiastas para acompanhar, discutir e aprofundar as novidades apresentadas.
+                </p>
+                <p className="mx-auto w-8/12 mt-4 text-center text-subtitle-color font-normal text-base">
+                   Com palestras, debates, atividades e muito networking, o Google I/O Extended conecta a comunidade local às tendências globais, tornando o conhecimento mais acessível e fortalecendo a troca entre pessoas apaixonadas por tecnologia.
                 </p>
             </section>
 

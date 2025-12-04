@@ -71,12 +71,32 @@ export function Header() {
                             )}
                         </div>
 
-                        <a
-                            href="#"
-                            className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                        {/* GDG BH Meet com dropdown de anos */}
+                        <div 
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            GDG BH Meet
-                        </a>
+                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                GDG BH Meet
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'gdgbhmeet' ? 'rotate-180' : ''}`} />
+                            </button>
+                            
+                            {openDropdown === 'gdgbhmeet' && (
+                                <div 
+                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                    onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <Link
+                                        to="/gdg-bh-meet-1"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        1ª Edição
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Build With AI com dropdown de anos */}
                         <div 
@@ -127,6 +147,12 @@ export function Header() {
                                         className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
                                     >
                                         2024
+                                    </Link>
+                                    <Link
+                                        to="/google-io-extended-2023"
+                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                    >
+                                        2023
                                     </Link>
                                 </div>
                             )}
@@ -222,13 +248,31 @@ export function Header() {
                                 )}
                             </div>
 
-                            <a
-                                href="#"
-                                className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                GDG BH Meet
-                            </a>
+                            {/* GDG BH Meet Mobile Dropdown */}
+                            <div>
+                                <button
+                                    onClick={() => setIsMobileEventsOpen(isMobileEventsOpen === 'gdgbhmeet' ? '' : 'gdgbhmeet')}
+                                    className="w-full flex items-center justify-between px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 font-regular"
+                                >
+                                    GDG BH Meet
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'gdgbhmeet' ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                {isMobileEventsOpen === 'gdgbhmeet' && (
+                                    <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/gdg-bh-meet-1"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            1ª Edição
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Build With AI Mobile Dropdown */}
                             <div>
@@ -277,6 +321,16 @@ export function Header() {
                                             }}
                                         >
                                             2024
+                                        </Link>
+                                        <Link
+                                            to="/google-io-extended-2023"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2023
                                         </Link>
                                     </div>
                                 )}
