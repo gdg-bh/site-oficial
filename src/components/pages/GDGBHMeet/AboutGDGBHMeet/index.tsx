@@ -9,15 +9,20 @@ export default function AboutGDGBHMeet() {
                 <SectionTitle text="O que é o" highlight="GDG BH Meet" />
                 <div className="mx-auto w-10/12 md:w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
                     <p className="mb-4">
-                        O <strong>GDG BH Meet</strong> é um encontro organizado pelo Google Developer Group Belo Horizonte com foco em conexão, troca de conhecimento e networking entre pessoas da comunidade de tecnologia.
+                        O <strong>GDG BH Meet</strong> é um encontro organizado pelo Google Developer Group Belo Horizonte com o objetivo de aproximar a comunidade de tecnologia da capital mineira. Ele foi criado para promover um espaço acolhedor onde profissionais, estudantes e entusiastas possam trocar experiências, aprender juntos e fortalecer suas redes de contato.
                     </p>
-                    <p className="mb-4">É um evento dinâmico, pensado para:</p>
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>Aproximar a comunidade</li>
-                        <li>Compartilhar práticas, cases e aprendizados</li>
-                        <li>Abrir espaço para conversas, conexões e oportunidades</li>
-                        <li>Fortalecer o ecossistema tech de BH</li>
-                    </ul>
+                    
+                    <p className="mb-4">
+                        Diferente dos grandes eventos anuais, o GDG BH Meet é mais dinâmico e frequente, permitindo discussões mais próximas e aprofundadas sobre temas atuais da área de tecnologia. A cada edição, o público tem acesso a palestras, painéis, demonstrações e momentos especiais de networking, sempre guiados por especialistas, parceiros e membros ativos da comunidade.
+                    </p>
+                    
+                    <p className="mb-4">
+                        O encontro também busca impulsionar a inovação local ao conectar pessoas que compartilham interesses comuns e que desejam crescer profissionalmente. Além disso, o GDG BH Meet reforça o papel do GDG Belo Horizonte como um catalisador de oportunidades, promovendo aprendizado contínuo e contribuindo para o desenvolvimento do ecossistema tech da região.
+                    </p>
+                    
+                    <p>
+                        Mais do que um evento, o GDG BH Meet é uma porta de entrada para quem deseja se conectar, aprender e fazer parte de uma comunidade colaborativa que acredita no poder das pessoas unidas pela tecnologia.
+                    </p>
                 </div>
             </section>
 
