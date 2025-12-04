@@ -2,11 +2,12 @@
 
 interface HeroProps {
     title: string;
+    subtitle?: string;
     location: string;
     bgImage: string;
 }
 
-export function HeroEvent({ title, location, bgImage }: HeroProps) {
+export function HeroEvent({ title, subtitle, location, bgImage }: HeroProps) {
     return (
         <section
             className="relative w-full h-[550px] flex flex-col items-center justify-center bg-cover bg-bottom px-4 lg:pb-24 overflow-hidden"
@@ -15,6 +16,11 @@ export function HeroEvent({ title, location, bgImage }: HeroProps) {
             <h1 className="font-medium text-5xl md:text-7xl text-center text-title-color drop-shadow-title">
                 {title}
             </h1>
+            {subtitle && (
+                <p className="font-medium text-3xl md:text-4xl text-center text-title-color drop-shadow-title mt-2">
+                    {subtitle}
+                </p>
+            )}
             <p className="font-normal text-2xl md:text-3xl text-center text-title-color drop-shadow-title mt-3">
                 {location}
             </p>
