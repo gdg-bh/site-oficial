@@ -23,9 +23,9 @@ export default function SpeakersGoogleIO2024() {
     ];
 
     return (
-        <section className="bg-white py-20 overflow-hidden">
+        <section className="bg-[#F7F9FB] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
-           
+            <div className="mb-16"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-wrap justify-center gap-6">
                     {speakers.map((speaker, idx) => (
