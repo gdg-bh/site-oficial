@@ -71,6 +71,19 @@ export default function AboutGDGBHMeet() {
                                 A programação contou com palestras de <strong>Alexia Kattah</strong>, engenheira da Computação que atua em uma empresa de tecnologia nos EUA desenvolvendo sistemas backend escaláveis e de alta performance com Node.js, além de <strong>André</strong>, Arquiteto de Software com ampla experiência em aplicações .NET Core escaláveis e RabbitMQ, e <strong>Matheus</strong>, Arquiteto de Soluções com mais de 10 anos de experiência em desenvolvimento, atuando com foco em arquiteturas resilientes e eficientes.
                             </p>
                         </div>
+                        <div className="flex justify-center mt-8">
+                            <a
+                                href="https://drive.google.com/drive/u/2/folders/1iVU_zcFyy4Fczh7QcbiF0LHahwK0af_M"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-google-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
+                            >
+                                Drive de fotos do evento
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
