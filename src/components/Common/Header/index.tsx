@@ -37,129 +37,141 @@ export function Header() {
                     </div>
 
                     <div className="hidden xl:flex items-center space-x-8">
-                    <nav className="flex items-center space-x-8">
-                        {/* DevFest com dropdown de anos */}
-                        <div 
-                            className="relative"
-                            onMouseEnter={() => handleMouseEnter('devfest')}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
-                                DevFest
-                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'devfest' ? 'rotate-180' : ''}`} />
-                            </button>
-                            
-                            {openDropdown === 'devfest' && (
-                                <div 
-                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
-                                    onMouseEnter={() => handleMouseEnter('devfest')}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    <Link
-                                        to="/devfest"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        2025
-                                    </Link>
-                                    <Link
-                                        to="/devfest-2024"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        2024
-                                    </Link>
-                                </div>
-                            )}
-                        </div>
+                        <nav className="flex items-center space-x-8">
+                            {/* DevFest com dropdown de anos */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => handleMouseEnter('devfest')}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                    DevFest
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'devfest' ? 'rotate-180' : ''}`} />
+                                </button>
 
-                        {/* GDG BH Meet com dropdown de anos */}
-                        <div 
-                            className="relative"
-                            onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
-                                GDG BH Meet
-                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'gdgbhmeet' ? 'rotate-180' : ''}`} />
-                            </button>
-                            
-                            {openDropdown === 'gdgbhmeet' && (
-                                <div 
-                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
-                                    onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    <Link
-                                        to="/gdg-bh-meet-1"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                {openDropdown === 'devfest' && (
+                                    <div
+                                        className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                        onMouseEnter={() => handleMouseEnter('devfest')}
+                                        onMouseLeave={handleMouseLeave}
                                     >
-                                        1ª Edição
-                                    </Link>
-                                </div>
-                            )}
-                        </div>
+                                        <Link
+                                            to="/devfest"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2025
+                                        </Link>
+                                        <Link
+                                            to="/devfest-2024"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2024
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
 
-                        {/* Build With AI com dropdown de anos */}
-                        <div 
-                            className="relative"
-                            onMouseEnter={() => handleMouseEnter('buildwithai')}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
-                                Build With AI
-                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'buildwithai' ? 'rotate-180' : ''}`} />
-                            </button>
-                            
-                            {openDropdown === 'buildwithai' && (
-                                <div 
-                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
-                                    onMouseEnter={() => handleMouseEnter('buildwithai')}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    <Link
-                                        to="/build-with-ai-2024"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        2024
-                                    </Link>
-                                </div>
-                            )}
-                        </div>
+                            {/* GDG BH Meet com dropdown de anos */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                    GDG BH Meet
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'gdgbhmeet' ? 'rotate-180' : ''}`} />
+                                </button>
 
-                        {/* Google I/O Extended com dropdown de anos */}
-                        <div 
-                            className="relative"
-                            onMouseEnter={() => handleMouseEnter('googleio')}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
-                                Google I/O Extended
-                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'googleio' ? 'rotate-180' : ''}`} />
-                            </button>
-                            
-                            {openDropdown === 'googleio' && (
-                                <div 
-                                    className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
-                                    onMouseEnter={() => handleMouseEnter('googleio')}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    <Link
-                                        to="/google-io-extended-2024"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                {openDropdown === 'gdgbhmeet' && (
+                                    <div
+                                        className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                        onMouseEnter={() => handleMouseEnter('gdgbhmeet')}
+                                        onMouseLeave={handleMouseLeave}
                                     >
-                                        2024
-                                    </Link>
-                                    <Link
-                                        to="/google-io-extended-2023"
-                                        className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        2023
-                                    </Link>
-                                </div>
-                            )}
-                        </div>
-                    </nav>
+                                        <Link
+                                            to="/gdg-bh-meet-2"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2ª Edição
+                                        </Link>
+                                        <Link
+                                            to="/gdg-bh-meet-1"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            1ª Edição
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
 
-                    {/* <div className="hidden xl:flex items-center">
+                            {/* Build With AI com dropdown de anos */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => handleMouseEnter('buildwithai')}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                    Build With AI
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'buildwithai' ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                {openDropdown === 'buildwithai' && (
+                                    <div
+                                        className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                        onMouseEnter={() => handleMouseEnter('buildwithai')}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <Link
+                                            to="/build-with-ai-2025"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2025
+                                        </Link>
+                                        <Link
+                                            to="/build-with-ai-2024"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2024
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Google I/O Extended com dropdown de anos */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => handleMouseEnter('googleio')}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                <button className="text-google-gray hover:text-google-blue transition-colors duration-200 font-regular flex items-center gap-1">
+                                    Google I/O Extended
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'googleio' ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                {openDropdown === 'googleio' && (
+                                    <div
+                                        className="absolute top-full left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50"
+                                        onMouseEnter={() => handleMouseEnter('googleio')}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <Link
+                                            to="/google-io-extended-2024"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2024
+                                        </Link>
+                                        <Link
+                                            to="/google-io-extended-2023"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2023
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+                        </nav>
+
+                        {/* <div className="hidden xl:flex items-center">
                         <a
                             href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3103493"
                             target="_blank"
@@ -221,7 +233,7 @@ export function Header() {
                                     DevFest
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'devfest' ? 'rotate-180' : ''}`} />
                                 </button>
-                                
+
                                 {isMobileEventsOpen === 'devfest' && (
                                     <div className="pl-6 space-y-1">
                                         <Link
@@ -257,9 +269,19 @@ export function Header() {
                                     GDG BH Meet
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'gdgbhmeet' ? 'rotate-180' : ''}`} />
                                 </button>
-                                
+
                                 {isMobileEventsOpen === 'gdgbhmeet' && (
                                     <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/gdg-bh-meet-2"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2ª Edição
+                                        </Link>
                                         <Link
                                             to="/gdg-bh-meet-1"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
@@ -283,9 +305,19 @@ export function Header() {
                                     Build With AI
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'buildwithai' ? 'rotate-180' : ''}`} />
                                 </button>
-                                
+
                                 {isMobileEventsOpen === 'buildwithai' && (
                                     <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/build-with-ai-2025"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2025
+                                        </Link>
                                         <Link
                                             to="/build-with-ai-2024"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
@@ -309,7 +341,7 @@ export function Header() {
                                     Google I/O Extended
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileEventsOpen === 'googleio' ? 'rotate-180' : ''}`} />
                                 </button>
-                                
+
                                 {isMobileEventsOpen === 'googleio' && (
                                     <div className="pl-6 space-y-1">
                                         <Link
