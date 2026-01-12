@@ -3,22 +3,22 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 const scheduleData = [
     {
         start: '08:30',
-        end: '09:00',
+        end: '09:30',
         title: 'Credenciamento e Coffee',
     },
     {
-        start: '09:00',
-        end: '09:30',
-        title: 'Abertura do Evento',
+        start: '09:30',
+        end: '10:00',
+        title: 'Abertura',
     },
     {
-        start: '09:30',
-        end: '10:30',
+        start: '10:00',
+        end: '10:40',
         title: 'Palestra 1',
         speaker: 'Em breve',
     },
     {
-        start: '10:30',
+        start: '10:40',
         end: '11:30',
         title: 'Palestra 2',
         speaker: 'Em breve',
