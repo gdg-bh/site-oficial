@@ -1,12 +1,12 @@
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 import localiza from '../../../../assets/logos/Localiza.png';
-import fiap from '../../../../assets/logos/Fiap.png';
+//import fiap from '../../../../assets/logos/Fiap.png';
 
 export default function SponsorsGDGBHMeet2() {
     const sponsors = [
         { logo: localiza, url: 'https://www.localiza.com/', name: 'Localiza' },
-        { logo: fiap, url: 'https://www.fiap.com.br/', name: 'FIAP' },
+        //{ logo: fiap, url: 'https://www.fiap.com.br/', name: 'FIAP' },
     ];
 
     return (

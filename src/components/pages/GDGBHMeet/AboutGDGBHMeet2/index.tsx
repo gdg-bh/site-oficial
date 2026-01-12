@@ -69,18 +69,10 @@ export default function AboutGDGBHMeet2() {
                         </h3>
                         <div className="text-gray-700 text-left leading-relaxed max-w-3xl mx-auto space-y-4">
                             <p>
-                                Na segunda edição do GDG BH Meet, reunimos mais uma vez nossa comunidade para uma manhã repleta de conteúdo técnico de qualidade e muito networking.
-                            </p>
-                            
-                            <p>
-                                A programação desta edição contou com palestras de especialistas renomados da área de tecnologia, abordando temas relevantes e atuais do mercado tech.
-                            </p>
-                            
-                            <p>
-                                Este evento proporcionou aos participantes a oportunidade de expandir seus conhecimentos, fazer conexões valiosas e se manter atualizados com as últimas tendências e práticas do desenvolvimento de software.
+                               Nesta edição do evento, o GDG BH Meet terá como foco a Segurança da Informação, trazendo conteúdos atuais e relevantes para quem quer se manter atento aos desafios e boas práticas da área. Teremos dois palestrantes compartilhando conhecimento e experiências, além de muito networking para fortalecer conexões na comunidade. Para deixar a experiência ainda melhor, o evento contará com café da manhã e um copo exclusivo do GDG como brinde para os participantes.
                             </p>
                         </div>
-                        <div className="flex justify-center mt-8">
+                        {/* <div className="flex justify-center mt-8">
                             <a
                                 href="#"
                                 target="_blank"
@@ -92,7 +84,7 @@ export default function AboutGDGBHMeet2() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
