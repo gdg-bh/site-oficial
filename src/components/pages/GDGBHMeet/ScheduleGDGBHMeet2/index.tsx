@@ -14,8 +14,8 @@ const scheduleData = [
     {
         start: '10:00',
         end: '10:40',
-        title: 'Palestra 1',
-        speaker: 'Em breve',
+        title: 'A Fábrica de Credenciais: do Stealer-as-a-Service à Exfiltração via Telegram/Discord',
+        speaker: 'Lucas Lemes',
     },
     {
         start: '10:40',

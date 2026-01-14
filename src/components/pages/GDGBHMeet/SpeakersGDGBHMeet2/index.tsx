@@ -1,34 +1,17 @@
 import ProfileCard from '../../DevFest/ProfileCard';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
-// import palestrante1 from '../../../../assets/palestrantes/palestrante1.jpg';
-// import palestrante2 from '../../../../assets/palestrantes/palestrante2.jpg';
-// import palestrante3 from '../../../../assets/palestrantes/palestrante3.jpg';
+import LucasLemes from '../../../../assets/palestrantes/Lucas_Lemes.jpeg';
 
 export default function SpeakersGDGBHMeet2() {
     const speakers = [
-        // Descomentar e atualizar com os dados dos palestrantes quando disponíveis
-        // {
-        //     photoUrl: palestrante1,
-        //     name: 'Nome do Palestrante 1',
-        //     role: 'Cargo',
-        //     description: 'Empresa',
-        //     links: { linkedin: 'https://www.linkedin.com/in/palestrante1/' },
-        // },
-        // {
-        //     photoUrl: palestrante2,
-        //     name: 'Nome do Palestrante 2',
-        //     role: 'Cargo',
-        //     description: 'Empresa',
-        //     links: { linkedin: 'https://www.linkedin.com/in/palestrante2/' },
-        // },
-        // {
-        //     photoUrl: palestrante3,
-        //     name: 'Nome do Palestrante 3',
-        //     role: 'Cargo',
-        //     description: 'Empresa',
-        //     links: { linkedin: 'https://www.linkedin.com/in/palestrante3/' },
-        // },
+        {
+            photoUrl: LucasLemes,
+            name: 'Lucas Lemes',
+            role: 'Cyber Security Analyst',
+            description: 'Banco do Brasil',
+            links: { linkedin: 'https://www.linkedin.com/in/lucas-lemes-839359111/', post: 'https://www.linkedin.com/feed/update/urn:li:activity:7417146326984888320' },
+        },
     ];
 
     return (

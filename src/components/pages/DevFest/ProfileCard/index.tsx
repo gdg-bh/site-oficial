@@ -26,7 +26,7 @@ export default function ProfileCard({ photoUrl, name, role, description, links }
       />
 
       <h3 className="text-lg font-medium text-gray-900">{name}</h3>
-      <p className="text-lg font-light text-[#4285F4]">{role}</p>
+      <p className="text-lg font-light text-gray-600">{role}</p>
       <p className="text-md leading-[18px] text-gray-600 mt-1">{description}</p>
 
       <div className="flex items-center gap-3 mt-4">
