@@ -20,8 +20,8 @@ const scheduleData = [
     {
         start: '10:40',
         end: '11:30',
-        title: 'Palestra 2',
-        speaker: 'Em breve',
+        title: 'Hackeando AI: O que Ainda Não te Contaram (e pode custar caro)',
+        speaker: 'Jaime Pinto',
     },
     {
         start: '11:30',

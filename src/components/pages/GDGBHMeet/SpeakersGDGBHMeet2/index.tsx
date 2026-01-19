@@ -2,6 +2,7 @@ import ProfileCard from '../../DevFest/ProfileCard';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 import LucasLemes from '../../../../assets/palestrantes/Lucas_Lemes.jpeg';
+import JaimePinto from '../../../../assets/palestrantes/Jaime_Pinto.jpg';
 
 export default function SpeakersGDGBHMeet2() {
     const speakers = [
@@ -11,6 +12,13 @@ export default function SpeakersGDGBHMeet2() {
             role: 'Cyber Security Analyst',
             description: 'Banco do Brasil',
             links: { linkedin: 'https://www.linkedin.com/in/lucas-lemes-839359111/', post: 'https://www.linkedin.com/feed/update/urn:li:activity:7417146326984888320' },
+        },
+        {
+            photoUrl: JaimePinto,
+            name: 'Jaime Pinto',
+            role: 'Head of IT',
+            description: 'Jaguar Mining Inc.',
+            links: { linkedin: 'https://www.linkedin.com/in/jaimeppinto/', post: 'https://www.linkedin.com/posts/gdg-bh_gdgbhmeet-gdgbh-activity-7417933961651376128-kBJx' },
         },
     ];
 
