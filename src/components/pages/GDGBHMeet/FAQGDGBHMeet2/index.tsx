@@ -44,7 +44,7 @@ export default function FAQGDGBHMeet2() {
     return (
         <section className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <SectionTitle text="Perguntas" highlight="frequentes" />
+                <SectionTitle text="Perguntas" highlight="Frequentes" />
                 <p className="mx-auto max-w-3xl mt-4 text-center text-subtitle-color font-normal text-base mb-12">
                     Tudo o que você precisa saber sobre a comunidade e eventos. Não encontrou a
                     resposta que procurava? Entre em contato com a nossa equipe por e-mail.
