@@ -12,24 +12,24 @@ export default function FAQGDGBHMeet2() {
 
     const faqItems: FAQItem[] = [
         {
-            question: 'O que é o GDG BH Meet?',
-            answer: 'O GDG BH Meet é um evento local promovido pelo Google Developer Group Belo Horizonte. É uma oportunidade para desenvolvedores, estudantes e entusiastas de tecnologia se reunirem para aprender, trocar experiências e fazer networking, explorando as últimas tendências e tecnologias do ecossistema Google.',
+            question: 'Posso Transferir Meu Ingresso Para Outra Pessoa?',
+            answer: 'Não. Os ingressos são nominais e intransferíveis.',
         },
         {
-            question: 'Preciso ter conhecimento prévio para participar?',
-            answer: 'Não é necessário ter conhecimento prévio específico. O evento é aberto a desenvolvedores, estudantes e entusiastas de tecnologia de todos os níveis de experiência. As palestras abordam temas de forma acessível, tanto para iniciantes quanto para profissionais experientes.',
+            question: 'Existe Alguma Regra De Vestimenta Para Entrar No Local Do Evento?',
+            answer: 'Sim. Para acesso ao local, é obrigatório o uso de sapato fechado, conforme regras da Localiza.',
         },
         {
-            question: 'O evento é gratuito?',
-            answer: 'Sim! O GDG BH Meet é um evento gratuito e aberto à comunidade. Nossa missão é tornar o conhecimento sobre tecnologia acessível a todos os interessados.',
+            question: 'O Evento Terá Acessibilidade Em LIBRAS?',
+            answer: 'Sim. O evento contará com tradução em LIBRAS.',
         },
         {
-            question: 'Onde o evento aconteceu?',
-            answer: 'O GDG BH Meet 2ª Edição aconteceu na PUC Minas - Lourdes, localizada em Belo Horizonte.',
+            question: 'Como Funciona A Entrega Dos Brindes?',
+            answer: 'Os brindes são entregues somente no dia do evento e apenas para pessoas presentes.',
         },
         {
-            question: 'Como posso me manter atualizado sobre próximos eventos?',
-            answer: 'Você pode acompanhar o GDG Belo Horizonte através de nossas redes sociais e plataformas de eventos. Publicamos regularmente informações sobre nossos próximos encontros, workshops e eventos especiais. Entre em contato conosco através do nosso site para não perder nenhuma novidade!',
+            question: 'O Evento Emite Certificado De Participação?',
+            answer: 'Sim. O certificado será enviado na semana seguinte ao evento para o e-mail cadastrado no ingresso. Caso não o receba, ele também ficará disponível no aplicativo da Sympla.',
         },
     ];
 
@@ -64,11 +64,19 @@ export default function FAQGDGBHMeet2() {
                                         }`}
                                     />
                                 </button>
-                                {openIndex === index && (
-                                    <div className="px-6 pb-4 pt-2">
-                                        <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                                <div
+                                    className={`grid transition-all duration-300 ease-in-out ${
+                                        openIndex === index
+                                            ? 'grid-rows-[1fr] opacity-100'
+                                            : 'grid-rows-[0fr] opacity-0'
+                                    }`}
+                                >
+                                    <div className="overflow-hidden">
+                                        <div className="px-6 pb-4 pt-2">
+                                            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                                        </div>
                                     </div>
-                                )}
+                                </div>
                             </div>
                         ))}
                     </div>
