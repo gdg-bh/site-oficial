@@ -31,6 +31,10 @@ export default function FAQGDGBHMeet2() {
             question: 'O Evento Emite Certificado De Participação?',
             answer: 'Sim. O certificado será enviado na semana seguinte ao evento para o e-mail cadastrado no ingresso. Caso não o receba, ele também ficará disponível no aplicativo da Sympla.',
         },
+        {
+            question: 'Quando E Como Vou Ter Acesso Às Fotos Oficiais Do Evento?',
+            answer: 'Até a sexta-feira seguinte ao evento, você receberá um e-mail com o link para as fotos. Elas também ficarão disponíveis no site do GDG.',
+        },
     ];
 
     const toggleFAQ = (index: number) => {
