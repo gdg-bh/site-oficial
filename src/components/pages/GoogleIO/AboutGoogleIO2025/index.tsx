@@ -1,18 +1,21 @@
-﻿import { SectionTitle } from '../../../Common/SectionTitle';
+import { SectionTitle } from '../../../Common/SectionTitle';
 import { EventInformationCard } from '../../DevFest/EventInformationCard';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
-export default function AboutBuildWithAI2024() {
+export default function AboutGoogleIO2025() {
     return (
         <>
             <section className="bg-white py-20">
-                <SectionTitle text="O que Ã© o" highlight="Build With AI" />
+                <SectionTitle text="O que é o" highlight="Google I/O Extended" />
                 <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                   O <strong>Build With AI</strong> Ã© um evento global promovido pelas comunidades Google Developer Groups (GDG), voltado para o aprendizado e a prÃ¡tica de InteligÃªncia Artificial Generativa. Seu objetivo Ã© reunir desenvolvedores de diferentes nÃ­veis de experiÃªncia para explorar as tecnologias mais recentes do Google, participar de atividades tÃ©cnicas, aprender conceitos atuais de IA e desenvolver soluÃ§Ãµes inovadoras em um ambiente colaborativo e voltado ao compartilhamento de conhecimento.
+                   O <strong>Google I/O Extended</strong> é a versão comunitária do Google I/O, criada para levar a experiência do evento oficial para diferentes cidades ao redor do mundo. Enquanto o Google I/O acontece na Califórnia e é organizado diretamente pelo Google, o I/O Extended é promovido pelas comunidades <strong>Google Developer Groups (GDG)</strong>, reunindo desenvolvedores, estudantes e entusiastas para acompanhar, discutir e aprofundar as novidades apresentadas.
+                </p>
+                <p className="mx-auto w-8/12 mt-4 text-center text-subtitle-color font-normal text-base">
+                   Com palestras, debates, atividades e muito networking, o Google I/O Extended conecta a comunidade local às tendências globais, tornando o conhecimento mais acessível e fortalecendo a troca entre pessoas apaixonadas por tecnologia.
                 </p>
             </section>
 
-            {/* SeÃ§Ã£o de EstatÃ­sticas do Evento */}
+            {/* Seção de Estatísticas do Evento */}
             <section className="bg-[#F7F9FB] py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Grid de Cards - Ajustado para 3 colunas */}
@@ -23,7 +26,7 @@ export default function AboutBuildWithAI2024() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-4xl font-semibold text-google-blue mb-2">98</h3>
+                            <h3 className="text-4xl font-semibold text-google-blue mb-2">385</h3>
                             <p className="text-gray-600 text-base font-medium">Participantes</p>
                         </div>
 
@@ -43,8 +46,8 @@ export default function AboutBuildWithAI2024() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-4xl font-semibold text-google-blue mb-2">12</h3>
-                            <p className="text-gray-600 text-base font-medium">Horas de conteÃºdo</p>
+                            <h3 className="text-4xl font-semibold text-google-blue mb-2">4</h3>
+                            <p className="text-gray-600 text-base font-medium">Horas de conteúdo</p>
                         </div>
                     </div>
 
@@ -52,29 +55,23 @@ export default function AboutBuildWithAI2024() {
                     <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
                         <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 flex items-center justify-center gap-3">
                             Sobre o Evento
-                            
                         </h3>
-                        <p className="text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-                            O Build With AI Belo Horizonte foi dedicado ao aprendizado e Ã  aplicaÃ§Ã£o prÃ¡tica de InteligÃªncia Artificial Generativa utilizando o Gemini, a tecnologia de IA do Google. Realizado em dois dias, o evento reuniu desenvolvedores, entusiastas e profissionais da Ã¡rea para uma imersÃ£o tÃ©cnica em ambientes colaborativos e orientados Ã  prÃ¡tica.
+                        <div className="text-gray-700 text-left leading-relaxed max-w-3xl mx-auto space-y-4">
+                            <p>
+                                O Google I/O Extended Belo Horizonte 2025 reuniu a comunidade em um grande encontro de tecnologia, inovação e troca de experiências, recebendo 385 participantes na PUC Minas – Coração Eucarístico.
+                            </p>
 
-                            No dia 20 de abril, o foco foi Python, com um workshop conduzido por Gabriel Cassimiro, Google Developer Expert (GDE) em Machine Learning. Gabriel compartilhou sua experiÃªncia como Tech Lead em iniciativas de GenAI, apresentando conceitos, ferramentas e exemplos prÃ¡ticos para quem jÃ¡ possuÃ­a conhecimento prÃ©vio em Python.
+                            <p>
+                                A programação contou com <strong>Beto Muniz</strong>, Google Developer Expert em Web Technologies e atualmente na Grafana Labs, com uma trajetória marcada por projetos para empresas como Google e Riot Games. Em sua palestra, "Inteligência Artificial no Desenvolvimento Web: O paradigma está evoluindo. E você também deve", Beto explorou como as inovações apresentadas no Google I/O 2025 estão transformando a forma de desenvolver aplicações, trazendo conceitos modernos como MCP e A2A e refletindo sobre o impacto da IA no futuro da engenharia de software, especialmente no desenvolvimento front-end.
+                            </p>
 
-                            JÃ¡ no dia 27 de abril, o destaque foi Flutter, com um workshop ministrado por Gabul, Google Developer Expert (GDE) em Flutter. Ele demonstrou como integrar Flutter a soluÃ§Ãµes de InteligÃªncia Artificial, oferecendo insights valiosos sobre o desenvolvimento de aplicaÃ§Ãµes modernas que fazem uso de IA generativa.
+                            <p>
+                                Também tivemos a presença de <strong>Ahirton Lopes</strong>, Ph.D., Senior Manager na Accenture, professor de MBA na FIAP, Google Developer Expert em IA e Microsoft MVP em AI Platform. Em sua talk, "Deep Thinking: Keras, JAX e a Ascensão dos Agentes no I/O 2025", Ahirton conduziu um mergulho nas principais inovações do evento global, destacando o avanço do Gemini 2.5 Pro, a autonomia dos Agentes de IA como o Projeto Astra, o papel de Keras e JAX na construção de modelos de alto desempenho e a chegada do Gemma 3n, ampliando o acesso a modelos multimodais e otimizados para dispositivos.
+                            </p>
 
-                            Com uma programaÃ§Ã£o voltada a participantes de nÃ­vel iniciante a intermediÃ¡rio, o Build With AI BH proporcionou aprendizado prÃ¡tico, troca de experiÃªncias e oportunidades de networking, fortalecendo a comunidade local e incentivando o uso de tecnologias atuais para criaÃ§Ã£o de projetosÂ inovadores.
-                        </p>
-                        <div className="flex justify-center mt-8">
-                            <a
-                                href="https://drive.google.com/drive/folders/1IITy5iy32X_1D4tjr67O33cAe7TbTpqh?usp=sharing"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 bg-google-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
-                            >
-                                Drive de fotos do evento
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </a>
+                            <p>
+                                O evento reforçou o papel da comunidade como um espaço de aprendizado, conexão e construção do futuro da tecnologia, marcando mais um capítulo importante na história do Google I/O Extended em Belo Horizonte.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -82,18 +79,18 @@ export default function AboutBuildWithAI2024() {
 
             <section className="flex flex-col xl:flex-row items-center py-24 xl:p-32 justify-center gap-12 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF]">
                 <div className="flex flex-col gap-6">
-                    <EventInformationCard icon={Calendar}>
-                        Puc Minas - Lourdes <br />
-                        Av. Brasil, 2023
-                    </EventInformationCard>
                     <EventInformationCard icon={MapPin}>
-                        07 de Setembro de 2024
+                        PUC Minas - Coração Eucarístico <br />
+                        Av. Dom José Gaspar, 500
                     </EventInformationCard>
-                    <EventInformationCard icon={Clock}>9:00 Ã s 17:00</EventInformationCard>
+                    <EventInformationCard icon={Calendar}>
+                        14 de junho de 2025
+                    </EventInformationCard>
+                    <EventInformationCard icon={Clock}>13:30 às 17:00</EventInformationCard>
                 </div>
                 <div className="w-80 h-48 md:w-[450px] md:h-[320px] xl:w-[672px] xl:h-[342px] bg-white border-[11px] border-white rounded-[32px]">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.788846822649!2d-43.93968002432465!3d-19.933300938412227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6991939c3dc67%3A0x1bcc33e162314675!2sPUC%20Minas%20Lourdes%20-%20Pr%C3%A9dio%201%20%E2%80%93%20Edif%C3%ADcio%20Dom%20Cabral!5e0!3m2!1spt-BR!2sbr!4v1757131665987!5m2!1spt-BR!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.358674849886!2d-43.99394852507123!3d-19.917750081694076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699fb1b026c5f%3A0xd12ddb4449db850d!2sPUC%20Minas%20-%20Cora%C3%A7%C3%A3o%20Eucar%C3%ADstico!5e0!3m2!1spt-BR!2sbr!4v1737651234567!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -106,4 +103,3 @@ export default function AboutBuildWithAI2024() {
         </>
     );
 }
-

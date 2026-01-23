@@ -5,6 +5,7 @@ import AboutGDGBHMeet2 from '../../components/pages/GDGBHMeet/AboutGDGBHMeet2';
 import SpeakersGDGBHMeet2 from '../../components/pages/GDGBHMeet/SpeakersGDGBHMeet2';
 import ScheduleGDGBHMeet2 from '../../components/pages/GDGBHMeet/ScheduleGDGBHMeet2';
 import SponsorsGDGBHMeet2 from '../../components/pages/GDGBHMeet/SponsorsGDGBHMeet2';
+import FAQGDGBHMeet2 from '../../components/pages/GDGBHMeet/FAQGDGBHMeet2';
 
 export function GDGBHMeet2() {
     return (
@@ -15,6 +16,7 @@ export function GDGBHMeet2() {
             <SpeakersGDGBHMeet2 />
             <ScheduleGDGBHMeet2 />
             <SponsorsGDGBHMeet2 />
+            <FAQGDGBHMeet2 />
         </>
     );
 }
