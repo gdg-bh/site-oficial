@@ -155,6 +155,12 @@ export function Header() {
                                         onMouseLeave={handleMouseLeave}
                                     >
                                         <Link
+                                            to="/google-io-extended-2025"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2025
+                                        </Link>
+                                        <Link
                                             to="/google-io-extended-2024"
                                             className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
                                         >
@@ -344,6 +350,16 @@ export function Header() {
 
                                 {isMobileEventsOpen === 'googleio' && (
                                     <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/google-io-extended-2025"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2025
+                                        </Link>
                                         <Link
                                             to="/google-io-extended-2024"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
