@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import instagramIcon from '../../../../assets/icons/InstagramGray.svg';
 import linkedinIcon from '../../../../assets/icons/LinkedinGray.svg';
 import githubIcon from '../../../../assets/icons/GithubGray.svg';
 import postIcon from '../../../../assets/icons/InfoGray.svg';
+import SpeakerModal from '../../../Common/SpeakerModal';
 
 interface ProfileProps {
   photoUrl: string;
@@ -12,18 +14,29 @@ interface ProfileProps {
     linkedin?: string;
     instagram?: string;
     github?: string;
-    post?: string;
   };
+  speakerInfo?: string;
+  talkTitle?: string;
+  talkInfo?: string;
 }
 
-export default function ProfileCard({ photoUrl, name, role, description, links }: ProfileProps) {
+export default function ProfileCard({ photoUrl, name, role, description, links, speakerInfo, talkTitle, talkInfo }: ProfileProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleInfoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsModalOpen(true);
+  };
+
   return (
-    <div className="max-w-sm bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center h-full">
-      <img
-        className="w-[100px] h-[100px] rounded-full object-cover mb-4 shadow-sm"
-        src={photoUrl}
-        alt={`${name} photo`}
-      />
+    <>
+      <div className="max-w-sm bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center h-full">
+        <img
+          className="w-[100px] h-[100px] rounded-full object-cover mb-4 shadow-sm"
+          src={photoUrl}
+          alt={`${name} photo`}
+        />
 
       <h3 className="text-lg font-medium text-gray-900">{name}</h3>
       <p className="text-lg font-light text-gray-600">{role}</p>
@@ -66,18 +79,28 @@ export default function ProfileCard({ photoUrl, name, role, description, links }
           </a>
         )}
 
-        {links.post && (
-          <a
-            href={links.post}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Post"
-            className="rounded-full p-1 hover:bg-gray-200 transition-transform transform hover:scale-110"
-          >
-            <img src={postIcon} alt="Post" />
-          </a>
-        )}
+        <button
+          onClick={handleInfoClick}
+          aria-label="Informações da Palestra"
+          className="rounded-full p-1 hover:bg-gray-200 transition-transform transform hover:scale-110 cursor-pointer"
+        >
+          <img src={postIcon} alt="Info" />
+        </button>
       </div>
     </div>
+
+    <SpeakerModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      photoUrl={photoUrl}
+      name={name}
+      role={role}
+      description={description}
+      speakerInfo={speakerInfo}
+      talkTitle={talkTitle}
+      talkInfo={talkInfo}
+      links={links}
+    />
+    </>
   );
 }

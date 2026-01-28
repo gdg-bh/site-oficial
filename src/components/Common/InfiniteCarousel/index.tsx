@@ -149,7 +149,7 @@ export function InfiniteCarousel({ count = 5, viewCount = 4, children }: Infinit
                     >
                         {duplicatedArray.map((child, i) => (
                             <div
-                                key={`carousel-item-${i}`}
+                                key={`carousel-${Date.now()}-${i}-${Math.random()}`}
                                 className={`flex-shrink-0 max-w-[100%] min-w-[280px]`}
                                 style={{ flexBasis: `${100 / viewCount}%` }}
                                 tabIndex={0}
