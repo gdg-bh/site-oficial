@@ -12,6 +12,9 @@ export default function SpeakersBuildWithAI2024() {
             role: 'Lead AI Engineer',
             description: 'Sierra Studio',
             links: { linkedin: 'https://www.linkedin.com/in/gabriel-cassimiro/' },
+            speakerInfo: '',
+            talkTitle: '',
+            talkInfo: 'Gabriel ministrou um treinamento hands-on em Python no Build With AI 2024, ensinando os participantes a desenvolverem aplicações de IA Generativa utilizando as tecnologias do Google. O workshop abordou conceitos práticos de implementação, frameworks e ferramentas essenciais para construir soluções inovadoras com Inteligência Artificial.',
         },
         {
             photoUrl: Gabul,
@@ -19,6 +22,9 @@ export default function SpeakersBuildWithAI2024() {
             role: 'Senior Software Engineer',
             description: 'Will Bank',
             links: { linkedin: 'https://www.linkedin.com/in/gabuldev/' },
+            speakerInfo: '',
+            talkTitle: '',
+            talkInfo: 'Gabul Dev conduziu um treinamento prático em Flutter no Build With AI 2024, mostrando como criar aplicações mobile inteligentes utilizando IA Generativa e as tecnologias do Google. Os participantes aprenderam a integrar recursos de IA em apps Flutter, criando experiências mobile inovadoras e interativas com Inteligência Artificial.',
         },
     ];
 
@@ -36,6 +42,9 @@ export default function SpeakersBuildWithAI2024() {
                                 role={speaker.role}
                                 description={speaker.description}
                                 links={speaker.links}
+                                speakerInfo={speaker.speakerInfo}
+                                talkTitle={speaker.talkTitle}
+                                talkInfo={speaker.talkInfo}
                             />
                         </div>
                     ))}
