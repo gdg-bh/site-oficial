@@ -1,5 +1,3 @@
-import { HeroGDGBHMeet2Card } from '../HeroGDGBHMeet2Card';
-
 interface HeroGDGBHMeet2Props {
     title: string;
     subtitle: string;
@@ -10,10 +8,10 @@ interface HeroGDGBHMeet2Props {
 export function HeroGDGBHMeet2({ title, subtitle, location, bgImage }: HeroGDGBHMeet2Props) {
     return (
         <section
-            className="relative w-full xl:h-[660px] flex flex-col items-center justify-center bg-cover bg-bottom px-4 pb-12 lg:pb-32 overflow-hidden"
+            className="relative w-full h-[550px] flex flex-col items-center justify-center bg-cover bg-bottom px-4 lg:pb-24 overflow-hidden"
             style={{ backgroundImage: `url(${bgImage})` }}
         >
-            <h1 className="font-medium text-5xl md:text-7xl text-center text-title-color drop-shadow-title mt-10 mt-xl-0">
+            <h1 className="font-medium text-5xl md:text-7xl text-center text-title-color drop-shadow-title">
                 {title}
             </h1>
             <p className="font-normal text-2xl md:text-3xl text-center text-title-color drop-shadow-title mt-3">
@@ -21,7 +19,6 @@ export function HeroGDGBHMeet2({ title, subtitle, location, bgImage }: HeroGDGBH
             </p>
             <p className="font-normal text-xl text-center text-title-color mt-2">{location}</p>
 
-            <HeroGDGBHMeet2Card />
             <svg
                 className="w-[300%] lg:w-[100vw] absolute bottom-[-5px]"
                 preserveAspectRatio="none"
