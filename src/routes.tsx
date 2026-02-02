@@ -11,6 +11,7 @@ import { GoogleIO2024 } from './pages/GoogleIO2024';
 import { GoogleIO2023 } from './pages/GoogleIO2023';
 import { GDGBHMeet } from './pages/GDGBHMeet';
 import { GDGBHMeet2 } from './pages/GDGBHMeet2';
+import { IWD2026 } from './pages/IWD2026';
 
 
 function ScrollToTop() {
@@ -35,6 +36,7 @@ export function AppRoutes() {
                     <Route path="/google-io-extended-2023" element={<GoogleIO2023 />} />
                     <Route path="/gdg-bh-meet-1" element={<GDGBHMeet />} />
                     <Route path="/gdg-bh-meet-2" element={<GDGBHMeet2 />} />
+                    <Route path="/iwd-2026" element={<IWD2026 />} />
                     <Route path="*" element={<Home />} />
                 </Route>
             </Routes>
