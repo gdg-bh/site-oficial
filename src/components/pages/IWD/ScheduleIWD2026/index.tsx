@@ -2,25 +2,37 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 
 const scheduleData = [
     {
-        start: '09:00',
-        end: '09:30',
+        start: '08:00',
+        end: '09:00',
         title: 'Credenciamento e Coffee',
     },
     {
-        start: '09:30',
-        end: '10:00',
+        start: '09:00',
+        end: '09:20',
         title: 'Abertura',
     },
     {
-        start: '10:00',
-        end: '13:00',
-        title: 'Palestras e Painéis',
+        start: '09:20',
+        end: '10:10',
+        title: 'Entrevista de Emprego Sem Frescura',
+        speaker: 'Luciana RH Sincero',
+    },
+    {
+        start: '10:10',
+        end: '11:00',
+        title: 'Em Breve',
         speaker: 'A definir',
     },
     {
-        start: '13:00',
-        end: '13:00',
-        title: 'Encerramento',
+        start: '11:00',
+        end: '11:50',
+        title: 'Painel: Mulheres Líderes',
+        speaker: 'A definir',
+    },
+    {
+        start: '11:50',
+        end: '12:20',
+        title: 'Encerramento, Sorteios e Foto oficial',
     },
 ];
 
