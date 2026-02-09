@@ -55,30 +55,6 @@ export default function ProfileCard({ photoUrl, name, role, description, links, 
           </a>
         )}
 
-        {links.instagram && (
-          <a
-            href={links.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="rounded-full p-1 hover:bg-gray-200 transition-transform transform hover:scale-110"
-          >
-            <img src={instagramIcon} alt="Instagram" />
-          </a>
-        )}
-
-        {links.github && (
-          <a
-            href={links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="rounded-full p-1 hover:bg-gray-200 transition-transform transform hover:scale-110"
-          >
-            <img src={githubIcon} alt="GitHub" />
-          </a>
-        )}
-
         <button
           onClick={handleInfoClick}
           aria-label="Informações da Palestra"
