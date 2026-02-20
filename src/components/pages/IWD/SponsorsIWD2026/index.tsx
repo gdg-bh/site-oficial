@@ -2,11 +2,15 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 
 import elasMaisMais from '../../../../assets/logos/elas++.png';
 import pucMinas from '../../../../assets/logos/puc-minas.png';
+import sydle from '../../../../assets/logos/sydle.png';
+import levty from '../../../../assets/logos/LEVTY.jpeg';
 
 export default function SponsorsIWD2026() {
     const sponsors = [
         { logo: elasMaisMais, url: 'https://www.instagram.com/elasmaismais/', name: 'Elas++' },
         { logo: pucMinas, url: 'https://www.pucminas.br/', name: 'PUC Minas' },
+        { logo: sydle, url: 'https://www.sydle.com/', name: 'SYDLE' },
+        { logo: levty, url: 'https://levty.com/', name: 'Levty' },
     ];
 
     return (
