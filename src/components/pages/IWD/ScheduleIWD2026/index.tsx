@@ -20,14 +20,14 @@ const scheduleData = [
     {
         start: '10:10',
         end: '11:00',
-        title: 'Em Breve',
-        speaker: 'A definir',
+        title: 'De Aprendiz a Referencial: Construindo Espaço na Tecnologia com Propósito',
+        speaker: 'Geise Martins',
     },
     {
         start: '11:00',
         end: '11:50',
-        title: 'Painel: Mulheres Líderes',
-        speaker: 'A definir',
+        title: 'Painel: Mulheres que Lideram',
+        speaker: 'Manoela Werneck e outras',
     },
     {
         start: '11:50',
@@ -41,7 +41,7 @@ export default function ScheduleIWD2026() {
         <section className="bg-white py-20 overflow-hidden">
             <SectionTitle highlight="Agenda" />
             <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                Confira o cronograma completo do evento. A programação detalhada será divulgada em breve!
+                Confira o cronograma completo do evento: 
             </p>
             <div className="w-full max-w-7xl mx-auto p-4">
                 <div className="border border-gray-200 rounded-lg h-[450px] overflow-y-auto">
