@@ -1,9 +1,12 @@
+import ContinuousSlider from '../../../Common/ContinuousSlider';
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 import elasMaisMais from '../../../../assets/logos/elas++.png';
 import pucMinas from '../../../../assets/logos/puc-minas.png';
 import sydle from '../../../../assets/logos/sydle.png';
-import levty from '../../../../assets/logos/LEVTY.jpeg';
+import levty from '../../../../assets/logos/LEVTY.png';
+import elogroup from '../../../../assets/logos/elogroup.png';
+import maxmuscles from '../../../../assets/logos/Maxmuscles.PNG';
 
 export default function SponsorsIWD2026() {
     const sponsors = [
@@ -11,31 +14,34 @@ export default function SponsorsIWD2026() {
         { logo: pucMinas, url: 'https://www.pucminas.br/', name: 'PUC Minas' },
         { logo: sydle, url: 'https://www.sydle.com/', name: 'SYDLE' },
         { logo: levty, url: 'https://levty.com/', name: 'Levty' },
+        { logo: elogroup, url: 'https://www.elogroup.com.br/', name: 'EloGroup' },
+        { logo: maxmuscles, url: 'https://lojamaxmuscles.com.br/', name: 'Maxmuscles' },
     ];
+
+    const duplicatedSponsors = [...sponsors, ...sponsors];
 
     return (
         <>
-            <section className="bg-[#F7F9FB] py-20">
+            <section className="bg-[#F7F9FB] py-20 overflow-hidden">
                 <SectionTitle highlight="Patrocinadores e Apoiadores" />
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                    <div className="flex flex-wrap items-center justify-center gap-12">
-                        {sponsors.map((sponsor, idx) => (
-                            <a
-                                key={idx}
-                                href={sponsor.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-transform duration-200 hover:scale-105"
-                            >
-                                <img
-                                    src={sponsor.logo}
-                                    alt={sponsor.name}
-                                    className="w-48 h-32 object-contain"
-                                />
-                            </a>
-                        ))}
-                    </div>
-                </div>
+                <p className="mx-auto w-10/12 lg:w-6/12 mb-16 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base"></p>
+                <ContinuousSlider>
+                    {duplicatedSponsors.map((sponsor, idx) => (
+                        <a
+                            key={idx}
+                            href={sponsor.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mx-6 flex-shrink-0 transition-transform duration-200 hover:scale-105"
+                        >
+                            <img
+                                src={sponsor.logo}
+                                alt={sponsor.name}
+                                className="w-48 h-32 object-contain"
+                            />
+                        </a>
+                    ))}
+                </ContinuousSlider>
             </section>
             <section>
                 <div className="mb-16 py-10 bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] text-center w-full max-w-7xl mx-auto rounded-xl">

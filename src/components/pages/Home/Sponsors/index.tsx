@@ -9,7 +9,7 @@ import lucralize from '../../../../assets/logos/lucralize.png';
 import localiza from '../../../../assets/logos/Localiza.png';
 import strider from '../../../../assets/logos/strider.png';
 import squadra from '../../../../assets/logos/squadra.png';
-import levty from '../../../../assets/logos/LEVTY.jpeg';
+import levty from '../../../../assets/logos/LEVTY.png';
 import hotmart from '../../../../assets/logos/Hotmart.png';
 import onfly from '../../../../assets/logos/Onfly.png';
 import luza from '../../../../assets/logos/luza.png';
