@@ -20,6 +20,16 @@ export default function SpeakersIWD2026() {
             description: 'SYDLE',
             links: { linkedin: 'https://www.linkedin.com/in/manoela-werneck/' },
             speakerInfo: 'Manoela iniciou sua trajetória na SYDLE há cinco anos, atuando como desenvolvedora full stack em projetos estratégicos nas áreas de mercado livre de energia, billing e e-commerce. Ao longo da sua caminhada, também compartilhou sua experiência em palestras e eventos, com foco em resolução de problemas e liderança técnica.\nAtualmente, lidera um time de desenvolvimento de BPMS, sendo responsável desde a concepção da arquitetura até a implementação final das soluções.\nUma trajetória que une profundidade técnica, visão estratégica e liderança na prática.'
+        },
+        {
+            photoUrl: new URL('/src/assets/palestrantes/Geisislaine_Lima_Martins.jpeg', import.meta.url).href,
+            name: 'Geise Martins',
+            role: 'Head de Travel',
+            description: 'Onfly',
+            links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
+            speakerInfo: 'Em 2020, Geise deixou uma carreira consolidada como Técnica em Segurança do Trabalho para se aventurar na programação. Seis anos depois, é Head de Travel na Onfly, liderando uma equipe com mais de 50 pessoas e conectando grandes empresas dos setores aéreo e hoteleiro por meio de tecnologia de ponta.\n\nIniciou como desenvolvedora no time Travel da Onfly, participou da criação do Luna — Gateway de Integrações, foi promovida a Tech Lead e hoje lidera a evolução da solução. O que antes levava meses para integrar, agora acontece em semanas: são 52 parceiros integrados e mais de 3.000 empresas gerenciando viagens e despesas com a tecnologia construída por seu time.',
+            talkTitle: 'De Aprendiz a Referencial: Construindo Espaço na Tecnologia com Propósito',
+            talkInfo: 'Na palestra, Geise compartilha sua transição de carreira, os aprendizados sobre planejamento, estratégia e posicionamento profissional, além de reflexões sobre como se fortalecer como mulher em ambientes majoritariamente masculinos. Uma conversa sobre crescimento, propósito e construção de espaço na tecnologia.'
         }
     ];
 
