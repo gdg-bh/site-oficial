@@ -27,7 +27,7 @@ const scheduleData = [
         start: '11:00',
         end: '11:50',
         title: 'Painel: Mulheres que Lideram',
-        speaker: 'Manoela Werneck e outras',
+        speaker: 'Manoela Werneck, Sabrina Karen e outras',
     },
     {
         start: '11:50',

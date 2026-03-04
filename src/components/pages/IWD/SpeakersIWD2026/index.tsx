@@ -30,6 +30,14 @@ export default function SpeakersIWD2026() {
             speakerInfo: 'Em 2020, Geise deixou uma carreira consolidada como Técnica em Segurança do Trabalho para se aventurar na programação. Seis anos depois, é Head de Travel na Onfly, liderando uma equipe com mais de 50 pessoas e conectando grandes empresas dos setores aéreo e hoteleiro por meio de tecnologia de ponta.\n\nIniciou como desenvolvedora no time Travel da Onfly, participou da criação do Luna — Gateway de Integrações, foi promovida a Tech Lead e hoje lidera a evolução da solução. O que antes levava meses para integrar, agora acontece em semanas: são 52 parceiros integrados e mais de 3.000 empresas gerenciando viagens e despesas com a tecnologia construída por seu time.',
             talkTitle: 'De Aprendiz a Referencial: Construindo Espaço na Tecnologia com Propósito',
             talkInfo: 'Na palestra, Geise compartilha sua transição de carreira, os aprendizados sobre planejamento, estratégia e posicionamento profissional, além de reflexões sobre como se fortalecer como mulher em ambientes majoritariamente masculinos. Uma conversa sobre crescimento, propósito e construção de espaço na tecnologia.'
+        },
+        {
+            photoUrl: new URL('/src/assets/palestrantes/Sabrina_Karen.jpeg', import.meta.url).href,
+            name: 'Sabrina Karen',
+            role: 'Tech Lead',
+            description: 'EloGroup',
+            links: {linkedin: 'https://www.linkedin.com/in/sabrina-karen/'},
+            speakerInfo: 'Sabrina Karen é uma profissional com quase 10 anos de experiência como engenheira de software. Ao longo da sua trajetória, atuou em projetos full stack com foco em aplicações analíticas de alta volumetria e ambientes distribuídos, consolidando experiência em arquitetura de soluções com Angular, Java/Spring Boot, Kubernetes/OpenShift e AWS — sempre com olhar atento para escalabilidade, performance e sustentabilidade técnica.\n\nAtualmente, atua como Tech Lead e Arquiteta de Soluções na EloGroup, liderando desde a definição arquitetural até a entrega em produção, apoiando o time na tomada de decisões e na evolução contínua da qualidade do software.\n\nUma trajetória que une profundidade técnica, visão sistêmica e liderança aplicada no dia a dia.'
         }
     ];
 
