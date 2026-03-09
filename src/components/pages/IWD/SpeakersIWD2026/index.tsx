@@ -1,10 +1,17 @@
 import ProfileCard from '../../DevFest/ProfileCard';
 import { SectionTitle } from '../../../Common/SectionTitle';
+import { Carousel } from '../../../Common/Carousel';
+
+import LucianaRHSincero from '../../../../assets/palestrantes/Luciana_RH_Sincero.jpeg';
+import ManoelaWerneck from '../../../../assets/palestrantes/Manoela_Werneck.jpeg';
+import GeisislaineLimaMartins from '../../../../assets/palestrantes/Geisislaine_Lima_Martins.jpeg';
+import SabrinaKaren from '../../../../assets/palestrantes/Sabrina_Karen.jpeg';
+import ArieleMuniz from '../../../../assets/palestrantes/Ariele_Muniz.jpeg';
 
 export default function SpeakersIWD2026() {
-    const speakers: any[] = [
+    const speakers = [
         {
-            photoUrl: new URL('/src/assets/palestrantes/Luciana_RH_Sincero.jpeg', import.meta.url).href,
+            photoUrl: LucianaRHSincero,
             name: 'Luciana Azevedo',
             role: '',
             description: 'RH Sincero',
@@ -14,7 +21,7 @@ export default function SpeakersIWD2026() {
             talkInfo: 'Nesta palestra, Luciana vai abordar os principais pilares de uma entrevista de emprego:\n✔️ Preparação e análise da vaga\n✔️ Como responder às principais perguntas\n✔️ Os erros mais comuns cometidos pelos candidatos\n\nTudo de forma descontraída, direta e real, mostrando como as coisas realmente funcionam no mercado de trabalho.'
         },
         {
-            photoUrl: new URL('/src/assets/palestrantes/Manoela_Werneck.jpeg', import.meta.url).href,
+            photoUrl: ManoelaWerneck,
             name: 'Manoela Werneck',
             role: 'Tech Lead',
             description: 'SYDLE',
@@ -22,7 +29,7 @@ export default function SpeakersIWD2026() {
             speakerInfo: 'Manoela iniciou sua trajetória na SYDLE há cinco anos, atuando como desenvolvedora full stack em projetos estratégicos nas áreas de mercado livre de energia, billing e e-commerce. Ao longo da sua caminhada, também compartilhou sua experiência em palestras e eventos, com foco em resolução de problemas e liderança técnica.\nAtualmente, lidera um time de desenvolvimento de BPMS, sendo responsável desde a concepção da arquitetura até a implementação final das soluções.\nUma trajetória que une profundidade técnica, visão estratégica e liderança na prática.'
         },
         {
-            photoUrl: new URL('/src/assets/palestrantes/Geisislaine_Lima_Martins.jpeg', import.meta.url).href,
+            photoUrl: GeisislaineLimaMartins,
             name: 'Geise Martins',
             role: 'Head de Travel',
             description: 'Onfly',
@@ -32,12 +39,20 @@ export default function SpeakersIWD2026() {
             talkInfo: 'Na palestra, Geise compartilha sua transição de carreira, os aprendizados sobre planejamento, estratégia e posicionamento profissional, além de reflexões sobre como se fortalecer como mulher em ambientes majoritariamente masculinos. Uma conversa sobre crescimento, propósito e construção de espaço na tecnologia.'
         },
         {
-            photoUrl: new URL('/src/assets/palestrantes/Sabrina_Karen.jpeg', import.meta.url).href,
+            photoUrl: SabrinaKaren,
             name: 'Sabrina Karen',
             role: 'Tech Lead',
             description: 'EloGroup',
             links: {linkedin: 'https://www.linkedin.com/in/sabrina-karen/'},
             speakerInfo: 'Sabrina Karen é uma profissional com quase 10 anos de experiência como engenheira de software. Ao longo da sua trajetória, atuou em projetos full stack com foco em aplicações analíticas de alta volumetria e ambientes distribuídos, consolidando experiência em arquitetura de soluções com Angular, Java/Spring Boot, Kubernetes/OpenShift e AWS — sempre com olhar atento para escalabilidade, performance e sustentabilidade técnica.\n\nAtualmente, atua como Tech Lead e Arquiteta de Soluções na EloGroup, liderando desde a definição arquitetural até a entrega em produção, apoiando o time na tomada de decisões e na evolução contínua da qualidade do software.\n\nUma trajetória que une profundidade técnica, visão sistêmica e liderança aplicada no dia a dia.'
+        },
+        {
+            photoUrl: ArieleMuniz,
+            name: 'Ariele Muniz',
+            role: 'Delivery Manager',
+            description: '',
+            links: { linkedin: 'https://www.linkedin.com/in/ariele-muniz-720b59208/' },
+            speakerInfo: 'Ariele entrou no mundo da tecnologia por meio dos jogos e do interesse pela lógica. Seu primeiro contato com programação aconteceu durante a graduação em Ciência da Computação, quando descobriu sua paixão pela área.\n\nIniciou sua carreira como estagiária desenvolvedora de software e, ao longo da jornada, percebeu sua vontade de liderar times e contribuir para a construção de soluções que geram valor real para os clientes.\n\nHoje atua como Delivery Manager, trabalhando na gestão de times, no desenvolvimento de novas lideranças e garantindo o sucesso dos projetos.\n\nUma trajetória que mostra como curiosidade, aprendizado contínuo e liderança podem caminhar juntos na tecnologia.'
         }
     ];
 
@@ -45,23 +60,40 @@ export default function SpeakersIWD2026() {
         <section className="bg-[#F7F9FB] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
             <div className="mb-16"></div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-wrap justify-center gap-6">
+
+            <div className="hidden xl:flex justify-center gap-6 max-w-7xl mx-auto px-4">
+                {speakers.map((speaker, idx) => (
+                    <div key={idx} className="w-[280px]">
+                        <ProfileCard
+                            photoUrl={speaker.photoUrl}
+                            name={speaker.name}
+                            role={speaker.role}
+                            description={speaker.description}
+                            links={speaker.links}
+                            speakerInfo={speaker.speakerInfo}
+                            talkTitle={speaker.talkTitle}
+                            talkInfo={speaker.talkInfo}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            <div className="xl:hidden">
+                <Carousel count={speakers.length} viewCount={4}>
                     {speakers.map((speaker, idx) => (
-                        <div key={idx} className="w-full sm:w-[280px]">
-                            <ProfileCard
-                                photoUrl={speaker.photoUrl}
-                                name={speaker.name}
-                                role={speaker.role}
-                                description={speaker.description}
-                                links={speaker.links}
-                                speakerInfo={speaker.speakerInfo}
-                                talkTitle={speaker.talkTitle}
-                                talkInfo={speaker.talkInfo}
-                            />
-                        </div>
+                        <ProfileCard
+                            key={idx}
+                            photoUrl={speaker.photoUrl}
+                            name={speaker.name}
+                            role={speaker.role}
+                            description={speaker.description}
+                            links={speaker.links}
+                            speakerInfo={speaker.speakerInfo}
+                            talkTitle={speaker.talkTitle}
+                            talkInfo={speaker.talkInfo}
+                        />
                     ))}
-                </div>
+                </Carousel>
             </div>
         </section>
     );
