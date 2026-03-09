@@ -1,5 +1,6 @@
 import ProfileCard from '../../DevFest/ProfileCard';
 import { SectionTitle } from '../../../Common/SectionTitle';
+import { Carousel } from '../../../Common/Carousel';
 
 import BetoMuniz from '../../../../assets/palestrantes/Beto_Muniz.jpeg';
 import AhirtonLopes from '../../../../assets/palestrantes/Ahirton_Lopes.jpeg';
@@ -32,23 +33,40 @@ export default function SpeakersGoogleIO2025() {
         <section className="bg-[#F7F9FB] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
             <div className="mb-16"></div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-wrap justify-center gap-6">
+
+            <div className="hidden xl:flex justify-center gap-6 max-w-7xl mx-auto px-4">
+                {speakers.map((speaker, idx) => (
+                    <div key={idx} className="w-[280px]">
+                        <ProfileCard
+                            photoUrl={speaker.photoUrl}
+                            name={speaker.name}
+                            role={speaker.role}
+                            description={speaker.description}
+                            links={speaker.links}
+                            speakerInfo={speaker.speakerInfo}
+                            talkTitle={speaker.talkTitle}
+                            talkInfo={speaker.talkInfo}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            <div className="xl:hidden">
+                <Carousel count={speakers.length} viewCount={4}>
                     {speakers.map((speaker, idx) => (
-                        <div key={idx} className="w-full sm:w-[280px]">
-                            <ProfileCard
-                                photoUrl={speaker.photoUrl}
-                                name={speaker.name}
-                                role={speaker.role}
-                                description={speaker.description}
-                                links={speaker.links}
-                                speakerInfo={speaker.speakerInfo}
-                                talkTitle={speaker.talkTitle}
-                                talkInfo={speaker.talkInfo}
-                            />
-                        </div>
+                        <ProfileCard
+                            key={idx}
+                            photoUrl={speaker.photoUrl}
+                            name={speaker.name}
+                            role={speaker.role}
+                            description={speaker.description}
+                            links={speaker.links}
+                            speakerInfo={speaker.speakerInfo}
+                            talkTitle={speaker.talkTitle}
+                            talkInfo={speaker.talkInfo}
+                        />
                     ))}
-                </div>
+                </Carousel>
             </div>
         </section>
     );
