@@ -13,11 +13,13 @@ import levty from '../../../../assets/logos/LEVTY.png';
 import hotmart from '../../../../assets/logos/Hotmart.png';
 import onfly from '../../../../assets/logos/Onfly.png';
 import luza from '../../../../assets/logos/luza.png';
+import elogroup from '../../../../assets/logos/elogroup.png';
+import montreal from '../../../../assets/logos/montreal.png';
 
 import { SectionTitle } from '../../../Common/SectionTitle';
 
 export default function Sponsors() {
-    const images = [pucminas, framework, fiap, alura, sydle, lucralize, localiza, strider, squadra, levty, hotmart, onfly, luza];
+    const images = [pucminas, framework, fiap, alura, sydle, lucralize, localiza, strider, squadra, levty, hotmart, onfly, luza, elogroup, montreal];
 
     return (
         <>

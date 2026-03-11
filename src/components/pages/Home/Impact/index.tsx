@@ -10,7 +10,7 @@ export default function Impact() {
     const cards = [
         {
             icon: people,
-            number: '+4.500',
+            number: '+5.000',
             title: 'Pessoas Impactadas',
             text: 'Pelos nossos eventos e iniciativas',
         },
@@ -28,7 +28,7 @@ export default function Impact() {
         },
         {
             icon: medal,
-            number: '3',
+            number: '4',
             title: 'Anos de impacto na comunidade',
             text: 'Construindo conexões desde 2022 com a organização atual',
         },
