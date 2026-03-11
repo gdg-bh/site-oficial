@@ -8,6 +8,7 @@ import levty from '../../../../assets/logos/LEVTY.png';
 import elogroup from '../../../../assets/logos/elogroup.png';
 import maxmuscles from '../../../../assets/logos/Maxmuscles.PNG';
 import montreal from '../../../../assets/logos/montreal.png';
+import pipizito from '../../../../assets/logos/pipizito.png';
 
 export default function SponsorsIWD2026() {
     const sponsors = [
@@ -17,7 +18,8 @@ export default function SponsorsIWD2026() {
         { logo: levty, url: 'https://levty.com/', name: 'Levty' },
         { logo: elogroup, url: 'https://www.elogroup.com.br/', name: 'EloGroup' },
         { logo: maxmuscles, url: 'https://lojamaxmuscles.com.br/', name: 'Maxmuscles' },
-        { logo: montreal, url: 'https://www.montreal.com.br/', name: 'Montreal' }
+        { logo: montreal, url: 'https://www.montreal.com.br/', name: 'Montreal' },
+        { logo: pipizito, url: 'https://www.pipizito.com.br/', name: 'Pipizito' },
     ];
 
     const duplicatedSponsors = [...sponsors, ...sponsors];
