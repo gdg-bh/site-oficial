@@ -19,14 +19,14 @@ export function HeroIWD2026Card() {
                 </div>
             </div>
 
-            <a
+            {/* <a
                 href="https://www.sympla.com.br/evento/international-women-s-day-belo-horizonte/3282582"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-google-blue text-white text-center px-6 py-3 rounded-lg font-normal transition-colors duration-200 shadow-soft hover:bg-blue-600 cursor-pointer"
             >
                 Garantir ingresso
-            </a>
+            </a> */}
         </div>
     );
 }

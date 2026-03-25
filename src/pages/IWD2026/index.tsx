@@ -16,7 +16,7 @@ export function IWD2026() {
                 location="Belo Horizonte" 
                 bgImage={iwdBg} 
             />
-            <CountdownTimerIWD2026 />
+            {/* <CountdownTimerIWD2026 /> */}
             <AboutIWD2026 />
             <SpeakersIWD2026 />
             <ScheduleIWD2026 />
