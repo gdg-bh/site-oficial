@@ -21,7 +21,7 @@ export function Hero({ title, location, bgImage, text }: HeroProps) {
             </p>
             <p className="font-normal text-xl text-center text-title-color lg:w-6/12">{text}</p>
 
-            <HeroSectionCard />
+            {/* <HeroSectionCard /> */}
             <svg
                 className="w-[300%] lg:w-[100vw] absolute bottom-[-5px]"
                 preserveAspectRatio="none"
