@@ -1,13 +1,14 @@
-// import { DevFestHeroSectionCard } from '../../pages/DevFest/DevFestHeroSectionCard';
+﻿import React from 'react';
 
 interface HeroProps {
     title: string;
     subtitle?: string;
     location: string;
     bgImage: string;
+    children?: React.ReactNode;
 }
 
-export function HeroEvent({ title, subtitle, location, bgImage }: HeroProps) {
+export function HeroEvent({ title, subtitle, location, bgImage, children }: HeroProps) {
     return (
         <section
             className="relative w-full h-[550px] flex flex-col items-center justify-center bg-cover bg-bottom px-4 lg:pb-24 overflow-hidden"
@@ -25,7 +26,7 @@ export function HeroEvent({ title, subtitle, location, bgImage }: HeroProps) {
                 {location}
             </p>
 
-            {/* <DevFestHeroSectionCard /> */}
+            {children}
 
             <svg
                 className="w-[300%] lg:w-[100vw] absolute bottom-[-5px]"

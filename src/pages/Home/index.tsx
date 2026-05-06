@@ -6,6 +6,7 @@ import { Hero } from '../../components/pages/Home/Hero';
 import Impact from '../../components/pages/Home/Impact';
 import Crew from '../../components/pages/Home/Crew';
 import About from '../../components/pages/Home/About';
+import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import HighlightSection from '../../components/Common/HighlightSection';
 
 export function Home() {
@@ -17,15 +18,10 @@ export function Home() {
                 text="Aprenda, conecte-se e evolua com uma comunidade inclusiva de desenvolvedores apaixonados por tecnologia."
                 bgImage={heroBG}
             />
+            <CountdownTimer targetDateString="2026-05-30T08:30:00-03:00" />
             <Impact />
             <Crew />
             <About />
-            {/* <HighlightSection
-                title="Save the Date!"
-                text="O DevFest 2025 está chegando. Não perca o nosso maior evento do ano!"
-                btnText="Saiba mais"
-                btnLink="/devfest"
-            /> */}
             <Sponsors />
             <Ideas />
         </>

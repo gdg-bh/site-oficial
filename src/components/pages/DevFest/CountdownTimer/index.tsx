@@ -35,8 +35,8 @@ const calculateTimeRemaining = (targetDate: Date): TimeRemaining => {
     };
 };
 
-export function CountdownTimer() {
-    const targetDate = useMemo(() => new Date('2025-11-08T08:30:00-03:00'), []);
+export function CountdownTimer({ targetDateString = '2026-05-30T08:30:00-03:00' }: { targetDateString?: string }) {
+    const targetDate = useMemo(() => new Date(targetDateString), [targetDateString]);
     const [timeRemaining, setTimeRemaining] = useState<TimeRemaining | null>(null);
     const [isMounted, setIsMounted] = useState(false);
 
