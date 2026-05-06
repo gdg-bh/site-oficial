@@ -6,6 +6,7 @@ import { DevFest } from './pages/DevFest';
 import { DevFest2024 } from './pages/DevFest2024';
 import { BuildWithAI2024 } from './pages/BuildWithAI2024';
 import { BuildWithAI2025 } from './pages/BuildWithAI2025';
+import { BuildWithAI2026 } from './pages/BuildWithAI2026';
 import { GoogleIO2025 } from './pages/GoogleIO2025';
 import { GoogleIO2024 } from './pages/GoogleIO2024';
 import { GoogleIO2023 } from './pages/GoogleIO2023';
@@ -31,6 +32,7 @@ export function AppRoutes() {
                     <Route path="/devfest-2024" element={<DevFest2024 />} />
                     <Route path="/build-with-ai-2024" element={<BuildWithAI2024 />} />
                     <Route path="/build-with-ai-2025" element={<BuildWithAI2025 />} />
+                    <Route path="/build-with-ai-2026" element={<BuildWithAI2026 />} />
                     <Route path="/google-io-extended-2025" element={<GoogleIO2025 />} />
                     <Route path="/google-io-extended-2024" element={<GoogleIO2024 />} />
                     <Route path="/google-io-extended-2023" element={<GoogleIO2023 />} />
