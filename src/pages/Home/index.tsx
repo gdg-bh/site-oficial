@@ -6,7 +6,7 @@ import { Hero } from '../../components/pages/Home/Hero';
 import Impact from '../../components/pages/Home/Impact';
 import Crew from '../../components/pages/Home/Crew';
 import About from '../../components/pages/Home/About';
-import PastEvents from '../../components/pages/Home/PastEvents';
+// import PastEvents from '../../components/pages/Home/PastEvents';
 import { CountdownTimer } from '../../components/pages/DevFest/CountdownTimer';
 import HighlightSection from '../../components/Common/HighlightSection';
 
@@ -23,7 +23,7 @@ export function Home() {
             <Impact />
             <Crew />
             <About />
-            <PastEvents />
+            {/* <PastEvents /> */}
             <Sponsors />
             <Ideas />
         </>
