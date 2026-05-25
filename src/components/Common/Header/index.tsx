@@ -155,6 +155,12 @@ export function Header() {
                                         onMouseLeave={handleMouseLeave}
                                     >
                                         <Link
+                                            to="/google-io-extended-2026"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2026
+                                        </Link>
+                                        <Link
                                             to="/google-io-extended-2025"
                                             className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
                                         >
