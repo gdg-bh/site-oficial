@@ -14,8 +14,8 @@ const scheduleData = [
     {
         start: '09:20',
         end: '10:10',
-        title: 'Palestra a confirmar',
-        speaker: 'A confirmar',
+        title: 'Google I/O 2026 - Omnimercial',
+        speaker: 'Emerson Rocco Bernardino',
     },
     {
         start: '10:10',
@@ -26,8 +26,8 @@ const scheduleData = [
     {
         start: '11:00',
         end: '11:50',
-        title: 'Palestra a confirmar',
-        speaker: 'A confirmar',
+        title: 'AI Para Web Developers',
+        speaker: 'Mario Souto Silva',
     },
     {
         start: '11:50',
