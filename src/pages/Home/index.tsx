@@ -19,7 +19,7 @@ export function Home() {
                 text="Aprenda, conecte-se e evolua com uma comunidade inclusiva de desenvolvedores apaixonados por tecnologia."
                 bgImage={heroBG}
             />
-            <CountdownTimer targetDateString="2026-05-30T08:30:00-03:00" />
+            <CountdownTimer targetDateString="2026-06-13T08:00:00-03:00" />
             <Impact />
             <Crew />
             <About />
