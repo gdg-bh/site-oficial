@@ -344,6 +344,16 @@ export function Header() {
                                 {isMobileEventsOpen === 'buildwithai' && (
                                     <div className="pl-6 space-y-1">
                                         <Link
+                                            to="/build-with-ai-2026"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2026
+                                        </Link>
+                                        <Link
                                             to="/build-with-ai-2025"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
                                             onClick={() => {
@@ -379,6 +389,16 @@ export function Header() {
 
                                 {isMobileEventsOpen === 'googleio' && (
                                     <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/google-io-extended-2026"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2026
+                                        </Link>
                                         <Link
                                             to="/google-io-extended-2025"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
