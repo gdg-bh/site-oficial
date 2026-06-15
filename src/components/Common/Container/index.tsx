@@ -2,8 +2,9 @@ import type { ReactNode } from 'react';
 
 interface ContainerProps {
     children: ReactNode;
+    className?: string;
 }
 
-export function Container({ children }: ContainerProps) {
-    return <section>{children}</section>;
+export function Container({ children, className = '' }: ContainerProps) {
+    return <section className={className}>{children}</section>;
 }

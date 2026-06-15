@@ -26,8 +26,8 @@ export default function SponsorHighlights() {
     ];
 
     return (
-        <section className="bg-white py-24 object-hidden z-20 relative">
-            <Container>
+        <section className="bg-transparent pt-12 pb-24 z-10 relative mt-[-20px] md:mt-[-50px]">
+            <Container className="relative">
                 <div className="text-center mb-16 max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-800 tracking-tight">
                         Sua marca no centro da <span className="text-google-blue font-bold">COMUNIDADE TECH.</span>

@@ -4,18 +4,18 @@ import { Container } from '../../../Common/Container';
 
 export default function CommunityPhoto() {
     return (
-        <section className="relative w-full overflow-hidden md:overflow-visible bg-white pt-16">
-            <div className="relative w-full max-w-[1400px] mx-auto flex justify-center px-4 md:px-8">
+        <section className="relative w-full overflow-hidden md:overflow-visible pt-16 mt-16">
+            <div className="relative w-full max-w-[1920px] mx-auto flex justify-center">
                 {/* Star on the left */}
-                <div className="absolute -left-10 md:-left-24 -bottom-10 md:-bottom-24 z-0 w-48 h-48 md:w-[450px] md:h-[450px] pointer-events-none">
+                <div className="absolute -left-16 md:-left-40 top-1/2 -translate-y-1/2 z-0 w-64 h-64 md:w-[600px] md:h-[600px] pointer-events-none">
                     <img src={starImage} alt="Estrela decorativa" className="w-full h-full object-contain" />
                 </div>
 
-                <div className="w-full relative z-10">
+                <div className="w-full relative z-10 px-0">
                     <img 
                         src={foto} 
                         alt="GDG Community" 
-                        className="w-full h-auto object-contain mx-auto" 
+                        className="w-full h-auto object-cover scale-110 md:scale-125 origin-bottom mx-auto" 
                     />
                 </div>
             </div>
