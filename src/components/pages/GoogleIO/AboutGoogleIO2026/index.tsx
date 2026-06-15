@@ -2,7 +2,20 @@ import { SectionTitle } from '../../../Common/SectionTitle';
 import { EventInformationCard } from '../../DevFest/EventInformationCard';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
+// Fotos do evento
+import foto1 from '../../../../assets/pages/io2026/Foto 1.jpeg';
+import foto2 from '../../../../assets/pages/io2026/Foto 2.jpeg';
+import foto3 from '../../../../assets/pages/io2026/Foto 3.jpeg';
+import foto4 from '../../../../assets/pages/io2026/Foto 4.jpeg';
+import foto5 from '../../../../assets/pages/io2026/Foto 5.jpeg';
+import foto6 from '../../../../assets/pages/io2026/Foto 6.jpeg';
+import foto7 from '../../../../assets/pages/io2026/Foto 7.jpeg';
+import foto8 from '../../../../assets/pages/io2026/Foto 8.jpeg';
+
 export default function AboutGoogleIO2026() {
+    const fotosCarrosselSuperior = [foto1, foto2, foto3, foto4];
+    const fotosCarrosselInferior = [foto5, foto6, foto7, foto8];
+
     return (
         <>
             <section className="bg-white py-20">
@@ -65,6 +78,113 @@ export default function AboutGoogleIO2026() {
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Galeria de Fotos do Evento */}
+            <section className="bg-white py-20 overflow-hidden">
+                <SectionTitle text="Galeria de" highlight="Fotos" />
+                <div className="mt-12 space-y-8">
+                    {/* Carrossel Superior - Move para a Esquerda */}
+                    <div className="relative w-full overflow-hidden">
+                        <style>{`
+                            @keyframes scrollLeftIO {
+                                0% { transform: translateX(0); }
+                                100% { transform: translateX(calc(-336px * 4)); }
+                            }
+                            .animate-scroll-left-io {
+                                animation: scrollLeftIO 40s linear infinite;
+                                will-change: transform;
+                            }
+                        `}</style>
+                        
+                        {/* Gradiente esquerdo */}
+                        <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                        
+                        {/* Gradiente direito */}
+                        <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                        
+                        <div className="flex animate-scroll-left-io" style={{ width: 'fit-content' }}>
+                            {fotosCarrosselSuperior.map((foto, index) => (
+                                <div key={`top-${index}`} className="flex-shrink-0 w-80 h-64 mx-2">
+                                    <img 
+                                        src={foto} 
+                                        alt={`Foto do evento Google I/O Extended 2026 - ${index + 1}`} 
+                                        loading="lazy"
+                                        className="w-full h-full object-cover rounded-2xl shadow-lg"
+                                    />
+                                </div>
+                            ))}
+                            {fotosCarrosselSuperior.map((foto, index) => (
+                                <div key={`top-dup-${index}`} className="flex-shrink-0 w-80 h-64 mx-2">
+                                    <img 
+                                        src={foto} 
+                                        alt={`Foto do evento Google I/O Extended 2026 - ${index + 1}`}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover rounded-2xl shadow-lg"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Carrossel Inferior - Move para a Direita */}
+                    <div className="relative w-full overflow-hidden">
+                        <style>{`
+                            @keyframes scrollRightIO {
+                                0% { transform: translateX(calc(-336px * 4)); }
+                                100% { transform: translateX(0); }
+                            }
+                            .animate-scroll-right-io {
+                                animation: scrollRightIO 40s linear infinite;
+                                will-change: transform;
+                            }
+                        `}</style>
+                        
+                        {/* Gradiente esquerdo */}
+                        <div className="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+                        
+                        {/* Gradiente direito */}
+                        <div className="absolute right-0 top-0 bottom-0 w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                        
+                        <div className="flex animate-scroll-right-io" style={{ width: 'fit-content' }}>
+                            {fotosCarrosselInferior.map((foto, index) => (
+                                <div key={`bottom-${index}`} className="flex-shrink-0 w-80 h-64 mx-2">
+                                    <img 
+                                        src={foto} 
+                                        alt={`Foto do evento Google I/O Extended 2026 - ${index + 5}`}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover rounded-2xl shadow-lg"
+                                    />
+                                </div>
+                            ))}
+                            {fotosCarrosselInferior.map((foto, index) => (
+                                <div key={`bottom-dup-${index}`} className="flex-shrink-0 w-80 h-64 mx-2">
+                                    <img 
+                                        src={foto} 
+                                        alt={`Foto do evento Google I/O Extended 2026 - ${index + 5}`}
+                                        loading="lazy"
+                                        className="w-full h-full object-cover rounded-2xl shadow-lg"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Botão do Drive */}
+                <div className="flex justify-center mt-12">
+                    <a
+                        href="https://drive.google.com/drive/u/1/folders/1AzRxc0yXP2BhFkAh_rDUSiBIWi3G0aMh"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-google-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
+                    >
+                        Ver todas as fotos no Drive
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </a>
                 </div>
             </section>
 

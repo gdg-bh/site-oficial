@@ -51,7 +51,7 @@ export default function HeroDevFest2026() {
                 </div>
 
             {/* Blue Star Graphic at bottom right */}
-            <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-20 lg:-bottom-32 lg:-right-24 w-48 h-48 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] z-20 pointer-events-none hidden sm:block">
+            <div className="absolute -bottom-32 md:-bottom-80 -right-24 md:-right-48 w-64 h-64 md:w-[700px] md:h-[700px] z-30 pointer-events-none hidden sm:block">
                 <img src={starImage} alt="Estrela decorativa" className="w-full h-full object-contain" />
             </div>
         </section>

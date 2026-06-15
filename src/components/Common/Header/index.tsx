@@ -23,7 +23,7 @@ export function Header() {
     };
 
     return (
-        <header className="bg-white shadow-soft sticky top-0 z-10">
+        <header className="bg-white shadow-soft sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center flex-shrink-0">
@@ -199,6 +199,12 @@ export function Header() {
                                         onMouseEnter={() => handleMouseEnter('devfest')}
                                         onMouseLeave={handleMouseLeave}
                                     >
+                                        <Link
+                                            to="/devfest-2026"
+                                            className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
+                                        >
+                                            2026
+                                        </Link>
                                         <Link
                                             to="/devfest"
                                             className="block px-4 py-2 text-google-gray hover:text-google-blue hover:bg-gray-50 transition-colors duration-200"
@@ -445,6 +451,16 @@ export function Header() {
 
                                 {isMobileEventsOpen === 'devfest' && (
                                     <div className="pl-6 space-y-1">
+                                        <Link
+                                            to="/devfest-2026"
+                                            className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"
+                                            onClick={() => {
+                                                setIsMobileMenuOpen(false);
+                                                setIsMobileEventsOpen('');
+                                            }}
+                                        >
+                                            2026
+                                        </Link>
                                         <Link
                                             to="/devfest"
                                             className="block px-3 py-2 text-google-gray hover:text-google-blue transition-colors duration-200 text-sm"

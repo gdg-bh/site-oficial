@@ -1,12 +1,12 @@
 import { Container } from '../../../Common/Container';
 import { Mail, FileText } from 'lucide-react';
-import starImage from '../../../../assets/pages/devfest2026/Vector (2).png';
+import starImage from '../../../../assets/pages/devfest2026/Vector (1).png';
 
 export default function SponsorCTA() {
     return (
         <section className="relative w-full bg-[#f8fbff] py-32 overflow-visible">
-            <Container className="relative z-10 flex justify-center">
-                <div className="bg-white rounded-3xl shadow-xl p-10 md:p-16 max-w-4xl w-full text-center border border-gray-100 relative">
+            <Container className="relative z-10 flex justify-center mx-auto items-center">
+                <div className="bg-white rounded-3xl shadow-xl p-10 md:p-16 max-w-4xl w-full text-center border border-gray-100 mx-auto relative">
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
                         Seja um Patrocinador do DevFest BH 2026!
                     </h2>
@@ -33,8 +33,8 @@ export default function SponsorCTA() {
                 </div>
             </Container>
 
-            {/* Green start at bottom right */}
-            <div className="absolute -bottom-10 -right-10 md:-bottom-24 md:-right-16 w-48 h-48 md:w-[450px] md:h-[450px] z-20 pointer-events-none">
+            {/* Yellow star at bottom left */}
+            <div className="absolute -bottom-10 -left-10 md:-bottom-24 md:-left-32 w-64 h-64 md:w-[600px] md:h-[600px] z-0 pointer-events-none">
                 <img src={starImage} alt="Estrela decorativa" className="w-full h-full object-contain" />
             </div>
         </section>
