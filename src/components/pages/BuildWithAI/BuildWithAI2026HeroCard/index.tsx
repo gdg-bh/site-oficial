@@ -1,7 +1,8 @@
 ﻿import { Calendar, MapPin } from 'lucide-react';
 
 export function BuildWithAI2026HeroCard() {
-    return (
+    return null;
+    /* return (
         <div className="mt-8 bg-white rounded-2xl drop-shadow-title px-6 py-6 md:px-10 md:py-8 flex flex-col items-center gap-4 max-w-3xl z-[1] w-full md:w-auto mx-4 md:mx-0">
             <h3 className="text-google-blue text-xl font-bold mb-2">Build With AI 2026</h3>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full text-google-gray text-sm md:text-base">
@@ -28,5 +29,5 @@ export function BuildWithAI2026HeroCard() {
                 Garanta seu ingresso
             </a>
         </div>
-    );
+    ); */
 }
