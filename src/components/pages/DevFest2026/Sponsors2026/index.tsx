@@ -2,11 +2,13 @@ import ContinuousSlider from '../../../Common/ContinuousSlider';
 import { SectionTitle } from '../../../Common/SectionTitle';
 import onfly from '../../../../assets/logos/Onfly.png';
 import framework from '../../../../assets/logos/framework.png';
+import casadocodigo from '../../../../assets/logos/casa_do_codigo.png';
 
 export default function Sponsors2026() {
     const sponsors = [
         { image: onfly, url: 'https://onfly.com.br/' },
-        { image: framework, url: 'https://framework.com.br/' }
+        { image: framework, url: 'https://framework.com.br/' },
+        { image: casadocodigo, url: 'https://casadocodigo.com.br/' }
     ];
     const images = sponsors.map(s => s.image);
     const urls = sponsors.map(s => s.url);
