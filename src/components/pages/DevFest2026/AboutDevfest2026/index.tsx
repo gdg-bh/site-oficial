@@ -78,7 +78,7 @@ export default function AboutDevfest2026() {
                             
                         </h3>
                         <p className="text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-                        O maior DevFest BH que já realizamos! A última edição reuniu quase 500 pessoas em um dia repleto de conteúdo, trazendo as principais tendências do mercado. Foram workshops, palestras inspiradoras e muitas oportunidades de networking, conectando a comunidade tech de Belo Horizonte em uma experiência intensa de aprendizado e troca.
+                        Prepare-se para viver o maior DevFest que Belo Horizonte já viu. Em 2026, reuniremos 1.100 participantes no Minas Centro para um dia inteiro de conteúdo, conexões e experiências. Serão quatro trilhas simultâneas, espaços dedicados ao networking e ativações que aproximam empresas, desenvolvedores, estudantes e profissionais de tecnologia. O DevFest BH é o lugar onde a comunidade se encontra para aprender, criar oportunidades e construir o futuro da tecnologia juntos.
                                                 </p>
                     </div>
                 </div>
