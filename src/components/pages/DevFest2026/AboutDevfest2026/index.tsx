@@ -8,9 +8,7 @@ export default function AboutDevfest2026() {
             <section className="bg-white py-20">
                 <SectionTitle text="Seja um" highlight="Patrocinador" />
                 <p className="mx-auto w-8/12 mt-4 md:mt-3 text-center text-subtitle-color font-normal text-base">
-                    Interessado em se tornar um patrocinador? Entre em contato conosco pelo
-                    e-mail <strong>gdgbhz@gmail.com</strong> para saber mais sobre as
-                    oportunidades de parceria e como sua empresa pode se envolver.
+                    Conecte sua marca a 1.100 profissionais apaixonados por tecnologia. Seja patrocinador do maior DevFest que Belo Horizonte já viu e faça parte de uma experiência que une conhecimento, networking, inovação e oportunidades reais de negócio. Fale com a gente: gdgbhz@gmail.com.
                 </p>
                 <div className="flex justify-center mt-8">
                     <a
