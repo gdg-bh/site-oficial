@@ -1,6 +1,7 @@
 ﻿import { SectionTitle } from '../../../Common/SectionTitle';
 import { EventInformationCard } from '../../DevFest/EventInformationCard';
 import { Calendar, Clock, MapPin } from 'lucide-react';
+import callForPapersBanner from '../../../../assets/pages/devfest2026/Call4pappers.png';
 
 export default function AboutDevfest2026() {
     return (
@@ -90,7 +91,7 @@ export default function AboutDevfest2026() {
                     </EventInformationCard>
                     <EventInformationCard icon={Calendar}>31 de Outubro de 2026
                     </EventInformationCard>
-                    <EventInformationCard icon={Clock}>08:00 Ã s 18:00</EventInformationCard>
+                    <EventInformationCard icon={Clock}>08:00 às 18:00</EventInformationCard>
                 </div>
                 <div className="w-80 h-48 md:w-[450px] md:h-[320px] xl:w-[672px] xl:h-[342px] bg-white border-[11px] border-white rounded-[32px]">
                     <iframe
@@ -102,6 +103,52 @@ export default function AboutDevfest2026() {
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     />
+                </div>
+                
+            </section>
+
+            <section className="bg-[#F7F9FB] py-20 md:py-24">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <SectionTitle text="Call For" highlight="Papers" />
+                    <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base md:text-lg text-gray-500 leading-relaxed">
+                        Tem algo incrível pra compartilhar sobre tecnologia, IA, desenvolvimento ou comunidade? Esse é o seu momento. Queremos conteúdos que inspirem, ensinem e conectem pessoas da comunidade tech.
+                    </p>
+
+                    <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSddEHAc6HgXJjvtTOYVgcqWz_8EamzPSqMDxy7xAUp8s_Cn1g/viewform?usp=dialog"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-google-blue bg-white px-6 py-3 text-sm sm:text-base font-medium text-[#111827] shadow-[0_6px_0_0_rgba(66,133,244,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_0_0_rgba(66,133,244,0.2)]"
+                            aria-label="Abrir formulário de Call For Papers para Palestrantes"
+                        >
+                            Quero Palestrar no DevFest
+                            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScAykNJeduIyS-Lt2bRXP7w9SJ-CZsLaUOON9Id5rO-cPrQYQ/viewform"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-google-blue bg-white px-6 py-3 text-sm sm:text-base font-medium text-[#111827] shadow-[0_6px_0_0_rgba(66,133,244,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_0_0_rgba(66,133,244,0.2)]"
+                            aria-label="Abrir formulário de Call For Papers para Trilha Feminina"
+                        >
+                            Call For Mentoras
+                            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div className="mt-12 overflow-hidden rounded-[2rem] border border-white/70 shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
+                        <img
+                            src={callForPapersBanner}
+                            alt="Call For Papers DevFest BH 2026"
+                            className="h-auto w-full object-cover"
+                        />
+                    </div>
                 </div>
             </section>
         </>

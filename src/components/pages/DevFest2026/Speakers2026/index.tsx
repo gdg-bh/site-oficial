@@ -364,7 +364,7 @@ export default function Speakers2026() {
     ];
 
     return (
-        <section className="bg-[#F7F9FB] py-20 overflow-hidden">
+        <section className="bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
             <div className="mb-8 md:mb-12"></div>
             <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-semibold text-lg md:text-xl">
