@@ -114,31 +114,45 @@ export default function AboutDevfest2026() {
                         Tem algo incrível pra compartilhar sobre tecnologia, IA, desenvolvimento ou comunidade? Esse é o seu momento. Queremos conteúdos que inspirem, ensinem e conectem pessoas da comunidade tech.
                     </p>
 
-                    <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto justify-items-stretch">
                         <a
                             href="https://docs.google.com/forms/d/e/1FAIpQLSddEHAc6HgXJjvtTOYVgcqWz_8EamzPSqMDxy7xAUp8s_Cn1g/viewform?usp=dialog"
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-google-blue bg-white px-6 py-3 text-sm sm:text-base font-medium text-[#111827] shadow-[0_6px_0_0_rgba(66,133,244,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_0_0_rgba(66,133,244,0.2)]"
                             aria-label="Abrir formulário de Call For Papers para Palestrantes"
+                            className="group min-h-32 rounded-[1.75rem] border border-gray-200 bg-white p-5 text-left shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)]"
                         >
-                            Quero Palestrar no DevFest
-                            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                            <div className="flex h-full flex-col justify-between gap-6">
+                                <p className="max-w-[18rem] text-sm sm:text-base leading-tight text-gray-500">
+                                    Leve sua ideia pro palco do DevFest e compartilhe com a comunidade!
+                                </p>
+                                <div className="flex items-center justify-end gap-3 text-google-blue font-medium text-sm sm:text-base">
+                                    <span>Call for Papers</span>
+                                    <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7 7 7-7 7" />
+                                    </svg>
+                                </div>
+                            </div>
                         </a>
 
                         <a
                             href="https://docs.google.com/forms/d/e/1FAIpQLScAykNJeduIyS-Lt2bRXP7w9SJ-CZsLaUOON9Id5rO-cPrQYQ/viewform"
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-google-blue bg-white px-6 py-3 text-sm sm:text-base font-medium text-[#111827] shadow-[0_6px_0_0_rgba(66,133,244,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_0_0_rgba(66,133,244,0.2)]"
                             aria-label="Abrir formulário de Call For Papers para Trilha Feminina"
+                            className="group min-h-32 rounded-[1.75rem] border border-gray-200 bg-white p-5 text-left shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)]"
                         >
-                            Call For Mentoras
-                            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                            <div className="flex h-full flex-col justify-between gap-6">
+                                <p className="max-w-[18rem] text-sm sm:text-base leading-tight text-gray-500">
+                                    Faça parte de um ambiente exclusivo de mulheres no evento, apoiando e fortalecendo a comunidade!
+                                </p>
+                                <div className="flex items-center justify-end gap-3 text-google-blue font-medium text-sm sm:text-base">
+                                    <span>Call for Mentoras</span>
+                                    <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7 7 7-7 7" />
+                                    </svg>
+                                </div>
+                            </div>
                         </a>
                     </div>
 
