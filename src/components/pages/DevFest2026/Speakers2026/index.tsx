@@ -90,7 +90,7 @@ export default function Speakers2026() {
             name: 'Kevin Uehara',
             role: 'Software Engineer',
             description: 'iFood',
-            links: {},
+            links: {linkedin: 'https://www.linkedin.com/in/kevin-uehara/' },
             speakerInfo: 'Software Engineer no iFood, Google Developer Expert (GDE), Microsoft MVP por três vezes, organizador do FrontIn Campinas e uma das grandes referências da comunidade frontend no Brasil, Kevin traz uma palestra cheia de conceitos, prática e arquitetura.',
             talkTitle: 'Micro-frontends: Escalando Interfaces com Arquitetura Modular',
             talkInfo: 'Os Micro-frontends estão mudando a forma como grandes aplicações web são construídas. Nesta palestra, você vai descobrir como essa arquitetura permite que diferentes equipes desenvolvam e publiquem interfaces de forma independente, sem perder a integração entre os projetos. \nVocê vai aprender os conceitos por trás da arquitetura de Micro-frontends, como o Module Federation v2 permite integrar aplicações de forma dinâmica e eficiente, além dos benefícios, desafios e trade-offs dessa abordagem, com demonstrações práticas de como orquestrar múltiplos frontends em uma mesma aplicação.',
