@@ -2,6 +2,7 @@ import { InfiniteCarousel } from '../../../Common/InfiniteCarousel';
 import ProfileCard from '../../DevFest/ProfileCard';
 
 import AlissonRosa from '../../../../assets/palestrantes/Alisson_Rosa.png';
+import AhirtonLopes from '../../../../assets/palestrantes/Ahirton_Lopes.jpeg';
 import AnaPaulaBartels from '../../../../assets/palestrantes/Ana_Paula_Bartels.png';
 import ArthurCarvalho from '../../../../assets/palestrantes/Arthur_Carvalho.jpeg';
 import ArthurDrumond from '../../../../assets/palestrantes/Arthur_Drumond.jpeg';
@@ -20,6 +21,9 @@ import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
 import LucasMenezes from '../../../../assets/palestrantes/Lucas_Menezes.png';
 import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
+import LucianaRHSincero from '../../../../assets/palestrantes/Luciana_RH_Sincero.jpeg';
+import DanielaOliveira from '../../../../assets/palestrantes/Daniela_Oliveira.jpeg';
+import KevinUehara from '../../../../assets/palestrantes/Kevin_Uehara.png';
 import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
 import MozartSousa from '../../../../assets/palestrantes/Mozart_Sousa.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
@@ -44,12 +48,52 @@ export default function Speakers2026() {
         {
             photoUrl: AlissonRosa,
             name: 'Alisson Rosa',
-            role: 'Engenheiro de Dados',
-            description: 'D-Analytics',
+            role: 'Staff Engineer de Data & AI',
+            description: 'Escale',
             links: { linkedin: 'https://www.linkedin.com/in/alissonrosa/' },
-            talkInfo: 'Prepare-se para mergulhar fundo no universo do Google BigQuery! Nesta sessão, Alisson vai explorar conceitos avançados e a arquitetura interna que faz do BigQuery uma ferramenta poderosa para análises em escala de petabytes. Você vai conhecer as features mais recentes — da integração nativa com IA à governança simplificada de dados — e aprender práticas para otimizar custos, aumentar performance e aplicar essas inovações em seus próprios projetos.',
-            speakerInfo: 'Alisson Rosa é Engenheiro de Dados com mais de 10 anos de experiência e 7 certificações Google Cloud Platform (GCP). Já participou de alguns dos maiores projetos de cloud do Brasil, com foco em soluções de dados em larga escala.',
-            talkTitle: 'BigQuery Advanced'
+            talkInfo: 'Nesta palestra, Alisson vai mostrar uma nova forma de pensar a orquestração de pipelines de dados, utilizando Leoflow, Google Kubernetes Engine (GKE) e BigQuery para construir soluções mais escaláveis e com menos complexidade de infraestrutura.\nO que você vai aprender?\nComo funciona uma arquitetura de orquestração baseada em estados no ecossistema cloud-native.\n As vantagens de executar tarefas em Pods efêmeros no Kubernetes.\n Como integrar essa arquitetura ao BigQuery para coordenar transformações de dados de forma escalável.\nCom quase 10 anos de experiência em projetos de Data & AI na nuvem e 7 certificações técnicas, Alisson traz uma visão prática de engenharia para quem quer explorar o verdadeiro potencial da Google Cloud.',
+            speakerInfo: 'Alisson, Staff Engineer de Data & AI e especialista em Google Cloud Platform, sobe ao palco do DevFest para compartilhar uma abordagem moderna de orquestração de pipelines utilizando Kubernetes e BigQuery.',
+            talkTitle: 'Nem só de Airflow vive o Data Engineer: Orquestrando Pipelines com Leoflow no GKE e BigQuery'
+        },
+        {
+            photoUrl: AhirtonLopes,
+            name: 'Ahirton Lopes',
+            role: 'Data & AI Senior Manager',
+            description: 'Accenture',
+            links: { linkedin: 'https://www.linkedin.com/in/ahirtonlopes/' },
+            speakerInfo: 'Ahirton Lopes, Ph.D. é Data & AI Senior Manager na Accenture, Google Developer Expert (GDE) em Inteligência Artificial, Microsoft MVP em AI Foundry e professor de MBA na FIAP. Ahirton atua projetando arquiteturas de IA em escala para grandes empresas e liderando times de engenharia de software e IA.',
+            talkTitle: 'Agent Foundry: Engenharia de Agentes de IA com Google ADK',
+            talkInfo: 'Nesta palestra hands-on, você vai aprender como construir agentes inteligentes utilizando o Google Agent Development Kit (ADK) e entender como eles podem interagir com ferramentas, memória, sistemas externos e até outros agentes.\nO que você vai aprender?\nComo criar agentes de IA com ferramentas customizadas e memória de conversa.\n Como orquestrar múltiplos agentes especializados em diferentes padrões de execução.\n Como utilizar os protocolos MCP e A2A para conectar agentes a dados e sistemas externos.\n Uma demonstração ao vivo de um agente de clima e turismo com contexto de Belo Horizonte.\nE tem mais: você sai da palestra com um agente funcionando e acesso ao repositório completo para continuar explorando tudo em casa.',
+        },
+        {
+            photoUrl: LucianaRHSincero,
+            name: 'Luciana Azevedo',
+            role: 'Consultora de RH e Influenciadora Digital',
+            description: 'RH Sincero',
+            links: { linkedin: 'https://www.linkedin.com/in/lucianarhsincero/', instagram: 'https://www.instagram.com/lucianarhsincero' },
+            speakerInfo: 'Luciana RH Sincero, conhecida como o RH mais sincero do Brasil, sobe ao palco do DevFest BH com uma conversa que promete provocar boas reflexões e muitas risadas. Com mais de 10 anos de experiência em RH em grandes empresas nacionais e multinacionais, como Souza Cruz, Midea Carrier, ExxonMobil, Arezzo, DISYS e SouCloud, ela compartilha uma visão prática e sem filtros sobre o mundo corporativo.',
+            talkTitle: 'Sobrevivência corporativa: Aprenda a Puxar Saco e conquiste a paz profissional',
+            talkInfo: 'Se você já se perguntou por que algumas pessoas parecem crescer mais rápido no ambiente corporativo, essa palestra é para você. Calma... não é o que você está pensando. Nessa palestra, Luciana vai mostrar que se destacar no trabalho não tem a ver com bajulação ou falta de caráter. Tem a ver com entender as relações no ambiente corporativo, saber se comunicar, criar conexões e aprender a jogar o jogo de forma justa.',
+        },
+        {
+            photoUrl: DanielaOliveira,
+            name: 'Daniela Oliveira',
+            role: 'Fundadora e CEO',
+            description: 'NeuroStack',
+            links: { linkedin: 'https://www.linkedin.com/in/danielaoli' },
+            speakerInfo: 'Fundadora e CEO da NeuroStack, biomédica, especialista em neurociência e gestão em saúde, Daniela conecta tecnologia, inovação e negócios para desenvolver soluções em IA na área da saúde e já impactou milhares de profissionais ao longo da sua trajetória.',
+            talkTitle: 'Da Competência à Influência: Carreira e Liderança Feminina em Tecnologia',
+            talkInfo: 'Como transformar competência técnica em influência e liderança? Nesta mentoria, Daniela vai compartilhar ferramentas e experiências para ajudar mulheres a crescerem na tecnologia com mais estratégia, confiança e protagonismo.',
+        },
+        {
+            photoUrl: KevinUehara,
+            name: 'Kevin Uehara',
+            role: 'Software Engineer',
+            description: 'iFood',
+            links: {},
+            speakerInfo: 'Software Engineer no iFood, Google Developer Expert (GDE), Microsoft MVP por três vezes, organizador do FrontIn Campinas e uma das grandes referências da comunidade frontend no Brasil, Kevin traz uma palestra cheia de conceitos, prática e arquitetura.',
+            talkTitle: 'Micro-frontends: Escalando Interfaces com Arquitetura Modular',
+            talkInfo: 'Os Micro-frontends estão mudando a forma como grandes aplicações web são construídas. Nesta palestra, você vai descobrir como essa arquitetura permite que diferentes equipes desenvolvam e publiquem interfaces de forma independente, sem perder a integração entre os projetos. \nVocê vai aprender os conceitos por trás da arquitetura de Micro-frontends, como o Module Federation v2 permite integrar aplicações de forma dinâmica e eficiente, além dos benefícios, desafios e trade-offs dessa abordagem, com demonstrações práticas de como orquestrar múltiplos frontends em uma mesma aplicação.',
         },
         {
             photoUrl: AnaPaulaBartels,
@@ -363,16 +407,16 @@ export default function Speakers2026() {
         },
     ];
 
+    const visibleSpeakers = speakers.filter((speaker) =>
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Daniela Oliveira', 'Kevin Uehara'].includes(speaker.name)
+    );
+
     return (
         <section className="bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] py-20 overflow-hidden">
             <SectionTitle highlight="Palestrantes" />
             <div className="mb-8 md:mb-12"></div>
-            <p className="mx-auto w-10/12 lg:w-6/12 mb-28 mt-4 md:mt-3 text-center text-subtitle-color font-semibold text-lg md:text-xl">
-                Anunciaremos os Palestrantes Em Breve.
-            </p>
-            {/* 
-            <InfiniteCarousel count={speakers.length}>
-                {speakers.map((card, index) => (
+            <InfiniteCarousel count={visibleSpeakers.length} viewCount={4}>
+                {visibleSpeakers.map((card, index) => (
                     <ProfileCard
                         key={index}
                         photoUrl={card.photoUrl}
@@ -386,7 +430,6 @@ export default function Speakers2026() {
                     />
                 ))}
             </InfiniteCarousel>
-            */}
         </section>
     );
 }
