@@ -1,7 +1,7 @@
 ﻿import { SectionTitle } from '../../../Common/SectionTitle';
 import { EventInformationCard } from '../../DevFest/EventInformationCard';
 import { Calendar, Clock, MapPin } from 'lucide-react';
-import callForPapersBanner from '../../../../assets/pages/devfest2026/Call4pappers.png';
+// import callForPapersBanner from '../../../../assets/pages/devfest2026/Call4pappers.png';
 
 export default function AboutDevfest2026() {
     return (
@@ -107,6 +107,7 @@ export default function AboutDevfest2026() {
                 
             </section>
 
+            {/*
             <section className="bg-[#F7F9FB] py-20 md:py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <SectionTitle text="Call For" highlight="Papers" />
@@ -165,6 +166,7 @@ export default function AboutDevfest2026() {
                     </div>
                 </div>
             </section>
+            */}
         </>
     );
 }
