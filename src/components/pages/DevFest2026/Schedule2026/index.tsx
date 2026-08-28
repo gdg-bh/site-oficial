@@ -41,11 +41,6 @@ const scheduleData = [
         speaker: 'Em Breve',
     },
     {
-        start: '10:10',
-        end: '10:20',
-        title: 'Tempo para transição',
-    },
-    {
         start: '10:20',
         end: '11:00',
         track: 'Horizonte',
@@ -72,11 +67,6 @@ const scheduleData = [
         track: 'Liberdade',
         title: 'Em Breve',
         speaker: 'Em Breve',
-    },
-    {
-        start: '11:00',
-        end: '11:10',
-        title: 'Tempo para transição',
     },
     {
         start: '11:10',
@@ -140,11 +130,6 @@ const scheduleData = [
         speaker: 'Em Breve',
     },
     {
-        start: '14:10',
-        end: '14:20',
-        title: 'Tempo para transição',
-    },
-    {
         start: '14:20',
         end: '15:00',
         track: 'Horizonte',
@@ -171,11 +156,6 @@ const scheduleData = [
         track: 'Liberdade',
         title: 'Em Breve',
         speaker: 'Em Breve',
-    },
-    {
-        start: '15:00',
-        end: '15:10',
-        title: 'Tempo para transição',
     },
     {
         start: '15:10',
