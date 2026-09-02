@@ -37,8 +37,8 @@ const scheduleData = [
         start: '09:30',
         end: '10:10',
         track: 'Liberdade',
-        title: 'Dinâmica de Networking',
-        speaker: 'Juliana Ribeiro',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
     },
     {
         start: '10:20',
