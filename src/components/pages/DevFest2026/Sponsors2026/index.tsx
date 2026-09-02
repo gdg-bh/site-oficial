@@ -5,6 +5,7 @@ import framework from '../../../../assets/logos/framework.png';
 import casadocodigo from '../../../../assets/logos/casa_do_codigo.png';
 import lucralize from '../../../../assets/logos/lucralize.png';
 import royalCenter from '../../../../assets/logos/Hotel_Royal_Boutique_Savassi.png';
+import bentivi from '../../../../assets/logos/BENTIVI.png';
 
 export default function Sponsors2026() {
     const sponsors = [
@@ -12,7 +13,8 @@ export default function Sponsors2026() {
         { image: framework, url: 'https://framework.com.br/' },
         { image: casadocodigo, url: 'https://casadocodigo.com.br/' },
         { image: lucralize, url: 'https://lucralize.com/' },
-        { image: royalCenter, url: 'https://book.omnibees.com/hotelresults?c=1676&q=5733&hotel_folder=&NRooms=1&CheckIn=30102026&CheckOut=02112026&ad=1&ch=0&ag=&Code=devfestbh&lang=pt-BR&currencyId=16&version=4' }
+        { image: royalCenter, url: 'https://book.omnibees.com/hotelresults?c=1676&q=5733&hotel_folder=&NRooms=1&CheckIn=30102026&CheckOut=02112026&ad=1&ch=0&ag=&Code=devfestbh&lang=pt-BR&currencyId=16&version=4' },
+        { image: bentivi, url: 'https://www.instagram.com/bentivi_cafe/' }
     ];
     const images = sponsors.map(s => s.image);
     const urls = sponsors.map(s => s.url);
