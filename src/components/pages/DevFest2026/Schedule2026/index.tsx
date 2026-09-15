@@ -1,5 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { Check, Download, Share2, X } from 'lucide-react';
 import { SectionTitle } from '../../../Common/SectionTitle';
+import credentialImage from '../../../../assets/pages/devfest2026/credencial.png';
 
 const scheduleData = [
     {
@@ -204,8 +206,55 @@ const tracks = [
     { name: 'Liberdade', color: '#FF5858' },
 ];
 
+const scheduleStorageKey = 'devfest-2026-personal-schedule';
+const credentialSlots = [
+    { start: '09:30', top: 385, bottom: 519, left: 192, right: 1011 },
+    { start: '10:20', top: 591, bottom: 724, left: 192, right: 1011 },
+    { start: '11:10', top: 781, bottom: 914, left: 192, right: 1011 },
+    { start: '13:30', top: 973, bottom: 1107, left: 192, right: 1011 },
+    { start: '14:20', top: 1179, bottom: 1314, left: 192, right: 1011 },
+    { start: '15:10', top: 1355, bottom: 1490, left: 192, right: 1011 },
+];
+
+type Session = (typeof scheduleData)[number];
+
+function isTalk(session: Session): session is Session & { track: string; speaker: string } {
+    return Boolean(session.track && session.speaker);
+}
+
+function getTalkKey(session: Session) {
+    return isTalk(session) ? `${session.track}:${session.title}` : session.title;
+}
+
+function wrapText(
+    context: CanvasRenderingContext2D,
+    text: string,
+    maxWidth: number,
+    fontSize: number
+) {
+    context.font = `700 ${fontSize}px Arial, sans-serif`;
+    const words = text.split(' ');
+    const lines: string[] = [];
+    let currentLine = '';
+
+    words.forEach((word) => {
+        const candidate = currentLine ? `${currentLine} ${word}` : word;
+        if (context.measureText(candidate).width <= maxWidth || !currentLine) {
+            currentLine = candidate;
+        } else {
+            lines.push(currentLine);
+            currentLine = word;
+        }
+    });
+
+    if (currentLine) lines.push(currentLine);
+    return lines;
+}
+
 export default function Schedule2026() {
     const [filter, setFilter] = useState('all');
+    const [isPlannerOpen, setIsPlannerOpen] = useState(false);
+    const [selectedTalks, setSelectedTalks] = useState<Record<string, string>>({});
 
     const sortedData = useMemo(() => {
         return [...scheduleData].sort((a, b) => a.start.localeCompare(b.start));
@@ -216,6 +265,160 @@ export default function Schedule2026() {
         return sortedData.filter((item) => item.track === filter || !item.track);
     }, [filter, sortedData]);
 
+    const talksByTime = useMemo(() => {
+        return sortedData.reduce<Record<string, Session[]>>((groups, item) => {
+            if (isTalk(item)) {
+                groups[item.start] = [...(groups[item.start] ?? []), item];
+            }
+            return groups;
+        }, {});
+    }, [sortedData]);
+
+    useEffect(() => {
+        try {
+            const savedSchedule = window.localStorage.getItem(scheduleStorageKey);
+            if (savedSchedule) {
+                const savedTalks = JSON.parse(savedSchedule) as Record<string, string>;
+                const migratedTalks = Object.entries(savedTalks).reduce<Record<string, string>>(
+                    (result, [start, selectedValue]) => {
+                        const talksAtTime = talksByTime[start] ?? [];
+                        const matchingTalks = talksAtTime.filter(
+                            (talk) => talk.title === selectedValue || getTalkKey(talk) === selectedValue
+                        );
+
+                        if (matchingTalks.length === 1) {
+                            result[start] = getTalkKey(matchingTalks[0]);
+                        }
+
+                        return result;
+                    },
+                    {},
+                );
+                setSelectedTalks(migratedTalks);
+            }
+        } catch {
+            window.localStorage.removeItem(scheduleStorageKey);
+        }
+    }, [talksByTime]);
+
+    useEffect(() => {
+        window.localStorage.setItem(scheduleStorageKey, JSON.stringify(selectedTalks));
+    }, [selectedTalks]);
+
+    useEffect(() => {
+        if (!isPlannerOpen) return;
+
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setIsPlannerOpen(false);
+        };
+
+        document.addEventListener('keydown', handleEscape);
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+            document.body.style.overflow = '';
+        };
+    }, [isPlannerOpen]);
+
+    const toggleTalk = (start: string, talk: Session) => {
+        const talkKey = getTalkKey(talk);
+        setSelectedTalks((current) => {
+            if (current[start] === talkKey) {
+                const next = { ...current };
+                delete next[start];
+                return next;
+            }
+
+            return { ...current, [start]: talkKey };
+        });
+    };
+
+    const shareSchedule = async () => {
+        const selectedSessions = sortedData.filter(
+            (item) => isTalk(item) && selectedTalks[item.start] === getTalkKey(item)
+        );
+        const scheduleText = selectedSessions.length
+            ? selectedSessions
+                  .map((item) => `${item.start} - ${item.title} (${item.track})`)
+                  .join('\n')
+            : 'Ainda não escolhi nenhuma palestra.';
+        const shareText = `Minha grade personalizada do DevFest 2026:\n\n${scheduleText}\n\nConfira a agenda em ${window.location.href}`;
+
+        try {
+            if (navigator.share) {
+                await navigator.share({
+                    title: 'Minha grade do DevFest 2026',
+                    text: shareText,
+                });
+                return;
+            }
+
+            await navigator.clipboard.writeText(shareText);
+            window.alert('Sua grade foi copiada. Agora é só compartilhar!');
+        } catch (error) {
+            if (error instanceof DOMException && error.name === 'AbortError') return;
+            window.alert('Não foi possível compartilhar sua grade agora.');
+        }
+    };
+
+    const createScheduleImage = async () => {
+            const image = new Image();
+            image.src = credentialImage;
+            await new Promise<void>((resolve, reject) => {
+                image.onload = () => resolve();
+                image.onerror = () => reject(new Error('Não foi possível carregar a credencial.'));
+            });
+
+            const canvas = document.createElement('canvas');
+            canvas.width = image.naturalWidth;
+            canvas.height = image.naturalHeight;
+            const context = canvas.getContext('2d');
+            if (!context) throw new Error('Não foi possível preparar a imagem.');
+
+            context.drawImage(image, 0, 0);
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillStyle = '#202124';
+
+            credentialSlots.forEach((slot) => {
+                const session = sortedData.find(
+                    (item) => isTalk(item) && item.start === slot.start && selectedTalks[item.start] === getTalkKey(item)
+                );
+                if (!session || !isTalk(session)) return;
+
+                const centerX = (slot.left + slot.right) / 2;
+                const centerY = (slot.top + slot.bottom) / 2;
+                const maxWidth = slot.right - slot.left - 80;
+                const titleLines = wrapText(context, session.title, maxWidth, 24).slice(0, 2);
+                const metadata = `${session.track} · ${session.speaker}`;
+                const lineHeight = 28;
+                const titleHeight = titleLines.length * lineHeight;
+                const metadataY = centerY + (titleHeight + 12) / 2;
+
+                context.font = '700 24px Arial, sans-serif';
+                titleLines.forEach((line, index) => {
+                    context.fillText(line, centerX, centerY - titleHeight / 2 + index * lineHeight + 12, maxWidth);
+                });
+                context.font = '16px Arial, sans-serif';
+                context.fillText(metadata, centerX, metadataY, maxWidth);
+            });
+
+            return canvas.toDataURL('image/png');
+    };
+
+    const downloadScheduleImage = async () => {
+        try {
+            const imageData = await createScheduleImage();
+            const link = document.createElement('a');
+            link.href = imageData;
+            link.download = 'minha-grade-devfest-2026.png';
+            link.click();
+        } catch {
+            window.alert('Não foi possível gerar sua credencial agora.');
+        }
+    };
+
     return (
         <section className="bg-white py-20 overflow-hidden">
             <SectionTitle highlight="Agenda" />
@@ -223,6 +426,22 @@ export default function Schedule2026() {
                 Confira o cronograma completo do evento.
             </p>
             <div className="w-full max-w-7xl mx-auto p-4">
+                <div className="mb-8 flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#f8f9fa] p-5 md:flex-row md:p-6">
+                    <div>
+                        <h3 className="text-lg font-bold text-[#21242C]">Monte sua experiência no DevFest</h3>
+                        <p className="mt-1 text-sm text-gray-600">
+                            Escolha uma palestra por horário e leve sua grade com você.
+                        </p>
+                    </div>
+                    <button
+                        type="button"
+                        onClick={() => setIsPlannerOpen(true)}
+                        className="inline-flex items-center justify-center rounded-lg bg-google-blue px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-google-blue focus:ring-offset-2"
+                    >
+                        Personalize Sua Grade
+                    </button>
+                </div>
+
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
                     <button
                         onClick={() => setFilter('all')}
@@ -324,6 +543,110 @@ export default function Schedule2026() {
                     </table>
                 </div>
             </div>
+
+            {isPlannerOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="planner-title"
+                    onClick={() => setIsPlannerOpen(false)}
+                >
+                    <div
+                        className="flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <div className="flex items-start justify-between border-b border-gray-200 p-5 md:p-6">
+                            <div>
+                                <p className="text-sm font-semibold uppercase tracking-wide text-google-blue">DevFest 2026</p>
+                                <h2 id="planner-title" className="mt-1 text-2xl font-bold text-[#21242C]">
+                                    Personalize sua grade
+                                </h2>
+                                <p className="mt-1 text-sm text-gray-600">Selecione no máximo uma palestra em cada horário.</p>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={() => setIsPlannerOpen(false)}
+                                className="rounded-full p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900"
+                                aria-label="Fechar personalizador"
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                        </div>
+
+                        <div className="overflow-y-auto p-5 md:p-6">
+                            <div className="space-y-6">
+                                {Object.entries(talksByTime).map(([time, talks]) => (
+                                    <fieldset key={time}>
+                                        <legend className="mb-3 text-base font-bold text-[#21242C]">{time}</legend>
+                                        <div className="grid gap-3 md:grid-cols-2">
+                                            {talks.map((talk) => {
+                                                const isSelected = selectedTalks[time] === getTalkKey(talk);
+                                                const track = tracks.find((item) => item.name === talk.track);
+
+                                                return (
+                                                    <button
+                                                        type="button"
+                                                        key={`${time}-${talk.title}`}
+                                                        onClick={() => toggleTalk(time, talk)}
+                                                        className={`flex min-h-24 items-start gap-3 rounded-xl border p-4 text-left transition focus:outline-none focus:ring-2 focus:ring-google-blue ${
+                                                            isSelected
+                                                                ? 'border-google-blue bg-blue-50 shadow-sm'
+                                                                : 'border-gray-200 hover:border-google-blue/50 hover:bg-gray-50'
+                                                        }`}
+                                                    >
+                                                        <span
+                                                            className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2"
+                                                            style={{
+                                                                borderColor: isSelected ? track?.color : '#D1D5DB',
+                                                                backgroundColor: isSelected ? track?.color : 'transparent',
+                                                            }}
+                                                        >
+                                                            {isSelected && <Check className="h-3 w-3 text-white" />}
+                                                        </span>
+                                                        <span>
+                                                            <span className="block text-sm font-semibold leading-snug text-gray-900">{talk.title}</span>
+                                                            <span className="mt-2 block text-xs text-gray-500">{talk.track} · {talk.speaker}</span>
+                                                        </span>
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </fieldset>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col-reverse gap-3 border-t border-gray-200 p-5 sm:flex-row sm:justify-between md:p-6">
+                            <button
+                                type="button"
+                                onClick={() => setSelectedTalks({})}
+                                className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-100"
+                            >
+                                Limpar escolhas
+                            </button>
+                            <div className="flex flex-col gap-3 sm:flex-row">
+                                <button
+                                    type="button"
+                                    onClick={downloadScheduleImage}
+                                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-google-blue px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+                                >
+                                    <Download className="h-4 w-4" />
+                                    Baixar
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={shareSchedule}
+                                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-google-blue px-4 py-2 text-sm font-semibold text-google-blue transition hover:bg-blue-50"
+                                >
+                                    <Share2 className="h-4 w-4" />
+                                    Compartilhar minha grade
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }
