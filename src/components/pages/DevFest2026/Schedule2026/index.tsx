@@ -213,7 +213,7 @@ const credentialSlots = [
     { start: '11:10', top: 781, bottom: 914, left: 192, right: 1011 },
     { start: '13:30', top: 973, bottom: 1107, left: 192, right: 1011 },
     { start: '14:20', top: 1179, bottom: 1314, left: 192, right: 1011 },
-    { start: '15:10', top: 1355, bottom: 1490, left: 192, right: 1011 },
+    { start: '15:10', top: 1355, bottom: 1490, left: 192, right: 1011, textOffsetY: 14 },
 ];
 
 type Session = (typeof scheduleData)[number];
@@ -346,16 +346,31 @@ export default function Schedule2026() {
         const shareText = `Minha grade personalizada do DevFest 2026:\n\n${scheduleText}\n\nConfira a agenda em ${window.location.href}`;
 
         try {
-            if (navigator.share) {
+            const imageData = await createScheduleImage();
+            const imageBlob = await fetch(imageData).then((response) => response.blob());
+            const imageFile = new File([imageBlob], 'minha-grade-devfest-2026.png', { type: 'image/png' });
+
+            if (navigator.canShare?.({ files: [imageFile] })) {
                 await navigator.share({
                     title: 'Minha grade do DevFest 2026',
                     text: shareText,
+                    files: [imageFile],
                 });
                 return;
             }
 
-            await navigator.clipboard.writeText(shareText);
-            window.alert('Sua grade foi copiada. Agora é só compartilhar!');
+            const link = document.createElement('a');
+            link.href = imageData;
+            link.download = 'minha-grade-devfest-2026.png';
+            link.click();
+
+            try {
+                await navigator.clipboard.writeText(shareText);
+            } catch {
+                // O download continua disponível mesmo quando a área de transferência é bloqueada.
+            }
+
+            window.alert('A imagem foi baixada e o texto foi copiado. Abra o WhatsApp para compartilhar.');
         } catch (error) {
             if (error instanceof DOMException && error.name === 'AbortError') return;
             window.alert('Não foi possível compartilhar sua grade agora.');
@@ -394,11 +409,17 @@ export default function Schedule2026() {
                 const metadata = `${session.track} · ${session.speaker}`;
                 const lineHeight = 28;
                 const titleHeight = titleLines.length * lineHeight;
-                const metadataY = centerY + (titleHeight + 12) / 2;
+                const textOffsetY = 'textOffsetY' in slot ? slot.textOffsetY ?? 0 : 0;
+                const metadataY = centerY + (titleHeight + 12) / 2 + textOffsetY;
 
                 context.font = '700 24px Arial, sans-serif';
                 titleLines.forEach((line, index) => {
-                    context.fillText(line, centerX, centerY - titleHeight / 2 + index * lineHeight + 12, maxWidth);
+                    context.fillText(
+                        line,
+                        centerX,
+                        centerY - titleHeight / 2 + index * lineHeight + 12 + textOffsetY,
+                        maxWidth,
+                    );
                 });
                 context.font = '16px Arial, sans-serif';
                 context.fillText(metadata, centerX, metadataY, maxWidth);
