@@ -45,6 +45,15 @@ export function DevFest2026() {
                             </div>
                         ))}
                     </div>
+
+                    <a
+                        href="https://www.sympla.com.br/evento/devfest-belo-horizonte/3489047"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-2 w-full cursor-pointer rounded-lg bg-google-blue px-6 py-3 text-center font-normal text-white shadow-soft transition-colors duration-200 hover:bg-blue-600"
+                    >
+                        Garanta seu ingresso
+                    </a>
                 </div>
             </HeroEvent>
             <AboutDevfest2026 />
