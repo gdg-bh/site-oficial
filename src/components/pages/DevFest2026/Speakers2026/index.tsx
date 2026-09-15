@@ -23,7 +23,12 @@ import LucasMenezes from '../../../../assets/palestrantes/Lucas_Menezes.png';
 import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
 import LucianaRHSincero from '../../../../assets/palestrantes/Luciana_RH_Sincero.jpeg';
 import DanielaOliveira from '../../../../assets/palestrantes/Daniela_Oliveira.jpeg';
+import CarolSevero from '../../../../assets/palestrantes/Carol_Severo.jpeg';
+import IzaBatista from '../../../../assets/palestrantes/Iza_Batista.jpeg';
+import JessicaFlores from '../../../../assets/palestrantes/Jéssica_Flores.png';
+import KarolAttekita from '../../../../assets/palestrantes/Karol_Attekita.png';
 import KevinUehara from '../../../../assets/palestrantes/Kevin_Uehara.png';
+import MarcellaSouza from '../../../../assets/palestrantes/Marcella_Souza.jpg';
 import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
 import MozartSousa from '../../../../assets/palestrantes/Mozart_Sousa.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
@@ -74,6 +79,56 @@ export default function Speakers2026() {
             speakerInfo: 'Luciana RH Sincero, conhecida como o RH mais sincero do Brasil, sobe ao palco do DevFest BH com uma conversa que promete provocar boas reflexões e muitas risadas. Com mais de 10 anos de experiência em RH em grandes empresas nacionais e multinacionais, como Souza Cruz, Midea Carrier, ExxonMobil, Arezzo, DISYS e SouCloud, ela compartilha uma visão prática e sem filtros sobre o mundo corporativo.',
             talkTitle: 'Sobrevivência corporativa: Aprenda a Puxar Saco e conquiste a paz profissional',
             talkInfo: 'Se você já se perguntou por que algumas pessoas parecem crescer mais rápido no ambiente corporativo, essa palestra é para você. Calma... não é o que você está pensando. Nessa palestra, Luciana vai mostrar que se destacar no trabalho não tem a ver com bajulação ou falta de caráter. Tem a ver com entender as relações no ambiente corporativo, saber se comunicar, criar conexões e aprender a jogar o jogo de forma justa.',
+        },
+        {
+            photoUrl: CarolSevero,
+            name: 'Carol Severo',
+            role: 'Executiva de Tecnologia',
+            description: 'Core Scale Solutions Ltda.',
+            links: {linkedin: 'https://www.linkedin.com/in/eucarolsevero/'},
+            speakerInfo: 'Executiva de Tecnologia com mais de 18 anos de experiência em Delivery Management, Produtos, Projetos e Operações, Carol também atua ajudando profissionais a fortalecerem sua identidade e posicionamento para alcançarem o próximo nível da carreira.',
+            talkTitle: 'O Código da Contratação: A inteligência por trás de um LinkedIn estratégico.',
+            talkInfo: 'Nesta palestra, Carol vai mostrar como transformar o LinkedIn em uma ferramenta estratégica para construir autoridade, atrair oportunidades e comunicar o valor que você entrega.\n\nO que você vai aprender?\n Como compreender e comunicar com clareza quem você é profissionalmente, sua trajetória, competências e o valor que você construiu ao longo da carreira.\n Como direcionar sua imagem profissional para que o mercado entenda onde você gera valor, quais problemas resolve e para quais oportunidades está preparado.\n Como desenvolver merecimento e reconhecer o valor da própria trajetória para sustentar esse posicionamento na hora da entrevista.',
+        },
+        {
+            photoUrl: IzaBatista,
+            name: 'Iza Batista',
+            role: 'Threat Researcher',
+            description: 'Infoblox',
+            links: { linkedin: 'https://www.linkedin.com/in/izadora-batista/' },
+            speakerInfo: 'Profissional de cibersegurança com atuação em OSINT (Open Source Intelligence), investigação digital e inteligência de ameaças, Iza também faz parte da comunidade UaiSINT, contribuindo para fortalecer a cultura de investigação em fontes abertas no Brasil.',
+            talkTitle: 'Google Dorks: Não é Hacking, é Google!',
+            talkInfo: 'Nesta palestra, Iza vai mostrar, na prática, como técnicas de Google Dorks e OSINT podem transformar buscas públicas em investigações completas — sempre respeitando limites éticos e legais.\n\nO que você vai aprender?\nComo utilizar operadores avançados do Google para encontrar informações públicas.\nComo documentos, metadados e páginas indexadas podem revelar muito mais do que imaginamos.\nComo conectar informações aparentemente isoladas para construir uma investigação em fontes abertas.\nE, principalmente, como refletir sobre a quantidade de informações que deixamos disponíveis na internet sem perceber.',
+        },
+        {
+            photoUrl: JessicaFlores,
+            name: 'Jéssica Flores',
+            role: 'Gerente de Projetos de Tecnologia',
+            description: 'Loovi',
+            links: { linkedin: 'https://www.linkedin.com/in/jessica--flores/' },
+            speakerInfo: 'Gerente de Projetos de Tecnologia e mestranda em Inovação Tecnológica e Propriedade Intelectual pela UFMG, Jéssica atua na interseção entre tecnologia, negócios e pessoas, liderando projetos e times multidisciplinares. Ela também integra a 6ª edição do Programa Líder Negra e acredita na liderança, inovação e educação como ferramentas para ampliar oportunidades.',
+            talkTitle: 'Da execução ao protagonismo: construindo sua carreira na tecnologia',
+            talkInfo: 'Como sair da execução e assumir um papel mais protagonista na sua carreira?\nNesta mentoria, Jéssica vai compartilhar experiências e reflexões sobre como construir uma trajetória profissional com mais intenção, visibilidade e confiança.\n\nO que vamos conversar?\nAutoconhecimento e posicionamento profissional.\nComo comunicar melhor suas entregas e seu impacto.\nNetworking e construção de repertório.\nDesenvolvimento contínuo e protagonismo na carreira.',
+        },
+        {
+            photoUrl: KarolAttekita,
+            name: 'Karol Attekita',
+            role: 'Senior Mobile Engineer',
+            description: 'Riot Games',
+            links: { linkedin: 'https://www.linkedin.com/in/bullas-attekita/' },
+            speakerInfo: 'Engenheira de Software com mais de 14 anos de experiência, atualmente Engenheira iOS na Riot Games, criadora do Attekita Dev, LinkedIn Top Voice e reconhecida pela Apple por sua contribuição à comunidade de desenvolvedores, Karol impacta mais de 500 mil pessoas compartilhando conteúdo sobre tecnologia, IA e carreira.',
+            talkTitle: 'O Programador Generalista e a IA Generativa',
+            talkInfo: 'Nesta palestra, Karol propõe uma reflexão sobre a evolução da engenharia de software e o papel dos desenvolvedores em um mercado cada vez mais influenciado pela IA Generativa.\n\nO que você vai aprender?\nComo a IA está transformando a engenharia de software.\nO que significa ser um desenvolvedor generalista nesse novo cenário.\nComo construir um posicionamento profissional para continuar relevante ao longo da carreira.',
+        },
+        {
+            photoUrl: MarcellaSouza,
+            name: 'Marcella Souza',
+            role: 'Engineering Manager',
+            description: 'iFood',
+            links: {linkedin: 'https://www.linkedin.com/in/marcellasouza/'},
+            speakerInfo: 'Engineering Manager dos times de plataforma mobile da logística no iFood, Marcella construiu grande parte da sua carreira com Android nativo e, nos últimos anos, liderou uma das migrações mais desafiadoras da empresa utilizando Kotlin Multiplatform e Compose Multiplatform.',
+            talkTitle: 'Recalculando a rota: como o app iFood para Entregadores voltou à App Store migrando do Android nativo para KMP + CMP',
+            talkInfo: 'Nesta palestra, Marcella vai compartilhar os bastidores de um projeto real do iFood: o retorno do app para Entregadores ao iOS, mostrando as decisões técnicas e organizacionais que tornaram essa migração possível.\n\nO que você vai aprender?\nComo estruturar uma migração de Android nativo para Kotlin Multiplatform e Compose Multiplatform.\nOs desafios de compartilhar código entre Android e iOS sem perder velocidade de desenvolvimento.\nOs aprendizados de um projeto entregue em tempo recorde por um time de 42 desenvolvedores.\nComo uma decisão de arquitetura pode resolver um problema real de negócio.',
         },
         {
             photoUrl: DanielaOliveira,
@@ -408,8 +463,8 @@ export default function Speakers2026() {
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Daniela Oliveira', 'Kevin Uehara'].includes(speaker.name)
-    );
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Kevin Uehara'].includes(speaker.name)
+    ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
         <section className="bg-gradient-to-r from-[#EBF3FC] via-[#EAF7F4] to-[#E9F9EF] py-20 overflow-hidden">
