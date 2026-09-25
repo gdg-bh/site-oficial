@@ -52,7 +52,7 @@ const scheduleData = [
         end: '10:50',
         track: 'Onfly',
         title: 'De Aprendiz a Referência: Construindo Espaço na Tecnologia com Propósito',
-        speaker: 'Geisislaine Lima Martins',
+        speaker: 'Geise Martins',
     },
     {
         start: '10:50',

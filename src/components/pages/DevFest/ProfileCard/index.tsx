@@ -18,9 +18,10 @@ interface ProfileProps {
   speakerInfo?: string;
   talkTitle?: string;
   talkInfo?: string;
+  photoPosition?: string;
 }
 
-export default function ProfileCard({ photoUrl, name, role, description, links, speakerInfo, talkTitle, talkInfo }: ProfileProps) {
+export default function ProfileCard({ photoUrl, name, role, description, links, speakerInfo, talkTitle, talkInfo, photoPosition }: ProfileProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInfoClick = (e: React.MouseEvent) => {
@@ -34,6 +35,7 @@ export default function ProfileCard({ photoUrl, name, role, description, links, 
       <div className="max-w-sm bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center h-full">
         <img
           className="w-[100px] h-[100px] rounded-full object-cover mb-4 shadow-sm"
+          style={{ objectPosition: photoPosition }}
           src={photoUrl}
           alt={`${name} photo`}
         />
@@ -75,6 +77,7 @@ export default function ProfileCard({ photoUrl, name, role, description, links, 
       speakerInfo={speakerInfo}
       talkTitle={talkTitle}
       talkInfo={talkInfo}
+      photoPosition={photoPosition}
       links={links}
     />
     </>

@@ -33,7 +33,7 @@ const scheduleData = [
         end: '10:10',
         track: 'Mercado',
         title: 'As Lições Práticas que Me Levaram ao Topo',
-        speaker: 'Geisislaine Lima Martins',
+        speaker: 'Geise Martins',
     },
     {
         start: '09:30',
@@ -72,47 +72,48 @@ const scheduleData = [
     },
     {
         start: '11:10',
-        end: '12:00',
+        end: '11:50',
         track: 'Horizonte',
         title: 'O Programador Generalista e a IA Generativa',
         speaker: 'Karol Attekita',
     },
     {
         start: '11:10',
-        end: '12:00',
+        end: '11:50',
         track: 'Pampulha',
         title: 'Em Breve',
         speaker: 'Em Breve',
     },
     {
         start: '11:10',
-        end: '12:00',
+        end: '11:50',
         track: 'Mercado',
         title: 'Google Dorks: Não é Hacking, é Google!',
         speaker: 'Iza Batista',
+    },    
+    {
+        start: '11:10',
+        end: '11:50',
+        track: 'Liberdade',
+        title: 'Em Breve',
+        speaker: 'Em Breve',
+    },
+    
+    {
+        start: '11:50',
+        end: '13:20',
+        title: 'Almoço',
     },
     {
         start: '13:20',
         end: '14:00',
-        track: 'Liberdade',
-        title: 'De engenheira civil a diretora de produto: como migrar de carreira sem começar do zero',
-        speaker: 'Maria Cecília Coelho',
-    },
-    {
-        start: '12:00',
-        end: '13:30',
-        title: 'Almoço',
-    },
-    {
-        start: '13:30',
-        end: '14:10',
         track: 'Horizonte',
         title: 'Em Breve',
         speaker: 'Em Breve',
     },
     {
-        start: '13:30',
-        end: '14:10',
+        start: '13:20',
+        end: '14:00',
         track: 'Pampulha',
         title: 'O Código da Contratação: A inteligência por trás de um LinkedIn estratégico.',
         speaker: 'Carol Severo',
@@ -123,13 +124,12 @@ const scheduleData = [
         track: 'Mercado',
         title: 'Migração de Tecnologia com IA',
         speaker: 'Felipe Horta e Bonaldi',
-    },
-    {
-        start: '13:30',
-        end: '14:10',
+    },{
+        start: '13:20',
+        end: '14:00',
         track: 'Liberdade',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'De engenheira civil a diretora de produto: como migrar de carreira sem começar do zero',
+        speaker: 'Maria Cecília Coelho',
     },
     {
         start: '14:10',
@@ -139,61 +139,61 @@ const scheduleData = [
         speaker: 'Victor Pugliese',
     },
     {
-        start: '14:20',
-        end: '15:00',
+        start: '14:10',
+        end: '14:50',
         track: 'Pampulha',
         title: 'Em Breve',
         speaker: 'Em Breve',
     },
     {
-        start: '14:20',
-        end: '15:00',
+        start: '14:10',
+        end: '14:50',
         track: 'Mercado',
         title: 'Micro-frontends: Escalando Interfaces com Arquitetura Modular',
         speaker: 'Kevin Uehara',
     },
     {
-        start: '14:20',
-        end: '15:00',
+        start: '14:10',
+        end: '14:50',
         track: 'Liberdade',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Mentoria para Quem Quer Ser Freelancer em Tecnologia',
+        speaker: 'Isadora Cardoso',
     },
     {
-        start: '15:10',
-        end: '16:00',
+        start: '15:00',
+        end: '15:40',
         track: 'Horizonte',
         title: 'Agent Foundry: Engenharia de Agentes de IA com Google ADK',
         speaker: 'Ahirton Lopes',
     },
     {
-        start: '15:10',
-        end: '16:00',
+        start: '15:00',
+        end: '15:40',
         track: 'Pampulha',
         title: 'Recalculando a rota: como o app iFood para Entregadores voltou à App Store migrando do Android nativo para KMP + CMP',
         speaker: 'Marcella Souza',
     },
     {
-        start: '15:10',
-        end: '16:00',
+        start: '15:00',
+        end: '15:40',
         track: 'Mercado',
         title: 'Em Breve',
         speaker: 'Em Breve',
     },
     {
-        start: '15:10',
-        end: '16:00',
+        start: '15:00',
+        end: '15:40',
         track: 'Liberdade',
         title: 'Da Competência à Influência: Carreira e Liderança Feminina em Tecnologia',
         speaker: 'Daniela Oliveira',
     },
     {
-        start: '16:00',
-        end: '16:20',
+        start: '15:40',
+        end: '16:00',
         title: 'Encerramento + Sorteios',
     },
     {
-        start: '16:20',
+        start: '16:00',
         end: '17:00',
         title: 'Happy Hour',
     },
@@ -211,9 +211,9 @@ const credentialSlots = [
     { start: '09:30', top: 435, bottom: 550, left: 244, right: 1030 },
     { start: '10:20', top: 589, bottom: 703, left: 244, right: 1030 },
     { start: '11:10', top: 742, bottom: 856, left: 244, right: 1030 },
-    { start: '13:30', top: 894, bottom: 1008, left: 244, right: 1030 },
-    { start: '14:20', top: 1047, bottom: 1161, left: 244, right: 1030 },
-    { start: '15:10', top: 1201, bottom: 1315, left: 244, right: 1030 },
+    { start: '13:20', top: 894, bottom: 1008, left: 244, right: 1030 },
+    { start: '14:10', top: 1047, bottom: 1161, left: 244, right: 1030 },
+    { start: '15:00', top: 1201, bottom: 1315, left: 244, right: 1030 },
 ];
 
 type Session = (typeof scheduleData)[number];
@@ -510,9 +510,17 @@ export default function Schedule2026() {
                         </thead>
                         <tbody>
                             {filteredData.map((item, idx) => (
+                                (() => {
+                                    const startsTimeSlot = idx === 0 || item.start !== filteredData[idx - 1].start;
+                                    const previousItem = filteredData[idx - 1];
+                                    const followsColoredBreak = previousItem?.title === 'Abertura' || previousItem?.title === 'Almoço';
+                                    const hasBlueSeparator = Boolean(item.track) && startsTimeSlot && !followsColoredBreak;
+
+                                    return (
                                 <tr
                                     key={idx}
-                                    className={`border-t border-gray-200 even:bg-white odd:bg-[#FAFAFC]${!item.track ? ' bg-gradient-to-r from-google-blue/20 to-google-green/20 border-white' : ''}`}
+                                    className={`${hasBlueSeparator ? 'border-t-2' : item.track ? 'border-t border-gray-200' : 'border-0'} even:bg-white odd:bg-[#FAFAFC]${!item.track ? ' bg-gradient-to-r from-google-blue/20 to-google-green/20 border-white' : ''}`}
+                                    style={hasBlueSeparator ? { borderTopColor: '#4285F4' } : undefined}
                                 >
                                     <td
                                         className={`px-3 align-center whitespace-nowrap${!item.track ? ' py-2' : 'py-5'}`}
@@ -559,6 +567,8 @@ export default function Schedule2026() {
                                         </td>
                                     )}
                                 </tr>
+                                    );
+                                })()
                             ))}
                         </tbody>
                     </table>

@@ -18,6 +18,7 @@ import Bonaldi from '../../../../assets/palestrantes/Bonaldi.png';
 import GabrielNogueira from '../../../../assets/palestrantes/Gabriel_Nogueira.jpeg';
 import GeisislaineLimaMartins from '../../../../assets/palestrantes/Geisislaine_Lima_Martins.jpeg';
 import IsabelaCancado from '../../../../assets/palestrantes/Isabela_Cancado.jpeg';
+import IsadoraCardoso from '../../../../assets/palestrantes/Isadora_Cardoso.jpeg';
 import JorgeMauroGonçalves from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
 import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.jpg';
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
@@ -291,7 +292,8 @@ export default function Speakers2026() {
         },
         {
             photoUrl: GeisislaineLimaMartins,
-            name: 'Geisislaine Lima Martins',
+            name: 'Geise Martins',
+            photoPosition: 'center 20%',
             role: 'Head de Tecnologia',
             description: 'Onfly',
             links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
@@ -306,6 +308,16 @@ export default function Speakers2026() {
             description: 'Arcelor Mittal',
             links: { linkedin: 'https://www.linkedin.com/in/isabela-can%C3%A7ado/' },
             speakerInfo:'Conheça Isabela Lopes R. Cançado, profissional que é inspiração quando o assunto é transição de carreira e agilidade! Isabela atua na ArcelorMittal Sistemas na área de agilidade, além de ser cofundadora da comunidade AgileMinds. Ela começou sua trajetória na engenharia de produto, onde trabalhou por 12 anos na área automotiva, liderando projetos estratégicos, desenvolvimento de veículos e gestão de custos — inclusive com experiências internacionais na Itália e Argentina. Em 2017, concluiu o mestrado em Administração, com foco em estratégia organizacional, gestão do conhecimento e inteligência competitiva. Desde então, vem se dedicando a ajudar pessoas e times a alcançarem seus melhores resultados por meio de metodologias ágeis como OKR, Kanban, Lean e Design Thinking.'
+        },
+        {
+            photoUrl: IsadoraCardoso,
+            name: 'Isadora Cardoso',
+            role: 'Desenvolvedora freelancer',
+            description: 'TypeScript, React e Node.js',
+            links: { linkedin: 'https://www.linkedin.com/in/isadora-cardoso-a65798277/' },
+            speakerInfo: 'Estudante de Sistemas de Informação na PUC Minas, desenvolvedora freelancer com TypeScript, React e Node.js e monitora acadêmica por dois anos. Isadora vive na prática os desafios de conciliar faculdade, trabalho e projetos como freelancer e quer compartilhar esse caminho com outras mulheres.',
+            talkTitle: 'Mentoria para Quem Quer Ser Freelancer em Tecnologia',
+            talkInfo: 'Nesta mentoria, Isadora vai ajudar você a construir um plano prático para dar os próximos passos no universo do trabalho freelancer em tecnologia.\n\nO que vamos conversar?\nComo organizar seus estudos para atuar como freelancer.\nComo conquistar o primeiro projeto e criar um plano de evolução.\nDesenvolvimento web com TypeScript, React e Node.js.\nNoções de organização, processo de trabalho e rotina de quem atua como freelancer.',
         },
         {
             photoUrl: JorgeMauroGonçalves,
@@ -509,7 +521,7 @@ export default function Speakers2026() {
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geisislaine Lima Martins', 'Kevin Uehara'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Kevin Uehara'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
@@ -528,6 +540,7 @@ export default function Speakers2026() {
                         speakerInfo={card.speakerInfo}
                         talkTitle={card.talkTitle}
                         talkInfo={card.talkInfo}
+                        photoPosition={card.photoPosition}
                     />
                 ))}
             </InfiniteCarousel>
