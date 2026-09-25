@@ -53,8 +53,8 @@ const scheduleData = [
         start: '10:20',
         end: '11:00',
         track: 'Pampulha',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Reforma tributária para quem escreve código',
+        speaker: 'Luiz Santos',
     },
     {
         start: '10:20',
@@ -92,11 +92,11 @@ const scheduleData = [
         speaker: 'Iza Batista',
     },
     {
-        start: '11:10',
-        end: '12:00',
+        start: '13:20',
+        end: '14:00',
         track: 'Liberdade',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'De engenheira civil a diretora de produto: como migrar de carreira sem começar do zero',
+        speaker: 'Maria Cecília Coelho',
     },
     {
         start: '12:00',
@@ -118,11 +118,11 @@ const scheduleData = [
         speaker: 'Carol Severo',
     },
     {
-        start: '13:30',
-        end: '14:10',
+        start: '13:20',
+        end: '14:00',
         track: 'Mercado',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Migração de Tecnologia com IA',
+        speaker: 'Felipe Horta e Bonaldi',
     },
     {
         start: '13:30',
@@ -132,11 +132,11 @@ const scheduleData = [
         speaker: 'Em Breve',
     },
     {
-        start: '14:20',
-        end: '15:00',
+        start: '14:10',
+        end: '14:50',
         track: 'Horizonte',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Hawkins Enterprise: Derrotando o Demogorgon das Alucinações Corporativas',
+        speaker: 'Victor Pugliese',
     },
     {
         start: '14:20',
@@ -211,8 +211,8 @@ const credentialSlots = [
     { start: '09:30', top: 385, bottom: 519, left: 192, right: 1011 },
     { start: '10:20', top: 591, bottom: 724, left: 192, right: 1011 },
     { start: '11:10', top: 781, bottom: 914, left: 192, right: 1011 },
-    { start: '13:30', top: 973, bottom: 1107, left: 192, right: 1011 },
-    { start: '14:20', top: 1179, bottom: 1314, left: 192, right: 1011 },
+    { start: '13:20', top: 973, bottom: 1107, left: 192, right: 1011 },
+    { start: '14:10', top: 1179, bottom: 1314, left: 192, right: 1011 },
     { start: '15:10', top: 1355, bottom: 1490, left: 192, right: 1011, textOffsetY: 14 },
 ];
 
