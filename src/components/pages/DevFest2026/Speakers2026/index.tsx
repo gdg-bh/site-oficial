@@ -292,10 +292,12 @@ export default function Speakers2026() {
         {
             photoUrl: GeisislaineLimaMartins,
             name: 'Geisislaine Lima Martins',
-            role: 'Tech Manager',
+            role: 'Head de Tecnologia',
             description: 'Onfly',
             links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
-            talkTitle: 'De Aprendiz a Referência: Construindo Espaço na Tecnologia com Propósito',
+            speakerInfo: 'Head de Tecnologia na Onfly, Geise construiu uma trajetória marcada por crescimento, liderança e desenvolvimento de pessoas. Hoje, também atua como palestrante e mentora, ajudando profissionais a conquistarem mais protagonismo na carreira.',
+            talkTitle: 'As Lições Práticas que Me Levaram ao Topo',
+            talkInfo: 'Nesta palestra, Geise vai compartilhar a trajetória real por trás da evolução da sua carreira — com os desafios, erros, inseguranças e aprendizados que fizeram diferença ao longo do caminho.\n\nO que você vai aprender?\nComo sair da execução e construir um posicionamento de liderança.\nEstratégias para ganhar visibilidade e protagonismo no ambiente de trabalho.\nComo desenvolver uma comunicação que impulsiona a carreira.\nComo enfrentar a síndrome do impostor e se posicionar com mais confiança.',
         },
         {
             photoUrl: IsabelaCancado,
@@ -507,7 +509,7 @@ export default function Speakers2026() {
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Kevin Uehara'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geisislaine Lima Martins', 'Kevin Uehara'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (

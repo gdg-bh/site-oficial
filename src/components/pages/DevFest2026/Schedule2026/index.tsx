@@ -32,8 +32,8 @@ const scheduleData = [
         start: '09:30',
         end: '10:10',
         track: 'Mercado',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'As Lições Práticas que Me Levaram ao Topo',
+        speaker: 'Geisislaine Lima Martins',
     },
     {
         start: '09:30',
