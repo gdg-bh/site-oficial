@@ -13,15 +13,20 @@ import DiegoBorgesFerreira from '../../../../assets/palestrantes/Diego_Borges_Fe
 import DouglasAugustoFerreiraAraujo from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
 import ElianaLimadaFonseca from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
 import FernandaCosta from '../../../../assets/palestrantes/Fernanda_Costa.jpg';
+import FelipeHorta from '../../../../assets/palestrantes/Felipe_Horta.jpg';
+import Bonaldi from '../../../../assets/palestrantes/Bonaldi.png';
 import GabrielNogueira from '../../../../assets/palestrantes/Gabriel_Nogueira.jpeg';
 import GeisislaineLimaMartins from '../../../../assets/palestrantes/Geisislaine_Lima_Martins.jpeg';
 import IsabelaCancado from '../../../../assets/palestrantes/Isabela_Cancado.jpeg';
+import IsadoraCardoso from '../../../../assets/palestrantes/Isadora_Cardoso.jpeg';
 import JorgeMauroGonçalves from '../../../../assets/palestrantes/Jorge_Mauro_Gonçalves.png';
 import JuliaVasconcelos from '../../../../assets/palestrantes/Julia_Vasconcelos.jpg';
 import JulianaConde from '../../../../assets/palestrantes/Juliana_Conde.jpg';
 import LucasMenezes from '../../../../assets/palestrantes/Lucas_Menezes.png';
 import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
+import LuizSantos from '../../../../assets/palestrantes/Luiz_Santos.jpg';
 import LucianaRHSincero from '../../../../assets/palestrantes/Luciana_RH_Sincero.jpeg';
+import MariaCeciliaCoelho from '../../../../assets/palestrantes/Maria_Cecilia_Coelho.jpeg';
 import DanielaOliveira from '../../../../assets/palestrantes/Daniela_Oliveira.jpeg';
 import CarolSevero from '../../../../assets/palestrantes/Carol_Severo.jpeg';
 import IzaBatista from '../../../../assets/palestrantes/Iza_Batista.jpeg';
@@ -141,6 +146,36 @@ export default function Speakers2026() {
             talkInfo: 'Como transformar competência técnica em influência e liderança? Nesta mentoria, Daniela vai compartilhar ferramentas e experiências para ajudar mulheres a crescerem na tecnologia com mais estratégia, confiança e protagonismo.',
         },
         {
+            photoUrl: MariaCeciliaCoelho,
+            name: 'Maria Cecília Coelho',
+            role: 'Product Director & COO',
+            description: 'Origami Lab',
+            links: { linkedin: 'https://www.linkedin.com/in/mariaceciliacoelho/' },
+            speakerInfo: 'Engenheira Civil de formação, Maria Cecília construiu uma trajetória marcada por reinvenção: passou pelo comércio exterior, migrou para tecnologia e hoje é Sócia e Diretora de Produtos na Origami Lab, liderando times e ajudando empresas a acelerarem sua transformação digital.',
+            talkTitle: 'De engenheira civil a diretora de produto: como migrar de carreira sem começar do zero',
+            talkInfo: 'Mudar de carreira não significa apagar tudo o que você já construiu.\n\nNesta mentoria, Maria Cecília vai compartilhar os aprendizados de quem fez uma transição para tecnologia, mostrando como aproveitar experiências anteriores para construir uma nova trajetória profissional com mais segurança e estratégia.\n\nO que vamos conversar?\nComo fazer uma transição de carreira sem começar do zero.\nO dia a dia de quem trabalha com Produto.\nAs soft skills que fazem diferença na tecnologia: comunicação, empatia e tomada de decisão.\nComo lidar com a insegurança e assumir o protagonismo na construção da sua carreira.',
+        },
+        {
+            photoUrl: FelipeHorta,
+            name: 'Felipe Horta',
+            role: 'Head de Inovação e Soluções',
+            description: 'Framework Digital',
+            links: { linkedin: 'https://www.linkedin.com/in/hortafelipe/' },
+            speakerInfo: 'Felipe Horta é mineiro, empreendedor e apaixonado por transformar desafios em soluções, unindo arquitetura, desenvolvimento e inovação. Como Head de Inovação e Soluções na Framework Digital, atua na criação de soluções que conectam tecnologia e negócio.',
+            talkTitle: 'Migração de Tecnologia com IA',
+            talkInfo: 'Nesta palestra, Felipe e Bonaldi vão mostrar como utilizar Inteligência Artificial para acelerar e organizar a modernização de aplicações legadas, com uma abordagem prática e baseada em casos reais.\n\nO que você vai aprender?\nComo agentes autônomos de IA podem apoiar todo o processo de migração.\nComo realizar engenharia reversa, documentação e definição arquitetural com apoio da IA.\nComo garantir governança, rastreabilidade, testes e deploy durante a modernização.\nCases práticos de migração utilizando IA em cenários reais.',
+        },
+        {
+            photoUrl: Bonaldi,
+            name: 'Rafael Bonaldi',
+            role: 'Especialista de IA & Arquiteto de Soluções',
+            description: 'Framework Digital',
+            links: {linkedin: 'https://www.linkedin.com/in/rafaelbonaldi/'},
+            speakerInfo: 'Bonaldi atua como Arquiteto de Software e Soluções .NET, especialista em IA, LLMs, microsserviços, Kubernetes e Kafka, levando aplicações para produção em ambientes de alta escala.',
+            talkTitle: 'Migração de Tecnologia com IA',
+            talkInfo: 'Nesta palestra, Felipe Horta e Bonaldi vão mostrar como utilizar Inteligência Artificial para acelerar e organizar a modernização de aplicações legadas, com uma abordagem prática e baseada em casos reais.\n\nO que você vai aprender?\nComo agentes autônomos de IA podem apoiar todo o processo de migração.\nComo realizar engenharia reversa, documentação e definição arquitetural com apoio da IA.\nComo garantir governança, rastreabilidade, testes e deploy durante a modernização.\nCases práticos de migração utilizando IA em cenários reais.',
+        },
+        {
             photoUrl: KevinUehara,
             name: 'Kevin Uehara',
             role: 'Software Engineer',
@@ -257,11 +292,14 @@ export default function Speakers2026() {
         },
         {
             photoUrl: GeisislaineLimaMartins,
-            name: 'Geisislaine Lima Martins',
-            role: 'Tech Manager',
+            name: 'Geise Martins',
+            photoPosition: 'center 20%',
+            role: 'Head de Tecnologia',
             description: 'Onfly',
             links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
-            talkTitle: 'De Aprendiz a Referência: Construindo Espaço na Tecnologia com Propósito',
+            speakerInfo: 'Head de Tecnologia na Onfly, Geise construiu uma trajetória marcada por crescimento, liderança e desenvolvimento de pessoas. Hoje, também atua como palestrante e mentora, ajudando profissionais a conquistarem mais protagonismo na carreira.',
+            talkTitle: 'As Lições Práticas que Me Levaram ao Topo',
+            talkInfo: 'Nesta palestra, Geise vai compartilhar a trajetória real por trás da evolução da sua carreira — com os desafios, erros, inseguranças e aprendizados que fizeram diferença ao longo do caminho.\n\nO que você vai aprender?\nComo sair da execução e construir um posicionamento de liderança.\nEstratégias para ganhar visibilidade e protagonismo no ambiente de trabalho.\nComo desenvolver uma comunicação que impulsiona a carreira.\nComo enfrentar a síndrome do impostor e se posicionar com mais confiança.',
         },
         {
             photoUrl: IsabelaCancado,
@@ -270,6 +308,16 @@ export default function Speakers2026() {
             description: 'Arcelor Mittal',
             links: { linkedin: 'https://www.linkedin.com/in/isabela-can%C3%A7ado/' },
             speakerInfo:'Conheça Isabela Lopes R. Cançado, profissional que é inspiração quando o assunto é transição de carreira e agilidade! Isabela atua na ArcelorMittal Sistemas na área de agilidade, além de ser cofundadora da comunidade AgileMinds. Ela começou sua trajetória na engenharia de produto, onde trabalhou por 12 anos na área automotiva, liderando projetos estratégicos, desenvolvimento de veículos e gestão de custos — inclusive com experiências internacionais na Itália e Argentina. Em 2017, concluiu o mestrado em Administração, com foco em estratégia organizacional, gestão do conhecimento e inteligência competitiva. Desde então, vem se dedicando a ajudar pessoas e times a alcançarem seus melhores resultados por meio de metodologias ágeis como OKR, Kanban, Lean e Design Thinking.'
+        },
+        {
+            photoUrl: IsadoraCardoso,
+            name: 'Isadora Cardoso',
+            role: 'Desenvolvedora freelancer',
+            description: 'TypeScript, React e Node.js',
+            links: { linkedin: 'https://www.linkedin.com/in/isadora-cardoso-a65798277/' },
+            speakerInfo: 'Estudante de Sistemas de Informação na PUC Minas, desenvolvedora freelancer com TypeScript, React e Node.js e monitora acadêmica por dois anos. Isadora vive na prática os desafios de conciliar faculdade, trabalho e projetos como freelancer e quer compartilhar esse caminho com outras mulheres.',
+            talkTitle: 'Mentoria para Quem Quer Ser Freelancer em Tecnologia',
+            talkInfo: 'Nesta mentoria, Isadora vai ajudar você a construir um plano prático para dar os próximos passos no universo do trabalho freelancer em tecnologia.\n\nO que vamos conversar?\nComo organizar seus estudos para atuar como freelancer.\nComo conquistar o primeiro projeto e criar um plano de evolução.\nDesenvolvimento web com TypeScript, React e Node.js.\nNoções de organização, processo de trabalho e rotina de quem atua como freelancer.',
         },
         {
             photoUrl: JorgeMauroGonçalves,
@@ -317,6 +365,16 @@ export default function Speakers2026() {
             links: { linkedin: 'https://www.linkedin.com/in/luizanaves/' },
             speakerInfo: 'Luiza Naves é Engenheira de Produção pela UFMG e com MBA em Gestão de Projetos pela USP/Esalq, Luiza atua como Especialista de Produto na Localiza&Co, onde é responsável pela estratégia, desenvolvimento e sucesso de produtos digitais. Com uma trajetória que une negócios, tecnologia e experiência do cliente, ela promove soluções centradas no usuário e já atuou como engenheira de processos na Suzano, liderando projetos e experimentos industriais.',
             talkInfo: 'Na sua mentoria, Luiza vai conversar sobre carreira de produto, produto e agilidade, além de liderança e gestão de times.'
+        },
+        {
+            photoUrl: LuizSantos,
+            name: 'Luiz Santos',
+            role: 'CEO',
+            description: 'Lucralize',
+            links: { linkedin: 'https://www.linkedin.com/in/luizdsan/' },
+            speakerInfo: 'Contador, bacharel em Direito e CEO da Lucralize, Luiz Santos tem 18 anos de experiência no setor contábil e já ajudou mais de 500 empresas, com foco em tecnologia, negócios digitais e profissionais que atuam como pessoa jurídica.',
+            talkTitle: 'Reforma tributária para quem escreve código',
+            talkInfo: 'A Reforma Tributária já começou — e entender o que muda para quem trabalha com tecnologia é essencial.\n\nNesta palestra, Luiz vai explicar, de forma prática e sem juridiquês, os impactos das novas regras para desenvolvedores, freelancers e empresas de tecnologia.\n\nO que você vai aprender?\nO que muda para quem trabalha como PJ na área de tecnologia.\nComo a Reforma Tributária impacta impostos, dividendos e exportação de serviços.\nAs diferenças entre Simples Nacional tradicional e híbrido.\nO que muda para quem presta serviços para empresas do Brasil e do exterior.',
         },
         {
             photoUrl: MarianaAlmeida,
@@ -432,13 +490,13 @@ export default function Speakers2026() {
         },
         {
             photoUrl: VictorPugliese,
-            name: 'Victor Pugliese',
+            name: 'Dr. Victor Pugliese',
             role: 'Google Developer Expert em AI',
             description: '',
-            links: { linkedin: 'https://www.linkedin.com/in/victorpug-exe/', post:'https://www.linkedin.com/posts/gdg-bh_devfestbh-gdgbh-devfest-activity-7387441967300784129-HtWN' },
-            speakerInfo: 'Victor é Doutorando em Ciência da Computação pela UNIFESP, com Mestrado pelo ITA, e mais de 10 anos de experiência na indústria. Além disso, já publicou 15 trabalhos científicos e foi Pesquisador Visitante no GAIPS, grupo de pesquisa do Instituto Superior Técnico da Universidade de Lisboa, contribuindo para avanços em Inteligência Artificial e Aprendizado de Máquina.',
-            talkTitle: 'A Era Gemma: Desvendando a Família de Modelos Abertos do Google',
-            talkInfo:'O Google apresentou ao mundo o Gemma, uma família de modelos de IA aberta que está redefinindo os limites da inovação.'
+            links: { linkedin: 'https://www.linkedin.com/in/victorpug-exe/' },
+            speakerInfo: 'Formado pelo IFSP-Caraguatatuba, Victor é doutor em Ciência da Computação pela UNIFESP, mestre pelo ITA e reconhecido como Google Developer Expert (GDE) em AI & Cloud. Organizador do GDG Caraguatatuba, acumula mais de 10 anos de experiência na indústria e dezenas de publicações científicas, com passagem como pesquisador visitante no Instituto Superior Técnico da Universidade de Lisboa. Victor une a profundidade da pesquisa acadêmica com a aplicação prática da tecnologia no ecossistema de inovação.',
+            talkTitle: 'Hawkins Enterprise: Derrotando o Demogorgon das Alucinações Corporativas',
+            talkInfo: 'Bem-vindos à Hawkins Enterprise. Nosso departamento de pesquisa acabou de abrir um portal para o Mundo Invertido: nossos colaboradores estão usando prompts ingênuos em ferramentas abertas, os dados da empresa estão sumindo em silos escuros e um monstro à espreita — o Demogorgon da Alucinação — acabou de inventar os números do balanço do último trimestre. Hoje, nós não vamos lançar feitiços de sorte. Vamos abrir o nosso Manual do Mestre, dominar conceitos da inteligência artificial generativa com NotebookLM para fechar esse portal e blindar nossos negócios.\n\nO que você vai aprender?\nComo reduzir alucinações em aplicações de IA Generativa.\nComo utilizar o NotebookLM para construir contexto e respostas mais confiáveis.\nBoas práticas para proteger informações corporativas e evitar erros causados por prompts ingênuos.\nComo aplicar IA Generativa com mais governança, segurança e confiabilidade no ambiente empresarial.',
         },
         {
             photoUrl: VictoriaBoaventura,
@@ -463,7 +521,7 @@ export default function Speakers2026() {
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Kevin Uehara'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Kevin Uehara'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
@@ -482,6 +540,7 @@ export default function Speakers2026() {
                         speakerInfo={card.speakerInfo}
                         talkTitle={card.talkTitle}
                         talkInfo={card.talkInfo}
+                        photoPosition={card.photoPosition}
                     />
                 ))}
             </InfiniteCarousel>

@@ -31,6 +31,7 @@ export default function SpeakersIWD2026() {
         {
             photoUrl: GeisislaineLimaMartins,
             name: 'Geise Martins',
+            photoPosition: 'center 20%',
             role: 'Head de Travel',
             description: 'Onfly',
             links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
@@ -73,6 +74,7 @@ export default function SpeakersIWD2026() {
                             speakerInfo={speaker.speakerInfo}
                             talkTitle={speaker.talkTitle}
                             talkInfo={speaker.talkInfo}
+                            photoPosition={speaker.photoPosition}
                         />
                     </div>
                 ))}
@@ -91,6 +93,7 @@ export default function SpeakersIWD2026() {
                             speakerInfo={speaker.speakerInfo}
                             talkTitle={speaker.talkTitle}
                             talkInfo={speaker.talkInfo}
+                            photoPosition={speaker.photoPosition}
                         />
                     ))}
                 </Carousel>

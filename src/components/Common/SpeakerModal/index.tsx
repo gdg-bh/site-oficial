@@ -14,6 +14,7 @@ interface SpeakerModalProps {
   speakerInfo?: string;
   talkTitle?: string;
   talkInfo?: string;
+  photoPosition?: string;
   links?: {
     linkedin?: string;
     instagram?: string;
@@ -31,6 +32,7 @@ export default function SpeakerModal({
   speakerInfo,
   talkTitle,
   talkInfo,
+  photoPosition,
   links,
 }: SpeakerModalProps) {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -101,6 +103,7 @@ export default function SpeakerModal({
             <div className="flex flex-col items-center text-center md:w-1/3 flex-shrink-0">
               <img
                 className="w-48 h-48 rounded-full object-cover mb-6 shadow-lg"
+                style={{ objectPosition: photoPosition }}
                 src={photoUrl}
                 alt={`${name} photo`}
               />

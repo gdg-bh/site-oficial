@@ -158,7 +158,7 @@ export default function Speakers() {
         },
         {
             photoUrl: GeisislaineLimaMartins,
-            name: 'Geisislaine Lima Martins',
+            name: 'Geise Martins',
             role: 'Tech Manager',
             description: 'Onfly',
             links: { linkedin: 'https://www.linkedin.com/in/geisislaine-martins/' },
