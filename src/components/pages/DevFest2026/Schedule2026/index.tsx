@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Check, Download, Share2, X } from 'lucide-react';
 import { SectionTitle } from '../../../Common/SectionTitle';
-import credentialImage from '../../../../assets/pages/devfest2026/credencial.png';
+import credentialImage from '../../../../assets/pages/devfest2026/credencial.jpeg';
 
 const scheduleData = [
     {
@@ -208,12 +208,12 @@ const tracks = [
 
 const scheduleStorageKey = 'devfest-2026-personal-schedule';
 const credentialSlots = [
-    { start: '09:30', top: 385, bottom: 519, left: 192, right: 1011 },
-    { start: '10:20', top: 591, bottom: 724, left: 192, right: 1011 },
-    { start: '11:10', top: 781, bottom: 914, left: 192, right: 1011 },
-    { start: '13:20', top: 973, bottom: 1107, left: 192, right: 1011 },
-    { start: '14:10', top: 1179, bottom: 1314, left: 192, right: 1011 },
-    { start: '15:10', top: 1355, bottom: 1490, left: 192, right: 1011, textOffsetY: 14 },
+    { start: '09:30', top: 435, bottom: 550, left: 244, right: 1030 },
+    { start: '10:20', top: 589, bottom: 703, left: 244, right: 1030 },
+    { start: '11:10', top: 742, bottom: 856, left: 244, right: 1030 },
+    { start: '13:30', top: 894, bottom: 1008, left: 244, right: 1030 },
+    { start: '14:20', top: 1047, bottom: 1161, left: 244, right: 1030 },
+    { start: '15:10', top: 1201, bottom: 1315, left: 244, right: 1030 },
 ];
 
 type Session = (typeof scheduleData)[number];
