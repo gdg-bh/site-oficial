@@ -142,8 +142,8 @@ const scheduleData = [
         start: '14:10',
         end: '14:50',
         track: 'Pampulha',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Construindo agentes que testam aplicações Flutter de forma autônoma com Gemini',
+        speaker: 'Rodrigo Rahman',
     },
     {
         start: '14:10',
@@ -177,8 +177,8 @@ const scheduleData = [
         start: '15:00',
         end: '15:40',
         track: 'Mercado',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Nuvem sem Fricção: Simplificando deploys com o Cloud Run',
+        speaker: 'Douglas Augusto',
     },
     {
         start: '15:00',

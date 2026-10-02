@@ -74,7 +74,7 @@ export function Footer() {
                 <div className="border-t border-gray-600 mb-8"></div>
 
                 <div className="text-[#FFFFFF66] text-lg">
-                    © 2025 Google Developer Group - Belo Horizonte
+                    © 2026 Google Developer Group - Belo Horizonte
                 </div>
             </div>
         </footer>

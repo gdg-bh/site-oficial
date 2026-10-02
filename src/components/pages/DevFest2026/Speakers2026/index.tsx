@@ -44,6 +44,7 @@ import PedroRosemberg from '../../../../assets/palestrantes/Pedro_Rosemberg.jpeg
 import RafaelCunha from '../../../../assets/palestrantes/Rafael_Cunha.jpeg';
 import RafaelRibeiroAndrade from '../../../../assets/palestrantes/Rafael_Ribeiro_Andrade.png';
 import RafaelaMarcolino from '../../../../assets/palestrantes/Rafaela_Marcolino.jpg';
+import RodrigoRahman from '../../../../assets/palestrantes/Rodrigo_Rahman.png';
 import ThaisFalabella from '../../../../assets/palestrantes/Thais_Falabella.png';
 import ToshiOssada from '../../../../assets/palestrantes/Toshi_Ossada.png';
 import VictorPugliese from '../../../../assets/palestrantes/Victor_Pugliese.jpeg';
@@ -255,12 +256,12 @@ export default function Speakers2026() {
         {
             photoUrl: DouglasAugustoFerreiraAraujo,
             name: 'Douglas Augusto',
-            role: 'Specialist Customer Engineer',
-            description: 'Google',
+            role: 'Platform Engineer',
+            description: 'Google Cloud',
             links: { linkedin: 'https://www.linkedin.com/in/douglasaugusto/' },
-            speakerInfo: 'Com mais de 10 anos de experiência em tecnologia, já atuou em grandes empresas como Coca-Cola e Stellantis, passando por consultorias e fábricas de software. Hoje, é Arquiteto de Soluções no Google Cloud, ajudando instituições financeiras a migrarem de sistemas legados para arquiteturas modernas e nativas em nuvem, acelerando inovação com segurança.',
-            talkTitle: 'Desenvolvimento de Agents com o ADK',
-            talkInfo: 'Nesta sessão prática, Douglas vai mostrar como criar agents autônomos usando o Agent Development Kit (ADK) do Google. Você vai aprender:\n Como um agent raciocina e planeja seus passos\n Como utilizar ferramentas para executar tarefas\n Como aplicar memória para manter contexto\n\nTudo isso para construir aplicações mais inteligentes e automatizar processos complexos.',
+            speakerInfo: 'Platform Engineer no Google Cloud e especialista em Arquitetura de Nuvem, Data & AI, Douglas atua transformando desafios de negócios em soluções escaláveis para grandes instituições financeiras. Também soma anos de experiência como mentor no Google for Startups e contribuindo com comunidades de tecnologia.',
+            talkTitle: 'Nuvem sem Fricção: Simplificando deploys com o Cloud Run',
+            talkInfo: 'A melhor infraestrutura é aquela que você nem percebe que existe. Em plena era da IA, não basta criar APIs, agentes inteligentes e novos microsserviços: também precisamos pensar em como colocar tudo isso em produção de forma simples, segura e escalável.\n\nNesta palestra, Douglas vai mostrar como o Cloud Run pode simplificar esse processo, permitindo que desenvolvedores se preocupem mais com o código e menos com a infraestrutura.\n\nO que vamos ver?\nComo simplificar deploys utilizando Cloud Run.\nComo lidar com escalabilidade e tráfego de forma transparente.\nComo incorporar segurança sem aumentar a complexidade da infraestrutura.\nComo executar APIs, microsserviços e aplicações de IA em produção.',
         },
         {
             photoUrl: ElianaLimadaFonseca,
@@ -518,10 +519,20 @@ export default function Speakers2026() {
             talkTitle: 'Por dentro da Análise de Dados: o divertido, o difícil e o essencial',
             talkInfo: 'Nesta palestra, Yuri vai compartilhar:\n Por que escolheu a área de análise de dados\n Os pontos positivos e os desafios da profissão\n A realidade do dia a dia de um analista',
         },
+        {
+            photoUrl: RodrigoRahman,
+            name: 'Rodrigo Rahman',
+            role: 'CEO',
+            description: 'R5 Academy',
+            links: { linkedin: 'https://www.linkedin.com/in/rodrigo-rahman/' },
+            speakerInfo: 'Google Developer Expert (GDE) em Flutter & Dart, fundador da R5 Academy e uma das maiores referências da comunidade Flutter no Brasil, Rodrigo Rahman soma mais de 20 anos de experiência em desenvolvimento de software e já formou mais de 2.100 desenvolvedores.',
+            talkTitle: 'Construindo agentes que testam aplicações Flutter de forma autônoma com Gemini',
+            talkInfo: 'Nesta palestra, Rodrigo vai mostrar como utilizar o Gemini para criar agentes de IA capazes de explorar, validar e testar aplicações Flutter de forma autônoma, inaugurando uma nova abordagem para testes de software.\n\nO que você vai aprender?\nComo integrar o Gemini ao ecossistema Flutter utilizando MCP (Model Context Protocol).\nComo agentes de IA podem navegar por telas, preencher formulários e validar comportamentos automaticamente.\nComo utilizar Dart MCP e Patrol MCP para executar testes end-to-end e identificar regressões.\nComo gerar evidências, analisar falhas e produzir relatórios de testes com apoio da IA.',
+        },
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Kevin Uehara'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Douglas Augusto', 'Kevin Uehara', 'Rodrigo Rahman'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
