@@ -39,8 +39,8 @@ const scheduleData = [
         start: '09:30',
         end: '10:10',
         track: 'Liberdade',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Carreira Tech sem Acaso — Seu próximo passo no Brasil e no mundo',
+        speaker: 'Mariana Aganetti',
     },
     {
         start: '10:20',
@@ -60,8 +60,8 @@ const scheduleData = [
         start: '10:20',
         end: '11:00',
         track: 'Mercado',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'AI Gateways: do Hype à Produção',
+        speaker: 'Matheus Meneses',
     },
     {
         start: '10:20',
@@ -108,8 +108,8 @@ const scheduleData = [
         start: '13:20',
         end: '14:00',
         track: 'Horizonte',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'O que um Hacker faz com seu código',
+        speaker: 'Francisco Marinho',
     },
     {
         start: '13:20',

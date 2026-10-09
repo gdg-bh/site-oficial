@@ -13,6 +13,7 @@ import DiegoBorgesFerreira from '../../../../assets/palestrantes/Diego_Borges_Fe
 import DouglasAugustoFerreiraAraujo from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
 import ElianaLimadaFonseca from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
 import FernandaCosta from '../../../../assets/palestrantes/Fernanda_Costa.jpg';
+import FranciscoMarinho from '../../../../assets/palestrantes/Francisco_Marinho.jpg';
 import FelipeHorta from '../../../../assets/palestrantes/Felipe_Horta.jpg';
 import Bonaldi from '../../../../assets/palestrantes/Bonaldi.png';
 import GabrielNogueira from '../../../../assets/palestrantes/Gabriel_Nogueira.jpeg';
@@ -27,6 +28,7 @@ import LuizaNaves from '../../../../assets/palestrantes/Luiza_Naves.jpg';
 import LuizSantos from '../../../../assets/palestrantes/Luiz_Santos.jpg';
 import LucianaRHSincero from '../../../../assets/palestrantes/Luciana_RH_Sincero.jpeg';
 import MariaCeciliaCoelho from '../../../../assets/palestrantes/Maria_Cecilia_Coelho.jpeg';
+import MatheusMeneses from '../../../../assets/palestrantes/Matheus_Meneses.png';
 import DanielaOliveira from '../../../../assets/palestrantes/Daniela_Oliveira.jpeg';
 import CarolSevero from '../../../../assets/palestrantes/Carol_Severo.jpeg';
 import IzaBatista from '../../../../assets/palestrantes/Iza_Batista.jpeg';
@@ -35,6 +37,7 @@ import KarolAttekita from '../../../../assets/palestrantes/Karol_Attekita.png';
 import KevinUehara from '../../../../assets/palestrantes/Kevin_Uehara.png';
 import MarcellaSouza from '../../../../assets/palestrantes/Marcella_Souza.jpg';
 import MarianaAlmeida from '../../../../assets/palestrantes/Mariana_Almeida.jpeg';
+import MarianaAganetti from '../../../../assets/palestrantes/Mariana_Aganetti.jpeg';
 import MozartSousa from '../../../../assets/palestrantes/Mozart_Sousa.jpeg';
 import MateusPereira from '../../../../assets/palestrantes/Mateus_Pereira.jpeg';
 import MimaAmie from '../../../../assets/palestrantes/Mima_Amie.jpg';
@@ -520,19 +523,48 @@ export default function Speakers2026() {
             talkInfo: 'Nesta palestra, Yuri vai compartilhar:\n Por que escolheu a área de análise de dados\n Os pontos positivos e os desafios da profissão\n A realidade do dia a dia de um analista',
         },
         {
+            photoUrl: FranciscoMarinho,
+            name: 'Francisco Marinho',
+            role: 'Head de Segurança Ofensiva',
+            description: 'iT.eam',
+            links: { linkedin: 'https://www.linkedin.com/in/tristao-offsec/?isSelfProfile=false' },
+            speakerInfo: 'Head de Segurança Ofensiva na iT.eam, Francisco lidera uma equipe de hackers éticos responsável por operações de Red Team e testes de segurança em empresas no Brasil e na Europa. Atua há mais de 5 anos na área, com experiência em exploração de vulnerabilidades e simulação de ataques reais, além de possuir certificações como OSCP, CEH e Pentest+.',
+            talkTitle: 'O que um Hacker faz com seu código',
+            talkInfo: 'Uma vulnerabilidade que parece pequena durante o desenvolvimento pode ser o ponto de partida para o comprometimento de todo um ambiente. Mas o que acontece quando um hacker encontra essa falha?\n\nNesta palestra, Francisco vai apresentar casos reais de operações de Red Team, mostrando como falhas de programação foram exploradas para obter acesso e avançar dentro de ambientes corporativos.\n\nO que vamos ver?\nComo vulnerabilidades no código podem se transformar em pontos de entrada para ataques.\nTécnicas utilizadas em operações reais de Red Team.\nA relação entre decisões tomadas no desenvolvimento e suas consequências durante uma invasão.\nPor que desenvolvimento e segurança precisam trabalhar cada vez mais próximos.\nComo conhecimentos de programação, arquitetura, segurança ofensiva e DevSecOps podem se complementar.',
+        },
+        {
             photoUrl: RodrigoRahman,
             name: 'Rodrigo Rahman',
-            role: 'CEO',
             description: 'R5 Academy',
             links: { linkedin: 'https://www.linkedin.com/in/rodrigo-rahman/' },
             speakerInfo: 'Google Developer Expert (GDE) em Flutter & Dart, fundador da R5 Academy e uma das maiores referências da comunidade Flutter no Brasil, Rodrigo Rahman soma mais de 20 anos de experiência em desenvolvimento de software e já formou mais de 2.100 desenvolvedores.',
             talkTitle: 'Construindo agentes que testam aplicações Flutter de forma autônoma com Gemini',
             talkInfo: 'Nesta palestra, Rodrigo vai mostrar como utilizar o Gemini para criar agentes de IA capazes de explorar, validar e testar aplicações Flutter de forma autônoma, inaugurando uma nova abordagem para testes de software.\n\nO que você vai aprender?\nComo integrar o Gemini ao ecossistema Flutter utilizando MCP (Model Context Protocol).\nComo agentes de IA podem navegar por telas, preencher formulários e validar comportamentos automaticamente.\nComo utilizar Dart MCP e Patrol MCP para executar testes end-to-end e identificar regressões.\nComo gerar evidências, analisar falhas e produzir relatórios de testes com apoio da IA.',
         },
+        {
+            photoUrl: MatheusMeneses,
+            name: 'Matheus Meneses',
+            role: 'Principal Platform Engineer',
+            description: 'Inter',
+            links: { linkedin: 'https://www.linkedin.com/in/matheus-meneses/?isSelfProfile=false' },
+            speakerInfo: 'Engenheiro de Plataforma no Inter, Matheus atua há mais de 10 anos construindo sistemas distribuídos, cloud e plataformas, com experiência em tecnologias como Java, Go, Kubernetes e observabilidade. Atualmente, lidera iniciativas de plataforma e inovação para ajudar times a construir e operar tecnologia em escala.',
+            talkTitle: 'AI Gateways: do Hype à Produção',
+            talkInfo: 'Nesta palestra, Matheus vai partir dos fundamentos dos AI Gateways e avançar para os desafios que aparecem quando aplicações de IA precisam ganhar escala no mundo real.\n\nO que vamos ver?\nO que é um AI Gateway e qual seu papel na arquitetura de aplicações com IA.\nComo lidar com a fragmentação de integrações entre diferentes modelos e serviços.\nObservabilidade e controle de custos em aplicações de IA.\nSegurança e governança em ambientes de produção.\nQuando um AI Gateway realmente agrega valor — e quando pode apenas adicionar complexidade.',
+        },
+        {
+            photoUrl: MarianaAganetti,
+            name: 'Mariana Aganetti',
+            role: 'Talent Acquisition Specialist',
+            description: 'Amplify IT',
+            links: { linkedin: 'https://www.linkedin.com/in/mariana-aganetti/' },
+            speakerInfo: 'Especialista em Talent Acquisition e apaixonada por pessoas, tecnologia e carreira, Mariana atua na Amplify conectando profissionais brasileiros de tecnologia a oportunidades em empresas globais. Sua experiência próxima de candidatos e empresas traz uma visão prática sobre o mercado Tech e os caminhos para construir novas oportunidades no Brasil e no exterior.',
+            talkTitle: 'Carreira Tech sem Acaso — Seu próximo passo no Brasil e no mundo',
+            talkInfo: 'Construir uma carreira vai muito além de buscar a próxima vaga. É preciso entender onde você está, onde quer chegar e quais movimentos podem aproximar você dos seus objetivos.\n\nNesta mentoria, Mariana vai ajudar as participantes a olharem para a própria trajetória de forma mais estratégica e transformar objetivos profissionais em próximos passos concretos.\n\nO que vamos conversar?\nComo identificar seu momento atual e definir onde quer chegar.\nComo construir um planejamento de carreira com objetivos claros.\nComo entender o que o mercado busca e identificar seus principais gaps de desenvolvimento.\nOportunidades e caminhos de carreira no Brasil e no mercado internacional.\nComo criar um pequeno mapa de carreira com ações para os próximos passos.',
+        },
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Douglas Augusto', 'Kevin Uehara', 'Rodrigo Rahman'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Douglas Augusto', 'Kevin Uehara', 'Rodrigo Rahman', 'Francisco Marinho', 'Matheus Meneses', 'Mariana Aganetti'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
