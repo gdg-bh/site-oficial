@@ -13,6 +13,7 @@ import DiegoBorgesFerreira from '../../../../assets/palestrantes/Diego_Borges_Fe
 import DouglasAugustoFerreiraAraujo from '../../../../assets/palestrantes/Douglas_Augusto_Ferreira_Araujo.png';
 import ElianaLimadaFonseca from '../../../../assets/palestrantes/Eliana_Lima_da_Fonseca.png';
 import FernandaCosta from '../../../../assets/palestrantes/Fernanda_Costa.jpg';
+import FellyphCintra from '../../../../assets/palestrantes/Fellyph_Cintra.png';
 import FranciscoMarinho from '../../../../assets/palestrantes/Francisco_Marinho.jpg';
 import FelipeHorta from '../../../../assets/palestrantes/Felipe_Horta.jpg';
 import Bonaldi from '../../../../assets/palestrantes/Bonaldi.png';
@@ -48,6 +49,8 @@ import RafaelCunha from '../../../../assets/palestrantes/Rafael_Cunha.jpeg';
 import RafaelRibeiroAndrade from '../../../../assets/palestrantes/Rafael_Ribeiro_Andrade.png';
 import RafaelaMarcolino from '../../../../assets/palestrantes/Rafaela_Marcolino.jpg';
 import RodrigoRahman from '../../../../assets/palestrantes/Rodrigo_Rahman.png';
+import SamuelNeves from '../../../../assets/palestrantes/Samuel_Neves.jpg';
+import ThamiresOliveira from '../../../../assets/palestrantes/Thamires_Oliveira.png';
 import ThaisFalabella from '../../../../assets/palestrantes/Thais_Falabella.png';
 import ToshiOssada from '../../../../assets/palestrantes/Toshi_Ossada.png';
 import VictorPugliese from '../../../../assets/palestrantes/Victor_Pugliese.jpeg';
@@ -561,10 +564,40 @@ export default function Speakers2026() {
             talkTitle: 'Carreira Tech sem Acaso — Seu próximo passo no Brasil e no mundo',
             talkInfo: 'Construir uma carreira vai muito além de buscar a próxima vaga. É preciso entender onde você está, onde quer chegar e quais movimentos podem aproximar você dos seus objetivos.\n\nNesta mentoria, Mariana vai ajudar as participantes a olharem para a própria trajetória de forma mais estratégica e transformar objetivos profissionais em próximos passos concretos.\n\nO que vamos conversar?\nComo identificar seu momento atual e definir onde quer chegar.\nComo construir um planejamento de carreira com objetivos claros.\nComo entender o que o mercado busca e identificar seus principais gaps de desenvolvimento.\nOportunidades e caminhos de carreira no Brasil e no mercado internacional.\nComo criar um pequeno mapa de carreira com ações para os próximos passos.',
         },
+        {
+            photoUrl: FellyphCintra,
+            name: 'Fellyph Cintra',
+            role: 'Developer Relations Advocate',
+            description: 'Automattic',
+            links: { linkedin: 'https://www.linkedin.com/in/fellyph/' },
+            speakerInfo: 'Developer Advocate na Automattic, Fellyph possui 20 anos de experiência em desenvolvimento front-end e há mais de 7 anos é certificado pelo Google como especialista em tecnologias web. Apaixonado por código aberto, tecnologia e construção de comunidades, já palestrou em três continentes e atualmente dedica parte do seu trabalho a investigar a Web Agêntica.',
+            talkTitle: 'Criando sites para a era dos Agentes com WebMCP',
+            talkInfo: 'E se o seu site pudesse dizer a um agente de IA exatamente o que ele pode fazer e como interagir com suas funcionalidades?\n\nNesta palestra, Fellyph vai apresentar o WebMCP, uma proposta de padrão web que permite que sites exponham ferramentas estruturadas para agentes de IA, criando uma interação mais confiável do que depender apenas de capturas de tela e cliques simulados.\n\nO que vamos ver?\nO que é WebMCP e por que ele pode ser importante para o futuro da web.\nComo registrar ferramentas utilizando JavaScript e transformar formulários HTML em ferramentas para agentes.\nAs diferenças e a relação entre WebMCP e MCP (Model Context Protocol).\nConsiderações de segurança e boas práticas para criar funcionalidades utilizadas por agentes.\nExemplos práticos com WebAssembly e um CMS executando diretamente no navegador.\nComo desenvolvedores podem começar a experimentar e contribuir para a evolução desse novo padrão.',
+        },
+        {
+            photoUrl: SamuelNeves,
+            name: 'Samuel Neves',
+            role: 'Technical Account Manager',
+            description: 'Google',
+            links: { linkedin: 'https://www.linkedin.com/in/samuel-neves/' },
+            speakerInfo: 'Mineiro, Engenheiro de Computação e Technical Account Manager no Google Cloud, Samuel acredita que a tecnologia é um meio, não o fim. Seu trabalho é ajudar grandes empresas a manter plataformas saudáveis e bem arquitetadas, garantindo que a infraestrutura impulsione os negócios com segurança, eficiência e confiabilidade.',
+            talkTitle: 'Como o Well-Architected te ajuda com as traquinagens do Saci',
+            talkInfo: 'E se o Saci resolvesse aprontar dentro da sua infraestrutura na nuvem?\nCredenciais expostas, queda de zona, recursos ociosos, picos de tráfego e configurações que mudam inesperadamente. Parece coisa do Saci, mas são desafios reais que podem comprometer uma arquitetura em produção!\n\nNesta palestra, Samuel vai mostrar como aplicar os 6 pilares do Google Cloud Well-Architected Framework para lidar com essas situações e construir ambientes mais seguros, resilientes e eficientes.\n\nO que vamos ver?\nComo os 6 pilares do Well-Architected ajudam a orientar decisões de arquitetura.\nBoas práticas para reduzir riscos de segurança, como credenciais expostas.\nEstratégias para lidar com falhas de infraestrutura e garantir maior confiabilidade.\nComo preparar aplicações para picos de tráfego e otimizar recursos na nuvem.\nComo identificar e mitigar problemas de configuração, incluindo o famoso drift.',
+        },
+        {
+            photoUrl: ThamiresOliveira,
+            name: 'Thamires Oliveira',
+            role: 'Fundadora',
+            description: 'Thami Oliveira RH',
+            links: { linkedin: 'https://www.linkedin.com/in/thamiresoliveirarh/' },
+            speakerInfo: 'Psicóloga, especialista em Recrutamento & Seleção e fundadora da RISE Talent Solutions, Thamires atua há mais de 8 anos em RH, apoiando empresas e profissionais em diferentes momentos de carreira. Com experiência no recrutamento de profissionais de tecnologia e posições estratégicas, conhece de perto os bastidores das decisões de contratação, remuneração e negociação salarial.',
+            talkTitle: 'Estratégias de negociação salarial para mulheres em tecnologia',
+            talkInfo: '“Será que estou pedindo demais?”, “Como saber quanto realmente posso pedir?” ou “E se eu perder a oportunidade?”\n\nNesta mentoria, Thamires vai mostrar o que acontece do outro lado da mesa e compartilhar estratégias para que mais mulheres consigam conduzir conversas sobre remuneração com informação, argumentos e segurança.\n\nO que vamos conversar?\nComo as empresas definem faixas salariais e avaliam pretensões.\nComo responder perguntas sobre pretensão salarial.\nComo se preparar e entender quanto você pode pedir.\nComo construir uma contraproposta com bons argumentos.\nComo comunicar seu valor e definir limites durante uma negociação.',
+        },
     ];
 
     const visibleSpeakers = speakers.filter((speaker) =>
-        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Douglas Augusto', 'Kevin Uehara', 'Rodrigo Rahman', 'Francisco Marinho', 'Matheus Meneses', 'Mariana Aganetti'].includes(speaker.name)
+        ['Alisson Rosa', 'Ahirton Lopes', 'Luciana Azevedo', 'Carol Severo', 'Iza Batista', 'Jéssica Flores', 'Karol Attekita', 'Marcella Souza', 'Daniela Oliveira', 'Maria Cecília Coelho', 'Felipe Horta', 'Rafael Bonaldi', 'Dr. Victor Pugliese', 'Luiz Santos', 'Geise Martins', 'Isadora Cardoso', 'Douglas Augusto', 'Kevin Uehara', 'Rodrigo Rahman', 'Francisco Marinho', 'Matheus Meneses', 'Mariana Aganetti', 'Fellyph Cintra', 'Samuel Neves', 'Thamires Oliveira'].includes(speaker.name)
     ).sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     return (
