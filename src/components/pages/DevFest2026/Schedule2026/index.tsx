@@ -389,7 +389,7 @@ export default function Schedule2026() {
         // Keep the white border and place the uploaded image only inside it.
         // Extend the lower edge under the speech bubble so the original white
         // placeholder border does not appear as a rectangle behind it.
-        const photoArea = { left: 229, top: 747, width: 622, height: 620 };
+        const photoArea = { left: 229, top: 747, width: 622, height: 600 };
         const coverScale = Math.max(photoArea.width / photo.naturalWidth, photoArea.height / photo.naturalHeight);
         const scaledWidth = photo.naturalWidth * coverScale * shareCardZoom;
         const scaledHeight = photo.naturalHeight * coverScale * shareCardZoom;
@@ -403,27 +403,7 @@ export default function Schedule2026() {
         context.drawImage(photo, left, top, scaledWidth, scaledHeight);
         context.restore();
 
-        // The artwork is flattened, so restore the original bubble artwork
-        // through its silhouette. This preserves its typography and dimensions
-        // without restoring the white placeholder rectangle.
-        context.save();
-        context.beginPath();
-        context.moveTo(150, 1190);
-        context.bezierCurveTo(150, 1168, 171, 1152, 201, 1149);
-        context.lineTo(319, 1138);
-        context.bezierCurveTo(350, 1136, 371, 1153, 375, 1181);
-        context.lineTo(381, 1260);
-        context.bezierCurveTo(383, 1290, 363, 1310, 335, 1314);
-        context.lineTo(247, 1320);
-        context.lineTo(212, 1367);
-        context.lineTo(215, 1317);
-        context.lineTo(181, 1309);
-        context.bezierCurveTo(158, 1303, 147, 1281, 149, 1257);
-        context.closePath();
-        context.clip();
-        context.drawImage(frame, 0, 0);
-        context.restore();
-
+     
         return canvas.toDataURL('image/png');
     }, [shareCardImage, shareCardPosition, shareCardZoom]);
 
