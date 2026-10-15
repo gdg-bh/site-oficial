@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Check, Download, Share2, X } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Check, Download, X } from 'lucide-react';
 import { SectionTitle } from '../../../Common/SectionTitle';
 import credentialImage from '../../../../assets/pages/devfest2026/credencial.jpeg';
+import euVouDevfestImage from '../../../../assets/pages/devfest2026/euvouDevfest.png';
 
 const scheduleData = [
     {
@@ -18,8 +19,8 @@ const scheduleData = [
         start: '09:30',
         end: '10:10',
         track: 'Horizonte',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Criando sites para a era dos Agentes com WebMCP',
+        speaker: 'Fellyph Cintra',
     },
     {
         start: '09:30',
@@ -81,8 +82,8 @@ const scheduleData = [
         start: '11:10',
         end: '11:50',
         track: 'Pampulha',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Como o Well-Architected te ajuda com as traquinagens do Saci',
+        speaker: 'Samuel Neves',
     },
     {
         start: '11:10',
@@ -95,8 +96,8 @@ const scheduleData = [
         start: '11:10',
         end: '11:50',
         track: 'Liberdade',
-        title: 'Em Breve',
-        speaker: 'Em Breve',
+        title: 'Estratégias de negociação salarial para mulheres em tecnologia',
+        speaker: 'Thamires Oliveira',
     },
     
     {
@@ -254,7 +255,13 @@ function wrapText(
 export default function Schedule2026() {
     const [filter, setFilter] = useState('all');
     const [isPlannerOpen, setIsPlannerOpen] = useState(false);
+    const [isShareCardOpen, setIsShareCardOpen] = useState(false);
     const [selectedTalks, setSelectedTalks] = useState<Record<string, string>>({});
+    const [shareCardImage, setShareCardImage] = useState<string | null>(null);
+    const [shareCardPreview, setShareCardPreview] = useState<string | null>(null);
+    const [shareCardZoom, setShareCardZoom] = useState(1);
+    const [shareCardPosition, setShareCardPosition] = useState({ x: 50, y: 50 });
+    const shareCardFileInputRef = useRef<HTMLInputElement>(null);
 
     const sortedData = useMemo(() => {
         return [...scheduleData].sort((a, b) => a.start.localeCompare(b.start));
@@ -306,10 +313,13 @@ export default function Schedule2026() {
     }, [selectedTalks]);
 
     useEffect(() => {
-        if (!isPlannerOpen) return;
+        if (!isPlannerOpen && !isShareCardOpen) return;
 
         const handleEscape = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') setIsPlannerOpen(false);
+            if (event.key === 'Escape') {
+                setIsPlannerOpen(false);
+                setIsShareCardOpen(false);
+            }
         };
 
         document.addEventListener('keydown', handleEscape);
@@ -319,7 +329,7 @@ export default function Schedule2026() {
             document.removeEventListener('keydown', handleEscape);
             document.body.style.overflow = '';
         };
-    }, [isPlannerOpen]);
+    }, [isPlannerOpen, isShareCardOpen]);
 
     const toggleTalk = (start: string, talk: Session) => {
         const talkKey = getTalkKey(talk);
@@ -332,6 +342,90 @@ export default function Schedule2026() {
 
             return { ...current, [start]: talkKey };
         });
+    };
+
+    const handleShareCardFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (!file) return;
+
+        if (!file.type.startsWith('image/')) {
+            window.alert('Selecione um arquivo de imagem.');
+            event.target.value = '';
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => {
+            if (typeof reader.result !== 'string') return;
+            setShareCardImage(reader.result);
+            setShareCardZoom(1);
+            setShareCardPosition({ x: 50, y: 50 });
+        };
+        reader.onerror = () => window.alert('Não foi possível carregar essa imagem.');
+        reader.readAsDataURL(file);
+    };
+
+    const createShareCardImage = useCallback(async () => {
+        if (!shareCardImage) throw new Error('Selecione uma foto antes de continuar.');
+
+        const loadImage = (source: string) =>
+            new Promise<HTMLImageElement>((resolve, reject) => {
+                const image = new Image();
+                image.onload = () => resolve(image);
+                image.onerror = () => reject(new Error('Não foi possível carregar a imagem.'));
+                image.src = source;
+            });
+
+        const [photo, frame] = await Promise.all([loadImage(shareCardImage), loadImage(euVouDevfestImage)]);
+        const canvas = document.createElement('canvas');
+        canvas.width = frame.naturalWidth;
+        canvas.height = frame.naturalHeight;
+        const context = canvas.getContext('2d');
+        if (!context) throw new Error('Não foi possível preparar a imagem.');
+
+        context.drawImage(frame, 0, 0);
+
+        // Interior of the white photo placeholder in euvouDevfest.png (1080x1920).
+        // Keep the white border and place the uploaded image only inside it.
+        // Extend the lower edge under the speech bubble so the original white
+        // placeholder border does not appear as a rectangle behind it.
+        const photoArea = { left: 229, top: 747, width: 622, height: 600 };
+        const coverScale = Math.max(photoArea.width / photo.naturalWidth, photoArea.height / photo.naturalHeight);
+        const scaledWidth = photo.naturalWidth * coverScale * shareCardZoom;
+        const scaledHeight = photo.naturalHeight * coverScale * shareCardZoom;
+        const left = photoArea.left - (scaledWidth - photoArea.width) * (shareCardPosition.x / 100);
+        const top = photoArea.top - (scaledHeight - photoArea.height) * (shareCardPosition.y / 100);
+
+        context.save();
+        context.beginPath();
+        context.rect(photoArea.left, photoArea.top, photoArea.width, photoArea.height);
+        context.clip();
+        context.drawImage(photo, left, top, scaledWidth, scaledHeight);
+        context.restore();
+
+     
+        return canvas.toDataURL('image/png');
+    }, [shareCardImage, shareCardPosition, shareCardZoom]);
+
+    useEffect(() => {
+        if (!shareCardImage) {
+            setShareCardPreview(null);
+            return;
+        }
+
+        void createShareCardImage().then(setShareCardPreview).catch(() => setShareCardPreview(null));
+    }, [createShareCardImage, shareCardImage]);
+
+    const downloadShareCard = async () => {
+        try {
+            const imageData = await createShareCardImage();
+            const link = document.createElement('a');
+            link.href = imageData;
+            link.download = 'eu-vou-no-devfest-2026.png';
+            link.click();
+        } catch {
+            window.alert('Selecione uma foto para gerar sua imagem.');
+        }
     };
 
     const shareSchedule = async () => {
@@ -454,13 +548,22 @@ export default function Schedule2026() {
                             Escolha uma palestra por horário e leve sua grade com você.
                         </p>
                     </div>
-                    <button
-                        type="button"
-                        onClick={() => setIsPlannerOpen(true)}
-                        className="inline-flex items-center justify-center rounded-lg bg-google-blue px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-google-blue focus:ring-offset-2"
-                    >
-                        Personalize Sua Grade
-                    </button>
+                    <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                        <button
+                            type="button"
+                            onClick={() => setIsPlannerOpen(true)}
+                            className="inline-flex items-center justify-center rounded-lg bg-google-blue px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-google-blue focus:ring-offset-2"
+                        >
+                            Personalize Sua Grade
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => setIsShareCardOpen(true)}
+                            className="inline-flex items-center justify-center rounded-lg border-2 border-google-blue px-5 py-3 text-sm font-semibold text-google-blue shadow-sm transition hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-google-blue focus:ring-offset-2"
+                        >
+                            Eu vou no DevFest
+                        </button>
+                    </div>
                 </div>
 
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
@@ -673,6 +776,132 @@ export default function Schedule2026() {
                                     <Share2 className="h-4 w-4" />
                                     Compartilhar minha grade
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {isShareCardOpen && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="share-card-title"
+                    onClick={() => setIsShareCardOpen(false)}
+                >
+                    <div
+                        className="flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <div className="flex items-start justify-between border-b border-gray-200 p-5 md:p-6">
+                            <div>
+                                <p className="text-sm font-semibold uppercase tracking-wide text-google-blue">DevFest 2026</p>
+                                <h2 id="share-card-title" className="mt-1 text-2xl font-bold text-[#21242C]">
+                                    Eu vou no DevFest!
+                                </h2>
+                                <p className="mt-1 text-sm text-gray-600">Coloque sua foto na moldura e compartilhe.</p>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={() => setIsShareCardOpen(false)}
+                                className="rounded-full p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900"
+                                aria-label="Fechar personalizador de foto"
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                        </div>
+
+                        <div className="grid gap-6 overflow-y-auto p-5 md:grid-cols-[minmax(0,1fr)_280px] md:p-6">
+                            <div className="flex min-h-[360px] items-center justify-center rounded-xl bg-gray-100 p-3">
+                                {shareCardPreview ? (
+                                    <img
+                                        src={shareCardPreview}
+                                        alt="Prévia da sua imagem do DevFest"
+                                        className="max-h-[58vh] w-auto max-w-full object-contain"
+                                    />
+                                ) : (
+                                    <button
+                                        type="button"
+                                        onClick={() => shareCardFileInputRef.current?.click()}
+                                        className="flex h-full min-h-[360px] w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-google-blue/40 p-8 text-center text-google-blue transition hover:bg-blue-50"
+                                    >
+                                        <span className="text-lg font-semibold">
+                                            {shareCardImage ? 'Preparando sua prévia...' : 'Escolha uma foto'}
+                                        </span>
+                                        <span className="mt-2 text-sm text-gray-600">
+                                            {shareCardImage
+                                                ? 'Ajustando sua foto na moldura'
+                                                : 'JPG ou PNG, processada somente no seu dispositivo'}
+                                        </span>
+                                    </button>
+                                )}
+                            </div>
+
+                            <div className="flex flex-col justify-center gap-5">
+                                <input
+                                    ref={shareCardFileInputRef}
+                                    type="file"
+                                    accept="image/png,image/jpeg,image/webp"
+                                    onChange={handleShareCardFile}
+                                    className="hidden"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => shareCardFileInputRef.current?.click()}
+                                    className="rounded-lg border-2 border-google-blue px-4 py-3 text-sm font-semibold text-google-blue transition hover:bg-blue-50"
+                                >
+                                    {shareCardImage ? 'Trocar foto' : 'Selecionar foto'}
+                                </button>
+                                <label className="text-sm font-semibold text-gray-700">
+                                    Zoom
+                                    <input
+                                        type="range"
+                                        min="1"
+                                        max="2.5"
+                                        step="0.05"
+                                        value={shareCardZoom}
+                                        onChange={(event) => setShareCardZoom(Number(event.target.value))}
+                                        className="mt-2 w-full accent-[#4285F4]"
+                                    />
+                                </label>
+                                <label className="text-sm font-semibold text-gray-700">
+                                    Ajuste horizontal
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value={shareCardPosition.x}
+                                        onChange={(event) =>
+                                            setShareCardPosition((position) => ({ ...position, x: Number(event.target.value) }))
+                                        }
+                                        className="mt-2 w-full accent-[#4285F4]"
+                                    />
+                                </label>
+                                <label className="text-sm font-semibold text-gray-700">
+                                    Ajuste vertical
+                                    <input
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value={shareCardPosition.y}
+                                        onChange={(event) =>
+                                            setShareCardPosition((position) => ({ ...position, y: Number(event.target.value) }))
+                                        }
+                                        className="mt-2 w-full accent-[#4285F4]"
+                                    />
+                                </label>
+                                <div className="mt-auto flex flex-col gap-3">
+                                    <button
+                                        type="button"
+                                        onClick={downloadShareCard}
+                                        disabled={!shareCardImage}
+                                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-google-blue px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+                                    >
+                                        <Download className="h-4 w-4" />
+                                        Baixar imagem
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
