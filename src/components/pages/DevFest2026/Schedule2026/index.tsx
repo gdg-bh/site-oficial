@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Check, Download, X } from 'lucide-react';
+import { Check, Download, Share2, X } from 'lucide-react';
 import { SectionTitle } from '../../../Common/SectionTitle';
 import credentialImage from '../../../../assets/pages/devfest2026/credencial.jpeg';
 import euVouDevfestImage from '../../../../assets/pages/devfest2026/euvouDevfest.png';
