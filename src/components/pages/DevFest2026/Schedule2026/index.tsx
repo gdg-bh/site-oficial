@@ -209,12 +209,14 @@ const tracks = [
 
 const scheduleStorageKey = 'devfest-2026-personal-schedule';
 const credentialSlots = [
-    { start: '09:30', top: 435, bottom: 550, left: 244, right: 1030 },
-    { start: '10:20', top: 589, bottom: 703, left: 244, right: 1030 },
-    { start: '11:10', top: 742, bottom: 856, left: 244, right: 1030 },
-    { start: '13:20', top: 894, bottom: 1008, left: 244, right: 1030 },
-    { start: '14:10', top: 1047, bottom: 1161, left: 244, right: 1030 },
-    { start: '15:00', top: 1201, bottom: 1315, left: 244, right: 1030 },
+    // Coordinates are based on the real 1181x1772 credential image.
+    // Keep the text inside the white schedule cards, including on mobile previews.
+    { start: '09:30', top: 481, bottom: 608, left: 270, right: 1142 },
+    { start: '10:20', top: 651, bottom: 778, left: 270, right: 1142 },
+    { start: '11:10', top: 821, bottom: 948, left: 270, right: 1142 },
+    { start: '13:20', top: 990, bottom: 1117, left: 270, right: 1142 },
+    { start: '14:10', top: 1160, bottom: 1287, left: 270, right: 1142 },
+    { start: '15:00', top: 1330, bottom: 1457, left: 270, right: 1142 },
 ];
 
 type Session = (typeof scheduleData)[number];
